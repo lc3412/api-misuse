@@ -1,0 +1,1322 @@
+; ModuleID = '/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--trace_headers_bsf.o.i'
+source_filename = "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--trace_headers_bsf.o.i"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.AVClass = type { i8*, i8* (i8*)*, %struct.AVOption*, i32, i32, i32, i8* (i8*, i8*)*, %struct.AVClass* (%struct.AVClass*)*, i32, i32 (i8*)*, i32 (%struct.AVOptionRanges**, i8*, i8*, i32)* }
+%struct.AVOption = type opaque
+%struct.AVOptionRanges = type opaque
+%struct.AVBSFContext = type { %struct.AVClass*, %struct.AVBitStreamFilter*, %struct.AVBSFInternal*, i8*, %struct.AVCodecParameters*, %struct.AVCodecParameters*, %struct.AVRational, %struct.AVRational }
+%struct.AVBitStreamFilter = type { i8*, i32*, %struct.AVClass*, i32, {}*, i32 (%struct.AVBSFContext*, %struct.AVPacket*)*, void (%struct.AVBSFContext*)*, void (%struct.AVBSFContext*)* }
+%struct.AVBSFInternal = type opaque
+%struct.AVCodecParameters = type { i32, i32, i32, i8*, i32, i32, i64, i32, i32, i32, i32, i32, i32, %struct.AVRational, i32, i32, i32, i32, i32, i32, i32, i64, i32, i32, i32, i32, i32, i32, i32 }
+%struct.AVRational = type { i32, i32 }
+%struct.AVPacket = type { %struct.AVBufferRef*, i64, i64, i8*, i32, i32, i32, %struct.AVPacketSideData*, i32, i64, i64, i64 }
+%struct.AVBufferRef = type { %struct.AVBuffer*, i8*, i32 }
+%struct.AVBuffer = type opaque
+%struct.AVPacketSideData = type { i8*, i32, i32 }
+%struct.TraceHeadersContext = type { %struct.CodedBitstreamContext* }
+%struct.CodedBitstreamContext = type { i8*, %struct.CodedBitstreamType*, i8*, i32*, i32, i32, i32 }
+%struct.CodedBitstreamType = type opaque
+%struct.CodedBitstreamFragment = type { i8*, i64, i64, %struct.AVBufferRef*, i32, %struct.CodedBitstreamUnit* }
+%struct.CodedBitstreamUnit = type { i32, i8*, i64, i64, %struct.AVBufferRef*, i8*, %struct.AVBufferRef* }
+
+@.str = private unnamed_addr constant [14 x i8] c"trace_headers\00", align 1
+@ff_cbs_all_codec_ids = external constant [0 x i32], align 4
+@ff_trace_headers_bsf = constant { i8*, i32*, %struct.AVClass*, i32, i32 (%struct.AVBSFContext*)*, i32 (%struct.AVBSFContext*, %struct.AVPacket*)*, void (%struct.AVBSFContext*)*, void (%struct.AVBSFContext*)* } { i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str, i32 0, i32 0), i32* getelementptr inbounds ([0 x i32], [0 x i32]* @ff_cbs_all_codec_ids, i32 0, i32 0), %struct.AVClass* null, i32 8, i32 (%struct.AVBSFContext*)* @trace_headers_init, i32 (%struct.AVBSFContext*, %struct.AVPacket*)* @trace_headers, void (%struct.AVBSFContext*)* @trace_headers_close, void (%struct.AVBSFContext*)* null }, align 8
+@.str.1 = private unnamed_addr constant [11 x i8] c"Extradata\0A\00", align 1
+@.str.2 = private unnamed_addr constant [12 x i8] c", key frame\00", align 1
+@.str.3 = private unnamed_addr constant [10 x i8] c", corrupt\00", align 1
+@.str.4 = private unnamed_addr constant [10 x i8] c", pts %ld\00", align 1
+@.str.5 = private unnamed_addr constant [9 x i8] c", no pts\00", align 1
+@.str.6 = private unnamed_addr constant [10 x i8] c", dts %ld\00", align 1
+@.str.7 = private unnamed_addr constant [9 x i8] c", no dts\00", align 1
+@.str.8 = private unnamed_addr constant [15 x i8] c", duration %ld\00", align 1
+@.str.9 = private unnamed_addr constant [21 x i8] c"Packet: %d bytes%s.\0A\00", align 1
+
+; Function Attrs: nounwind uwtable
+define internal i32 @trace_headers_init(%struct.AVBSFContext* %bsf) #0 !dbg !785 {
+entry:
+  %retval = alloca i32, align 4
+  %bsf.addr = alloca %struct.AVBSFContext*, align 8
+  %ctx = alloca %struct.TraceHeadersContext*, align 8
+  %err = alloca i32, align 4
+  %ps = alloca %struct.CodedBitstreamFragment, align 8
+  store %struct.AVBSFContext* %bsf, %struct.AVBSFContext** %bsf.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.AVBSFContext** %bsf.addr, metadata !787, metadata !788), !dbg !789
+  call void @llvm.dbg.declare(metadata %struct.TraceHeadersContext** %ctx, metadata !790, metadata !788), !dbg !813
+  %0 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !814
+  %priv_data = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %0, i32 0, i32 3, !dbg !815
+  %1 = load i8*, i8** %priv_data, align 8, !dbg !815
+  %2 = bitcast i8* %1 to %struct.TraceHeadersContext*, !dbg !814
+  store %struct.TraceHeadersContext* %2, %struct.TraceHeadersContext** %ctx, align 8, !dbg !813
+  call void @llvm.dbg.declare(metadata i32* %err, metadata !816, metadata !788), !dbg !817
+  %3 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !818
+  %cbc = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %3, i32 0, i32 0, !dbg !819
+  %4 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !820
+  %par_in = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %4, i32 0, i32 4, !dbg !821
+  %5 = load %struct.AVCodecParameters*, %struct.AVCodecParameters** %par_in, align 8, !dbg !821
+  %codec_id = getelementptr inbounds %struct.AVCodecParameters, %struct.AVCodecParameters* %5, i32 0, i32 1, !dbg !822
+  %6 = load i32, i32* %codec_id, align 4, !dbg !822
+  %7 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !823
+  %8 = bitcast %struct.AVBSFContext* %7 to i8*, !dbg !823
+  %call = call i32 @ff_cbs_init(%struct.CodedBitstreamContext** %cbc, i32 %6, i8* %8), !dbg !824
+  store i32 %call, i32* %err, align 4, !dbg !825
+  %9 = load i32, i32* %err, align 4, !dbg !826
+  %cmp = icmp slt i32 %9, 0, !dbg !828
+  br i1 %cmp, label %if.then, label %if.end, !dbg !829
+
+if.then:                                          ; preds = %entry
+  %10 = load i32, i32* %err, align 4, !dbg !830
+  store i32 %10, i32* %retval, align 4, !dbg !831
+  br label %return, !dbg !831
+
+if.end:                                           ; preds = %entry
+  %11 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !832
+  %cbc1 = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %11, i32 0, i32 0, !dbg !833
+  %12 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc1, align 8, !dbg !833
+  %trace_enable = getelementptr inbounds %struct.CodedBitstreamContext, %struct.CodedBitstreamContext* %12, i32 0, i32 5, !dbg !834
+  store i32 1, i32* %trace_enable, align 4, !dbg !835
+  %13 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !836
+  %cbc2 = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %13, i32 0, i32 0, !dbg !837
+  %14 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc2, align 8, !dbg !837
+  %trace_level = getelementptr inbounds %struct.CodedBitstreamContext, %struct.CodedBitstreamContext* %14, i32 0, i32 6, !dbg !838
+  store i32 32, i32* %trace_level, align 8, !dbg !839
+  %15 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !840
+  %par_in3 = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %15, i32 0, i32 4, !dbg !842
+  %16 = load %struct.AVCodecParameters*, %struct.AVCodecParameters** %par_in3, align 8, !dbg !842
+  %extradata = getelementptr inbounds %struct.AVCodecParameters, %struct.AVCodecParameters* %16, i32 0, i32 3, !dbg !843
+  %17 = load i8*, i8** %extradata, align 8, !dbg !843
+  %tobool = icmp ne i8* %17, null, !dbg !840
+  br i1 %tobool, label %if.then4, label %if.end9, !dbg !844
+
+if.then4:                                         ; preds = %if.end
+  call void @llvm.dbg.declare(metadata %struct.CodedBitstreamFragment* %ps, metadata !845, metadata !788), !dbg !869
+  %18 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !870
+  %19 = bitcast %struct.AVBSFContext* %18 to i8*, !dbg !870
+  call void (i8*, i32, i8*, ...) @av_log(i8* %19, i32 32, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.1, i32 0, i32 0)), !dbg !871
+  %20 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !872
+  %cbc5 = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %20, i32 0, i32 0, !dbg !873
+  %21 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc5, align 8, !dbg !873
+  %22 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !874
+  %par_in6 = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %22, i32 0, i32 4, !dbg !875
+  %23 = load %struct.AVCodecParameters*, %struct.AVCodecParameters** %par_in6, align 8, !dbg !875
+  %call7 = call i32 @ff_cbs_read_extradata(%struct.CodedBitstreamContext* %21, %struct.CodedBitstreamFragment* %ps, %struct.AVCodecParameters* %23), !dbg !876
+  store i32 %call7, i32* %err, align 4, !dbg !877
+  %24 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !878
+  %cbc8 = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %24, i32 0, i32 0, !dbg !879
+  %25 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc8, align 8, !dbg !879
+  call void @ff_cbs_fragment_uninit(%struct.CodedBitstreamContext* %25, %struct.CodedBitstreamFragment* %ps), !dbg !880
+  br label %if.end9, !dbg !881
+
+if.end9:                                          ; preds = %if.then4, %if.end
+  %26 = load i32, i32* %err, align 4, !dbg !882
+  store i32 %26, i32* %retval, align 4, !dbg !883
+  br label %return, !dbg !883
+
+return:                                           ; preds = %if.end9, %if.then
+  %27 = load i32, i32* %retval, align 4, !dbg !884
+  ret i32 %27, !dbg !884
+}
+
+; Function Attrs: nounwind uwtable
+define internal i32 @trace_headers(%struct.AVBSFContext* %bsf, %struct.AVPacket* %pkt) #0 !dbg !885 {
+entry:
+  %retval = alloca i32, align 4
+  %bsf.addr = alloca %struct.AVBSFContext*, align 8
+  %pkt.addr = alloca %struct.AVPacket*, align 8
+  %ctx = alloca %struct.TraceHeadersContext*, align 8
+  %au = alloca %struct.CodedBitstreamFragment, align 8
+  %tmp = alloca [256 x i8], align 16
+  %err = alloca i32, align 4
+  store %struct.AVBSFContext* %bsf, %struct.AVBSFContext** %bsf.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.AVBSFContext** %bsf.addr, metadata !886, metadata !788), !dbg !887
+  store %struct.AVPacket* %pkt, %struct.AVPacket** %pkt.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.AVPacket** %pkt.addr, metadata !888, metadata !788), !dbg !889
+  call void @llvm.dbg.declare(metadata %struct.TraceHeadersContext** %ctx, metadata !890, metadata !788), !dbg !891
+  %0 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !892
+  %priv_data = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %0, i32 0, i32 3, !dbg !893
+  %1 = load i8*, i8** %priv_data, align 8, !dbg !893
+  %2 = bitcast i8* %1 to %struct.TraceHeadersContext*, !dbg !892
+  store %struct.TraceHeadersContext* %2, %struct.TraceHeadersContext** %ctx, align 8, !dbg !891
+  call void @llvm.dbg.declare(metadata %struct.CodedBitstreamFragment* %au, metadata !894, metadata !788), !dbg !895
+  call void @llvm.dbg.declare(metadata [256 x i8]* %tmp, metadata !896, metadata !788), !dbg !900
+  %3 = bitcast [256 x i8]* %tmp to i8*, !dbg !900
+  call void @llvm.memset.p0i8.i64(i8* %3, i8 0, i64 256, i32 16, i1 false), !dbg !900
+  call void @llvm.dbg.declare(metadata i32* %err, metadata !901, metadata !788), !dbg !902
+  %4 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !903
+  %5 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !904
+  %call = call i32 @ff_bsf_get_packet_ref(%struct.AVBSFContext* %4, %struct.AVPacket* %5), !dbg !905
+  store i32 %call, i32* %err, align 4, !dbg !906
+  %6 = load i32, i32* %err, align 4, !dbg !907
+  %cmp = icmp slt i32 %6, 0, !dbg !909
+  br i1 %cmp, label %if.then, label %if.end, !dbg !910
+
+if.then:                                          ; preds = %entry
+  %7 = load i32, i32* %err, align 4, !dbg !911
+  store i32 %7, i32* %retval, align 4, !dbg !912
+  br label %return, !dbg !912
+
+if.end:                                           ; preds = %entry
+  %8 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !913
+  %flags = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %8, i32 0, i32 6, !dbg !915
+  %9 = load i32, i32* %flags, align 8, !dbg !915
+  %and = and i32 %9, 1, !dbg !916
+  %tobool = icmp ne i32 %and, 0, !dbg !916
+  br i1 %tobool, label %if.then2, label %if.end4, !dbg !917
+
+if.then2:                                         ; preds = %if.end
+  %arraydecay = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !918
+  %call3 = call i64 @av_strlcat(i8* %arraydecay, i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.2, i32 0, i32 0), i64 256), !dbg !919
+  br label %if.end4, !dbg !919
+
+if.end4:                                          ; preds = %if.then2, %if.end
+  %10 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !920
+  %flags5 = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %10, i32 0, i32 6, !dbg !922
+  %11 = load i32, i32* %flags5, align 8, !dbg !922
+  %and6 = and i32 %11, 2, !dbg !923
+  %tobool7 = icmp ne i32 %and6, 0, !dbg !923
+  br i1 %tobool7, label %if.then8, label %if.end11, !dbg !924
+
+if.then8:                                         ; preds = %if.end4
+  %arraydecay9 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !925
+  %call10 = call i64 @av_strlcat(i8* %arraydecay9, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.3, i32 0, i32 0), i64 256), !dbg !926
+  br label %if.end11, !dbg !926
+
+if.end11:                                         ; preds = %if.then8, %if.end4
+  %12 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !927
+  %pts = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %12, i32 0, i32 1, !dbg !929
+  %13 = load i64, i64* %pts, align 8, !dbg !929
+  %cmp12 = icmp ne i64 %13, -9223372036854775808, !dbg !930
+  br i1 %cmp12, label %if.then13, label %if.else, !dbg !931
+
+if.then13:                                        ; preds = %if.end11
+  %arraydecay14 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !932
+  %14 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !933
+  %pts15 = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %14, i32 0, i32 1, !dbg !934
+  %15 = load i64, i64* %pts15, align 8, !dbg !934
+  %call16 = call i64 (i8*, i64, i8*, ...) @av_strlcatf(i8* %arraydecay14, i64 256, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i32 0, i32 0), i64 %15), !dbg !935
+  br label %if.end19, !dbg !935
+
+if.else:                                          ; preds = %if.end11
+  %arraydecay17 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !936
+  %call18 = call i64 @av_strlcat(i8* %arraydecay17, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.5, i32 0, i32 0), i64 256), !dbg !937
+  br label %if.end19
+
+if.end19:                                         ; preds = %if.else, %if.then13
+  %16 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !938
+  %dts = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %16, i32 0, i32 2, !dbg !940
+  %17 = load i64, i64* %dts, align 8, !dbg !940
+  %cmp20 = icmp ne i64 %17, -9223372036854775808, !dbg !941
+  br i1 %cmp20, label %if.then21, label %if.else25, !dbg !942
+
+if.then21:                                        ; preds = %if.end19
+  %arraydecay22 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !943
+  %18 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !944
+  %dts23 = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %18, i32 0, i32 2, !dbg !945
+  %19 = load i64, i64* %dts23, align 8, !dbg !945
+  %call24 = call i64 (i8*, i64, i8*, ...) @av_strlcatf(i8* %arraydecay22, i64 256, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.6, i32 0, i32 0), i64 %19), !dbg !946
+  br label %if.end28, !dbg !946
+
+if.else25:                                        ; preds = %if.end19
+  %arraydecay26 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !947
+  %call27 = call i64 @av_strlcat(i8* %arraydecay26, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.7, i32 0, i32 0), i64 256), !dbg !948
+  br label %if.end28
+
+if.end28:                                         ; preds = %if.else25, %if.then21
+  %20 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !949
+  %duration = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %20, i32 0, i32 9, !dbg !951
+  %21 = load i64, i64* %duration, align 8, !dbg !951
+  %cmp29 = icmp sgt i64 %21, 0, !dbg !952
+  br i1 %cmp29, label %if.then30, label %if.end34, !dbg !953
+
+if.then30:                                        ; preds = %if.end28
+  %arraydecay31 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !954
+  %22 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !955
+  %duration32 = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %22, i32 0, i32 9, !dbg !956
+  %23 = load i64, i64* %duration32, align 8, !dbg !956
+  %call33 = call i64 (i8*, i64, i8*, ...) @av_strlcatf(i8* %arraydecay31, i64 256, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.8, i32 0, i32 0), i64 %23), !dbg !957
+  br label %if.end34, !dbg !957
+
+if.end34:                                         ; preds = %if.then30, %if.end28
+  %24 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !958
+  %25 = bitcast %struct.AVBSFContext* %24 to i8*, !dbg !958
+  %26 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !959
+  %size = getelementptr inbounds %struct.AVPacket, %struct.AVPacket* %26, i32 0, i32 4, !dbg !960
+  %27 = load i32, i32* %size, align 8, !dbg !960
+  %arraydecay35 = getelementptr inbounds [256 x i8], [256 x i8]* %tmp, i32 0, i32 0, !dbg !961
+  call void (i8*, i32, i8*, ...) @av_log(i8* %25, i32 32, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.9, i32 0, i32 0), i32 %27, i8* %arraydecay35), !dbg !962
+  %28 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !963
+  %cbc = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %28, i32 0, i32 0, !dbg !964
+  %29 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc, align 8, !dbg !964
+  %30 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !965
+  %call36 = call i32 @ff_cbs_read_packet(%struct.CodedBitstreamContext* %29, %struct.CodedBitstreamFragment* %au, %struct.AVPacket* %30), !dbg !966
+  store i32 %call36, i32* %err, align 4, !dbg !967
+  %31 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !968
+  %cbc37 = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %31, i32 0, i32 0, !dbg !969
+  %32 = load %struct.CodedBitstreamContext*, %struct.CodedBitstreamContext** %cbc37, align 8, !dbg !969
+  call void @ff_cbs_fragment_uninit(%struct.CodedBitstreamContext* %32, %struct.CodedBitstreamFragment* %au), !dbg !970
+  %33 = load i32, i32* %err, align 4, !dbg !971
+  %cmp38 = icmp slt i32 %33, 0, !dbg !973
+  br i1 %cmp38, label %if.then39, label %if.end40, !dbg !974
+
+if.then39:                                        ; preds = %if.end34
+  %34 = load %struct.AVPacket*, %struct.AVPacket** %pkt.addr, align 8, !dbg !975
+  call void @av_packet_unref(%struct.AVPacket* %34), !dbg !976
+  br label %if.end40, !dbg !976
+
+if.end40:                                         ; preds = %if.then39, %if.end34
+  %35 = load i32, i32* %err, align 4, !dbg !977
+  store i32 %35, i32* %retval, align 4, !dbg !978
+  br label %return, !dbg !978
+
+return:                                           ; preds = %if.end40, %if.then
+  %36 = load i32, i32* %retval, align 4, !dbg !979
+  ret i32 %36, !dbg !979
+}
+
+; Function Attrs: nounwind uwtable
+define internal void @trace_headers_close(%struct.AVBSFContext* %bsf) #0 !dbg !980 {
+entry:
+  %bsf.addr = alloca %struct.AVBSFContext*, align 8
+  %ctx = alloca %struct.TraceHeadersContext*, align 8
+  store %struct.AVBSFContext* %bsf, %struct.AVBSFContext** %bsf.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.AVBSFContext** %bsf.addr, metadata !981, metadata !788), !dbg !982
+  call void @llvm.dbg.declare(metadata %struct.TraceHeadersContext** %ctx, metadata !983, metadata !788), !dbg !984
+  %0 = load %struct.AVBSFContext*, %struct.AVBSFContext** %bsf.addr, align 8, !dbg !985
+  %priv_data = getelementptr inbounds %struct.AVBSFContext, %struct.AVBSFContext* %0, i32 0, i32 3, !dbg !986
+  %1 = load i8*, i8** %priv_data, align 8, !dbg !986
+  %2 = bitcast i8* %1 to %struct.TraceHeadersContext*, !dbg !985
+  store %struct.TraceHeadersContext* %2, %struct.TraceHeadersContext** %ctx, align 8, !dbg !984
+  %3 = load %struct.TraceHeadersContext*, %struct.TraceHeadersContext** %ctx, align 8, !dbg !987
+  %cbc = getelementptr inbounds %struct.TraceHeadersContext, %struct.TraceHeadersContext* %3, i32 0, i32 0, !dbg !988
+  call void @ff_cbs_close(%struct.CodedBitstreamContext** %cbc), !dbg !989
+  ret void, !dbg !990
+}
+
+; Function Attrs: nounwind readnone
+declare void @llvm.dbg.declare(metadata, metadata, metadata) #1
+
+declare i32 @ff_cbs_init(%struct.CodedBitstreamContext**, i32, i8*) #2
+
+declare void @av_log(i8*, i32, i8*, ...) #2
+
+declare i32 @ff_cbs_read_extradata(%struct.CodedBitstreamContext*, %struct.CodedBitstreamFragment*, %struct.AVCodecParameters*) #2
+
+declare void @ff_cbs_fragment_uninit(%struct.CodedBitstreamContext*, %struct.CodedBitstreamFragment*) #2
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #3
+
+declare i32 @ff_bsf_get_packet_ref(%struct.AVBSFContext*, %struct.AVPacket*) #2
+
+declare i64 @av_strlcat(i8*, i8*, i64) #2
+
+declare i64 @av_strlcatf(i8*, i64, i8*, ...) #2
+
+declare i32 @ff_cbs_read_packet(%struct.CodedBitstreamContext*, %struct.CodedBitstreamFragment*, %struct.AVPacket*) #2
+
+declare void @av_packet_unref(%struct.AVPacket*) #2
+
+declare void @ff_cbs_close(%struct.CodedBitstreamContext**) #2
+
+attributes #0 = { nounwind uwtable "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind readnone }
+attributes #2 = { "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { argmemonly nounwind }
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!782, !783}
+!llvm.ident = !{!784}
+
+!0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 3.9.0 (tags/RELEASE_390/final)", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !2, retainedTypes: !610, globals: !614)
+!1 = !DIFile(filename: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--trace_headers_bsf.o.i", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!2 = !{!3, !463, !484, !494, !502, !509, !527, !551, !570, !580}
+!3 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVCodecID", file: !4, line: 215, size: 32, align: 32, elements: !5)
+!4 = !DIFile(filename: "libavcodec/avcodec.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!5 = !{!6, !7, !8, !9, !10, !11, !12, !13, !14, !15, !16, !17, !18, !19, !20, !21, !22, !23, !24, !25, !26, !27, !28, !29, !30, !31, !32, !33, !34, !35, !36, !37, !38, !39, !40, !41, !42, !43, !44, !45, !46, !47, !48, !49, !50, !51, !52, !53, !54, !55, !56, !57, !58, !59, !60, !61, !62, !63, !64, !65, !66, !67, !68, !69, !70, !71, !72, !73, !74, !75, !76, !77, !78, !79, !80, !81, !82, !83, !84, !85, !86, !87, !88, !89, !90, !91, !92, !93, !94, !95, !96, !97, !98, !99, !100, !101, !102, !103, !104, !105, !106, !107, !108, !109, !110, !111, !112, !113, !114, !115, !116, !117, !118, !119, !120, !121, !122, !123, !124, !125, !126, !127, !128, !129, !130, !131, !132, !133, !134, !135, !136, !137, !138, !139, !140, !141, !142, !143, !144, !145, !146, !147, !148, !149, !150, !151, !152, !153, !154, !155, !156, !157, !158, !159, !160, !161, !162, !163, !164, !165, !166, !167, !168, !169, !170, !171, !172, !173, !174, !175, !176, !177, !178, !179, !180, !181, !182, !183, !184, !185, !186, !187, !188, !189, !190, !191, !192, !193, !194, !195, !196, !197, !198, !199, !200, !201, !202, !203, !204, !205, !206, !207, !208, !209, !210, !211, !212, !213, !214, !215, !216, !217, !218, !219, !220, !221, !222, !223, !224, !225, !226, !227, !228, !229, !230, !231, !232, !233, !234, !235, !236, !237, !238, !239, !240, !241, !242, !243, !244, !245, !246, !247, !248, !249, !250, !251, !252, !253, !254, !255, !256, !257, !258, !259, !260, !261, !262, !263, !264, !265, !266, !267, !268, !269, !270, !271, !272, !273, !274, !275, !276, !277, !278, !279, !280, !281, !282, !283, !284, !285, !286, !287, !288, !289, !290, !291, !292, !293, !294, !295, !296, !297, !298, !299, !300, !301, !302, !303, !304, !305, !306, !307, !308, !309, !310, !311, !312, !313, !314, !315, !316, !317, !318, !319, !320, !321, !322, !323, !324, !325, !326, !327, !328, !329, !330, !331, !332, !333, !334, !335, !336, !337, !338, !339, !340, !341, !342, !343, !344, !345, !346, !347, !348, !349, !350, !351, !352, !353, !354, !355, !356, !357, !358, !359, !360, !361, !362, !363, !364, !365, !366, !367, !368, !369, !370, !371, !372, !373, !374, !375, !376, !377, !378, !379, !380, !381, !382, !383, !384, !385, !386, !387, !388, !389, !390, !391, !392, !393, !394, !395, !396, !397, !398, !399, !400, !401, !402, !403, !404, !405, !406, !407, !408, !409, !410, !411, !412, !413, !414, !415, !416, !417, !418, !419, !420, !421, !422, !423, !424, !425, !426, !427, !428, !429, !430, !431, !432, !433, !434, !435, !436, !437, !438, !439, !440, !441, !442, !443, !444, !445, !446, !447, !448, !449, !450, !451, !452, !453, !454, !455, !456, !457, !458, !459, !460, !461, !462}
+!6 = !DIEnumerator(name: "AV_CODEC_ID_NONE", value: 0)
+!7 = !DIEnumerator(name: "AV_CODEC_ID_MPEG1VIDEO", value: 1)
+!8 = !DIEnumerator(name: "AV_CODEC_ID_MPEG2VIDEO", value: 2)
+!9 = !DIEnumerator(name: "AV_CODEC_ID_H261", value: 3)
+!10 = !DIEnumerator(name: "AV_CODEC_ID_H263", value: 4)
+!11 = !DIEnumerator(name: "AV_CODEC_ID_RV10", value: 5)
+!12 = !DIEnumerator(name: "AV_CODEC_ID_RV20", value: 6)
+!13 = !DIEnumerator(name: "AV_CODEC_ID_MJPEG", value: 7)
+!14 = !DIEnumerator(name: "AV_CODEC_ID_MJPEGB", value: 8)
+!15 = !DIEnumerator(name: "AV_CODEC_ID_LJPEG", value: 9)
+!16 = !DIEnumerator(name: "AV_CODEC_ID_SP5X", value: 10)
+!17 = !DIEnumerator(name: "AV_CODEC_ID_JPEGLS", value: 11)
+!18 = !DIEnumerator(name: "AV_CODEC_ID_MPEG4", value: 12)
+!19 = !DIEnumerator(name: "AV_CODEC_ID_RAWVIDEO", value: 13)
+!20 = !DIEnumerator(name: "AV_CODEC_ID_MSMPEG4V1", value: 14)
+!21 = !DIEnumerator(name: "AV_CODEC_ID_MSMPEG4V2", value: 15)
+!22 = !DIEnumerator(name: "AV_CODEC_ID_MSMPEG4V3", value: 16)
+!23 = !DIEnumerator(name: "AV_CODEC_ID_WMV1", value: 17)
+!24 = !DIEnumerator(name: "AV_CODEC_ID_WMV2", value: 18)
+!25 = !DIEnumerator(name: "AV_CODEC_ID_H263P", value: 19)
+!26 = !DIEnumerator(name: "AV_CODEC_ID_H263I", value: 20)
+!27 = !DIEnumerator(name: "AV_CODEC_ID_FLV1", value: 21)
+!28 = !DIEnumerator(name: "AV_CODEC_ID_SVQ1", value: 22)
+!29 = !DIEnumerator(name: "AV_CODEC_ID_SVQ3", value: 23)
+!30 = !DIEnumerator(name: "AV_CODEC_ID_DVVIDEO", value: 24)
+!31 = !DIEnumerator(name: "AV_CODEC_ID_HUFFYUV", value: 25)
+!32 = !DIEnumerator(name: "AV_CODEC_ID_CYUV", value: 26)
+!33 = !DIEnumerator(name: "AV_CODEC_ID_H264", value: 27)
+!34 = !DIEnumerator(name: "AV_CODEC_ID_INDEO3", value: 28)
+!35 = !DIEnumerator(name: "AV_CODEC_ID_VP3", value: 29)
+!36 = !DIEnumerator(name: "AV_CODEC_ID_THEORA", value: 30)
+!37 = !DIEnumerator(name: "AV_CODEC_ID_ASV1", value: 31)
+!38 = !DIEnumerator(name: "AV_CODEC_ID_ASV2", value: 32)
+!39 = !DIEnumerator(name: "AV_CODEC_ID_FFV1", value: 33)
+!40 = !DIEnumerator(name: "AV_CODEC_ID_4XM", value: 34)
+!41 = !DIEnumerator(name: "AV_CODEC_ID_VCR1", value: 35)
+!42 = !DIEnumerator(name: "AV_CODEC_ID_CLJR", value: 36)
+!43 = !DIEnumerator(name: "AV_CODEC_ID_MDEC", value: 37)
+!44 = !DIEnumerator(name: "AV_CODEC_ID_ROQ", value: 38)
+!45 = !DIEnumerator(name: "AV_CODEC_ID_INTERPLAY_VIDEO", value: 39)
+!46 = !DIEnumerator(name: "AV_CODEC_ID_XAN_WC3", value: 40)
+!47 = !DIEnumerator(name: "AV_CODEC_ID_XAN_WC4", value: 41)
+!48 = !DIEnumerator(name: "AV_CODEC_ID_RPZA", value: 42)
+!49 = !DIEnumerator(name: "AV_CODEC_ID_CINEPAK", value: 43)
+!50 = !DIEnumerator(name: "AV_CODEC_ID_WS_VQA", value: 44)
+!51 = !DIEnumerator(name: "AV_CODEC_ID_MSRLE", value: 45)
+!52 = !DIEnumerator(name: "AV_CODEC_ID_MSVIDEO1", value: 46)
+!53 = !DIEnumerator(name: "AV_CODEC_ID_IDCIN", value: 47)
+!54 = !DIEnumerator(name: "AV_CODEC_ID_8BPS", value: 48)
+!55 = !DIEnumerator(name: "AV_CODEC_ID_SMC", value: 49)
+!56 = !DIEnumerator(name: "AV_CODEC_ID_FLIC", value: 50)
+!57 = !DIEnumerator(name: "AV_CODEC_ID_TRUEMOTION1", value: 51)
+!58 = !DIEnumerator(name: "AV_CODEC_ID_VMDVIDEO", value: 52)
+!59 = !DIEnumerator(name: "AV_CODEC_ID_MSZH", value: 53)
+!60 = !DIEnumerator(name: "AV_CODEC_ID_ZLIB", value: 54)
+!61 = !DIEnumerator(name: "AV_CODEC_ID_QTRLE", value: 55)
+!62 = !DIEnumerator(name: "AV_CODEC_ID_TSCC", value: 56)
+!63 = !DIEnumerator(name: "AV_CODEC_ID_ULTI", value: 57)
+!64 = !DIEnumerator(name: "AV_CODEC_ID_QDRAW", value: 58)
+!65 = !DIEnumerator(name: "AV_CODEC_ID_VIXL", value: 59)
+!66 = !DIEnumerator(name: "AV_CODEC_ID_QPEG", value: 60)
+!67 = !DIEnumerator(name: "AV_CODEC_ID_PNG", value: 61)
+!68 = !DIEnumerator(name: "AV_CODEC_ID_PPM", value: 62)
+!69 = !DIEnumerator(name: "AV_CODEC_ID_PBM", value: 63)
+!70 = !DIEnumerator(name: "AV_CODEC_ID_PGM", value: 64)
+!71 = !DIEnumerator(name: "AV_CODEC_ID_PGMYUV", value: 65)
+!72 = !DIEnumerator(name: "AV_CODEC_ID_PAM", value: 66)
+!73 = !DIEnumerator(name: "AV_CODEC_ID_FFVHUFF", value: 67)
+!74 = !DIEnumerator(name: "AV_CODEC_ID_RV30", value: 68)
+!75 = !DIEnumerator(name: "AV_CODEC_ID_RV40", value: 69)
+!76 = !DIEnumerator(name: "AV_CODEC_ID_VC1", value: 70)
+!77 = !DIEnumerator(name: "AV_CODEC_ID_WMV3", value: 71)
+!78 = !DIEnumerator(name: "AV_CODEC_ID_LOCO", value: 72)
+!79 = !DIEnumerator(name: "AV_CODEC_ID_WNV1", value: 73)
+!80 = !DIEnumerator(name: "AV_CODEC_ID_AASC", value: 74)
+!81 = !DIEnumerator(name: "AV_CODEC_ID_INDEO2", value: 75)
+!82 = !DIEnumerator(name: "AV_CODEC_ID_FRAPS", value: 76)
+!83 = !DIEnumerator(name: "AV_CODEC_ID_TRUEMOTION2", value: 77)
+!84 = !DIEnumerator(name: "AV_CODEC_ID_BMP", value: 78)
+!85 = !DIEnumerator(name: "AV_CODEC_ID_CSCD", value: 79)
+!86 = !DIEnumerator(name: "AV_CODEC_ID_MMVIDEO", value: 80)
+!87 = !DIEnumerator(name: "AV_CODEC_ID_ZMBV", value: 81)
+!88 = !DIEnumerator(name: "AV_CODEC_ID_AVS", value: 82)
+!89 = !DIEnumerator(name: "AV_CODEC_ID_SMACKVIDEO", value: 83)
+!90 = !DIEnumerator(name: "AV_CODEC_ID_NUV", value: 84)
+!91 = !DIEnumerator(name: "AV_CODEC_ID_KMVC", value: 85)
+!92 = !DIEnumerator(name: "AV_CODEC_ID_FLASHSV", value: 86)
+!93 = !DIEnumerator(name: "AV_CODEC_ID_CAVS", value: 87)
+!94 = !DIEnumerator(name: "AV_CODEC_ID_JPEG2000", value: 88)
+!95 = !DIEnumerator(name: "AV_CODEC_ID_VMNC", value: 89)
+!96 = !DIEnumerator(name: "AV_CODEC_ID_VP5", value: 90)
+!97 = !DIEnumerator(name: "AV_CODEC_ID_VP6", value: 91)
+!98 = !DIEnumerator(name: "AV_CODEC_ID_VP6F", value: 92)
+!99 = !DIEnumerator(name: "AV_CODEC_ID_TARGA", value: 93)
+!100 = !DIEnumerator(name: "AV_CODEC_ID_DSICINVIDEO", value: 94)
+!101 = !DIEnumerator(name: "AV_CODEC_ID_TIERTEXSEQVIDEO", value: 95)
+!102 = !DIEnumerator(name: "AV_CODEC_ID_TIFF", value: 96)
+!103 = !DIEnumerator(name: "AV_CODEC_ID_GIF", value: 97)
+!104 = !DIEnumerator(name: "AV_CODEC_ID_DXA", value: 98)
+!105 = !DIEnumerator(name: "AV_CODEC_ID_DNXHD", value: 99)
+!106 = !DIEnumerator(name: "AV_CODEC_ID_THP", value: 100)
+!107 = !DIEnumerator(name: "AV_CODEC_ID_SGI", value: 101)
+!108 = !DIEnumerator(name: "AV_CODEC_ID_C93", value: 102)
+!109 = !DIEnumerator(name: "AV_CODEC_ID_BETHSOFTVID", value: 103)
+!110 = !DIEnumerator(name: "AV_CODEC_ID_PTX", value: 104)
+!111 = !DIEnumerator(name: "AV_CODEC_ID_TXD", value: 105)
+!112 = !DIEnumerator(name: "AV_CODEC_ID_VP6A", value: 106)
+!113 = !DIEnumerator(name: "AV_CODEC_ID_AMV", value: 107)
+!114 = !DIEnumerator(name: "AV_CODEC_ID_VB", value: 108)
+!115 = !DIEnumerator(name: "AV_CODEC_ID_PCX", value: 109)
+!116 = !DIEnumerator(name: "AV_CODEC_ID_SUNRAST", value: 110)
+!117 = !DIEnumerator(name: "AV_CODEC_ID_INDEO4", value: 111)
+!118 = !DIEnumerator(name: "AV_CODEC_ID_INDEO5", value: 112)
+!119 = !DIEnumerator(name: "AV_CODEC_ID_MIMIC", value: 113)
+!120 = !DIEnumerator(name: "AV_CODEC_ID_RL2", value: 114)
+!121 = !DIEnumerator(name: "AV_CODEC_ID_ESCAPE124", value: 115)
+!122 = !DIEnumerator(name: "AV_CODEC_ID_DIRAC", value: 116)
+!123 = !DIEnumerator(name: "AV_CODEC_ID_BFI", value: 117)
+!124 = !DIEnumerator(name: "AV_CODEC_ID_CMV", value: 118)
+!125 = !DIEnumerator(name: "AV_CODEC_ID_MOTIONPIXELS", value: 119)
+!126 = !DIEnumerator(name: "AV_CODEC_ID_TGV", value: 120)
+!127 = !DIEnumerator(name: "AV_CODEC_ID_TGQ", value: 121)
+!128 = !DIEnumerator(name: "AV_CODEC_ID_TQI", value: 122)
+!129 = !DIEnumerator(name: "AV_CODEC_ID_AURA", value: 123)
+!130 = !DIEnumerator(name: "AV_CODEC_ID_AURA2", value: 124)
+!131 = !DIEnumerator(name: "AV_CODEC_ID_V210X", value: 125)
+!132 = !DIEnumerator(name: "AV_CODEC_ID_TMV", value: 126)
+!133 = !DIEnumerator(name: "AV_CODEC_ID_V210", value: 127)
+!134 = !DIEnumerator(name: "AV_CODEC_ID_DPX", value: 128)
+!135 = !DIEnumerator(name: "AV_CODEC_ID_MAD", value: 129)
+!136 = !DIEnumerator(name: "AV_CODEC_ID_FRWU", value: 130)
+!137 = !DIEnumerator(name: "AV_CODEC_ID_FLASHSV2", value: 131)
+!138 = !DIEnumerator(name: "AV_CODEC_ID_CDGRAPHICS", value: 132)
+!139 = !DIEnumerator(name: "AV_CODEC_ID_R210", value: 133)
+!140 = !DIEnumerator(name: "AV_CODEC_ID_ANM", value: 134)
+!141 = !DIEnumerator(name: "AV_CODEC_ID_BINKVIDEO", value: 135)
+!142 = !DIEnumerator(name: "AV_CODEC_ID_IFF_ILBM", value: 136)
+!143 = !DIEnumerator(name: "AV_CODEC_ID_KGV1", value: 137)
+!144 = !DIEnumerator(name: "AV_CODEC_ID_YOP", value: 138)
+!145 = !DIEnumerator(name: "AV_CODEC_ID_VP8", value: 139)
+!146 = !DIEnumerator(name: "AV_CODEC_ID_PICTOR", value: 140)
+!147 = !DIEnumerator(name: "AV_CODEC_ID_ANSI", value: 141)
+!148 = !DIEnumerator(name: "AV_CODEC_ID_A64_MULTI", value: 142)
+!149 = !DIEnumerator(name: "AV_CODEC_ID_A64_MULTI5", value: 143)
+!150 = !DIEnumerator(name: "AV_CODEC_ID_R10K", value: 144)
+!151 = !DIEnumerator(name: "AV_CODEC_ID_MXPEG", value: 145)
+!152 = !DIEnumerator(name: "AV_CODEC_ID_LAGARITH", value: 146)
+!153 = !DIEnumerator(name: "AV_CODEC_ID_PRORES", value: 147)
+!154 = !DIEnumerator(name: "AV_CODEC_ID_JV", value: 148)
+!155 = !DIEnumerator(name: "AV_CODEC_ID_DFA", value: 149)
+!156 = !DIEnumerator(name: "AV_CODEC_ID_WMV3IMAGE", value: 150)
+!157 = !DIEnumerator(name: "AV_CODEC_ID_VC1IMAGE", value: 151)
+!158 = !DIEnumerator(name: "AV_CODEC_ID_UTVIDEO", value: 152)
+!159 = !DIEnumerator(name: "AV_CODEC_ID_BMV_VIDEO", value: 153)
+!160 = !DIEnumerator(name: "AV_CODEC_ID_VBLE", value: 154)
+!161 = !DIEnumerator(name: "AV_CODEC_ID_DXTORY", value: 155)
+!162 = !DIEnumerator(name: "AV_CODEC_ID_V410", value: 156)
+!163 = !DIEnumerator(name: "AV_CODEC_ID_XWD", value: 157)
+!164 = !DIEnumerator(name: "AV_CODEC_ID_CDXL", value: 158)
+!165 = !DIEnumerator(name: "AV_CODEC_ID_XBM", value: 159)
+!166 = !DIEnumerator(name: "AV_CODEC_ID_ZEROCODEC", value: 160)
+!167 = !DIEnumerator(name: "AV_CODEC_ID_MSS1", value: 161)
+!168 = !DIEnumerator(name: "AV_CODEC_ID_MSA1", value: 162)
+!169 = !DIEnumerator(name: "AV_CODEC_ID_TSCC2", value: 163)
+!170 = !DIEnumerator(name: "AV_CODEC_ID_MTS2", value: 164)
+!171 = !DIEnumerator(name: "AV_CODEC_ID_CLLC", value: 165)
+!172 = !DIEnumerator(name: "AV_CODEC_ID_MSS2", value: 166)
+!173 = !DIEnumerator(name: "AV_CODEC_ID_VP9", value: 167)
+!174 = !DIEnumerator(name: "AV_CODEC_ID_AIC", value: 168)
+!175 = !DIEnumerator(name: "AV_CODEC_ID_ESCAPE130", value: 169)
+!176 = !DIEnumerator(name: "AV_CODEC_ID_G2M", value: 170)
+!177 = !DIEnumerator(name: "AV_CODEC_ID_WEBP", value: 171)
+!178 = !DIEnumerator(name: "AV_CODEC_ID_HNM4_VIDEO", value: 172)
+!179 = !DIEnumerator(name: "AV_CODEC_ID_HEVC", value: 173)
+!180 = !DIEnumerator(name: "AV_CODEC_ID_FIC", value: 174)
+!181 = !DIEnumerator(name: "AV_CODEC_ID_ALIAS_PIX", value: 175)
+!182 = !DIEnumerator(name: "AV_CODEC_ID_BRENDER_PIX", value: 176)
+!183 = !DIEnumerator(name: "AV_CODEC_ID_PAF_VIDEO", value: 177)
+!184 = !DIEnumerator(name: "AV_CODEC_ID_EXR", value: 178)
+!185 = !DIEnumerator(name: "AV_CODEC_ID_VP7", value: 179)
+!186 = !DIEnumerator(name: "AV_CODEC_ID_SANM", value: 180)
+!187 = !DIEnumerator(name: "AV_CODEC_ID_SGIRLE", value: 181)
+!188 = !DIEnumerator(name: "AV_CODEC_ID_MVC1", value: 182)
+!189 = !DIEnumerator(name: "AV_CODEC_ID_MVC2", value: 183)
+!190 = !DIEnumerator(name: "AV_CODEC_ID_HQX", value: 184)
+!191 = !DIEnumerator(name: "AV_CODEC_ID_TDSC", value: 185)
+!192 = !DIEnumerator(name: "AV_CODEC_ID_HQ_HQA", value: 186)
+!193 = !DIEnumerator(name: "AV_CODEC_ID_HAP", value: 187)
+!194 = !DIEnumerator(name: "AV_CODEC_ID_DDS", value: 188)
+!195 = !DIEnumerator(name: "AV_CODEC_ID_DXV", value: 189)
+!196 = !DIEnumerator(name: "AV_CODEC_ID_SCREENPRESSO", value: 190)
+!197 = !DIEnumerator(name: "AV_CODEC_ID_RSCC", value: 191)
+!198 = !DIEnumerator(name: "AV_CODEC_ID_AVS2", value: 192)
+!199 = !DIEnumerator(name: "AV_CODEC_ID_Y41P", value: 32768)
+!200 = !DIEnumerator(name: "AV_CODEC_ID_AVRP", value: 32769)
+!201 = !DIEnumerator(name: "AV_CODEC_ID_012V", value: 32770)
+!202 = !DIEnumerator(name: "AV_CODEC_ID_AVUI", value: 32771)
+!203 = !DIEnumerator(name: "AV_CODEC_ID_AYUV", value: 32772)
+!204 = !DIEnumerator(name: "AV_CODEC_ID_TARGA_Y216", value: 32773)
+!205 = !DIEnumerator(name: "AV_CODEC_ID_V308", value: 32774)
+!206 = !DIEnumerator(name: "AV_CODEC_ID_V408", value: 32775)
+!207 = !DIEnumerator(name: "AV_CODEC_ID_YUV4", value: 32776)
+!208 = !DIEnumerator(name: "AV_CODEC_ID_AVRN", value: 32777)
+!209 = !DIEnumerator(name: "AV_CODEC_ID_CPIA", value: 32778)
+!210 = !DIEnumerator(name: "AV_CODEC_ID_XFACE", value: 32779)
+!211 = !DIEnumerator(name: "AV_CODEC_ID_SNOW", value: 32780)
+!212 = !DIEnumerator(name: "AV_CODEC_ID_SMVJPEG", value: 32781)
+!213 = !DIEnumerator(name: "AV_CODEC_ID_APNG", value: 32782)
+!214 = !DIEnumerator(name: "AV_CODEC_ID_DAALA", value: 32783)
+!215 = !DIEnumerator(name: "AV_CODEC_ID_CFHD", value: 32784)
+!216 = !DIEnumerator(name: "AV_CODEC_ID_TRUEMOTION2RT", value: 32785)
+!217 = !DIEnumerator(name: "AV_CODEC_ID_M101", value: 32786)
+!218 = !DIEnumerator(name: "AV_CODEC_ID_MAGICYUV", value: 32787)
+!219 = !DIEnumerator(name: "AV_CODEC_ID_SHEERVIDEO", value: 32788)
+!220 = !DIEnumerator(name: "AV_CODEC_ID_YLC", value: 32789)
+!221 = !DIEnumerator(name: "AV_CODEC_ID_PSD", value: 32790)
+!222 = !DIEnumerator(name: "AV_CODEC_ID_PIXLET", value: 32791)
+!223 = !DIEnumerator(name: "AV_CODEC_ID_SPEEDHQ", value: 32792)
+!224 = !DIEnumerator(name: "AV_CODEC_ID_FMVC", value: 32793)
+!225 = !DIEnumerator(name: "AV_CODEC_ID_SCPR", value: 32794)
+!226 = !DIEnumerator(name: "AV_CODEC_ID_CLEARVIDEO", value: 32795)
+!227 = !DIEnumerator(name: "AV_CODEC_ID_XPM", value: 32796)
+!228 = !DIEnumerator(name: "AV_CODEC_ID_AV1", value: 32797)
+!229 = !DIEnumerator(name: "AV_CODEC_ID_BITPACKED", value: 32798)
+!230 = !DIEnumerator(name: "AV_CODEC_ID_MSCC", value: 32799)
+!231 = !DIEnumerator(name: "AV_CODEC_ID_SRGC", value: 32800)
+!232 = !DIEnumerator(name: "AV_CODEC_ID_SVG", value: 32801)
+!233 = !DIEnumerator(name: "AV_CODEC_ID_GDV", value: 32802)
+!234 = !DIEnumerator(name: "AV_CODEC_ID_FITS", value: 32803)
+!235 = !DIEnumerator(name: "AV_CODEC_ID_IMM4", value: 32804)
+!236 = !DIEnumerator(name: "AV_CODEC_ID_PROSUMER", value: 32805)
+!237 = !DIEnumerator(name: "AV_CODEC_ID_MWSC", value: 32806)
+!238 = !DIEnumerator(name: "AV_CODEC_ID_WCMV", value: 32807)
+!239 = !DIEnumerator(name: "AV_CODEC_ID_RASC", value: 32808)
+!240 = !DIEnumerator(name: "AV_CODEC_ID_HYMT", value: 32809)
+!241 = !DIEnumerator(name: "AV_CODEC_ID_ARBC", value: 32810)
+!242 = !DIEnumerator(name: "AV_CODEC_ID_FIRST_AUDIO", value: 65536)
+!243 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S16LE", value: 65536)
+!244 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S16BE", value: 65537)
+!245 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U16LE", value: 65538)
+!246 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U16BE", value: 65539)
+!247 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S8", value: 65540)
+!248 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U8", value: 65541)
+!249 = !DIEnumerator(name: "AV_CODEC_ID_PCM_MULAW", value: 65542)
+!250 = !DIEnumerator(name: "AV_CODEC_ID_PCM_ALAW", value: 65543)
+!251 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S32LE", value: 65544)
+!252 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S32BE", value: 65545)
+!253 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U32LE", value: 65546)
+!254 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U32BE", value: 65547)
+!255 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S24LE", value: 65548)
+!256 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S24BE", value: 65549)
+!257 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U24LE", value: 65550)
+!258 = !DIEnumerator(name: "AV_CODEC_ID_PCM_U24BE", value: 65551)
+!259 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S24DAUD", value: 65552)
+!260 = !DIEnumerator(name: "AV_CODEC_ID_PCM_ZORK", value: 65553)
+!261 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S16LE_PLANAR", value: 65554)
+!262 = !DIEnumerator(name: "AV_CODEC_ID_PCM_DVD", value: 65555)
+!263 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F32BE", value: 65556)
+!264 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F32LE", value: 65557)
+!265 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F64BE", value: 65558)
+!266 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F64LE", value: 65559)
+!267 = !DIEnumerator(name: "AV_CODEC_ID_PCM_BLURAY", value: 65560)
+!268 = !DIEnumerator(name: "AV_CODEC_ID_PCM_LXF", value: 65561)
+!269 = !DIEnumerator(name: "AV_CODEC_ID_S302M", value: 65562)
+!270 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S8_PLANAR", value: 65563)
+!271 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S24LE_PLANAR", value: 65564)
+!272 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S32LE_PLANAR", value: 65565)
+!273 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S16BE_PLANAR", value: 65566)
+!274 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S64LE", value: 67584)
+!275 = !DIEnumerator(name: "AV_CODEC_ID_PCM_S64BE", value: 67585)
+!276 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F16LE", value: 67586)
+!277 = !DIEnumerator(name: "AV_CODEC_ID_PCM_F24LE", value: 67587)
+!278 = !DIEnumerator(name: "AV_CODEC_ID_PCM_VIDC", value: 67588)
+!279 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_QT", value: 69632)
+!280 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_WAV", value: 69633)
+!281 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_DK3", value: 69634)
+!282 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_DK4", value: 69635)
+!283 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_WS", value: 69636)
+!284 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_SMJPEG", value: 69637)
+!285 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_MS", value: 69638)
+!286 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_4XM", value: 69639)
+!287 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_XA", value: 69640)
+!288 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_ADX", value: 69641)
+!289 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA", value: 69642)
+!290 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_G726", value: 69643)
+!291 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_CT", value: 69644)
+!292 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_SWF", value: 69645)
+!293 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_YAMAHA", value: 69646)
+!294 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_SBPRO_4", value: 69647)
+!295 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_SBPRO_3", value: 69648)
+!296 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_SBPRO_2", value: 69649)
+!297 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_THP", value: 69650)
+!298 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_AMV", value: 69651)
+!299 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA_R1", value: 69652)
+!300 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA_R3", value: 69653)
+!301 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA_R2", value: 69654)
+!302 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_EA_SEAD", value: 69655)
+!303 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_EA_EACS", value: 69656)
+!304 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA_XAS", value: 69657)
+!305 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_EA_MAXIS_XA", value: 69658)
+!306 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_ISS", value: 69659)
+!307 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_G722", value: 69660)
+!308 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_APC", value: 69661)
+!309 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_VIMA", value: 69662)
+!310 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_AFC", value: 71680)
+!311 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_OKI", value: 71681)
+!312 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_DTK", value: 71682)
+!313 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_RAD", value: 71683)
+!314 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_G726LE", value: 71684)
+!315 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_THP_LE", value: 71685)
+!316 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_PSX", value: 71686)
+!317 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_AICA", value: 71687)
+!318 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_IMA_DAT4", value: 71688)
+!319 = !DIEnumerator(name: "AV_CODEC_ID_ADPCM_MTAF", value: 71689)
+!320 = !DIEnumerator(name: "AV_CODEC_ID_AMR_NB", value: 73728)
+!321 = !DIEnumerator(name: "AV_CODEC_ID_AMR_WB", value: 73729)
+!322 = !DIEnumerator(name: "AV_CODEC_ID_RA_144", value: 77824)
+!323 = !DIEnumerator(name: "AV_CODEC_ID_RA_288", value: 77825)
+!324 = !DIEnumerator(name: "AV_CODEC_ID_ROQ_DPCM", value: 81920)
+!325 = !DIEnumerator(name: "AV_CODEC_ID_INTERPLAY_DPCM", value: 81921)
+!326 = !DIEnumerator(name: "AV_CODEC_ID_XAN_DPCM", value: 81922)
+!327 = !DIEnumerator(name: "AV_CODEC_ID_SOL_DPCM", value: 81923)
+!328 = !DIEnumerator(name: "AV_CODEC_ID_SDX2_DPCM", value: 83968)
+!329 = !DIEnumerator(name: "AV_CODEC_ID_GREMLIN_DPCM", value: 83969)
+!330 = !DIEnumerator(name: "AV_CODEC_ID_MP2", value: 86016)
+!331 = !DIEnumerator(name: "AV_CODEC_ID_MP3", value: 86017)
+!332 = !DIEnumerator(name: "AV_CODEC_ID_AAC", value: 86018)
+!333 = !DIEnumerator(name: "AV_CODEC_ID_AC3", value: 86019)
+!334 = !DIEnumerator(name: "AV_CODEC_ID_DTS", value: 86020)
+!335 = !DIEnumerator(name: "AV_CODEC_ID_VORBIS", value: 86021)
+!336 = !DIEnumerator(name: "AV_CODEC_ID_DVAUDIO", value: 86022)
+!337 = !DIEnumerator(name: "AV_CODEC_ID_WMAV1", value: 86023)
+!338 = !DIEnumerator(name: "AV_CODEC_ID_WMAV2", value: 86024)
+!339 = !DIEnumerator(name: "AV_CODEC_ID_MACE3", value: 86025)
+!340 = !DIEnumerator(name: "AV_CODEC_ID_MACE6", value: 86026)
+!341 = !DIEnumerator(name: "AV_CODEC_ID_VMDAUDIO", value: 86027)
+!342 = !DIEnumerator(name: "AV_CODEC_ID_FLAC", value: 86028)
+!343 = !DIEnumerator(name: "AV_CODEC_ID_MP3ADU", value: 86029)
+!344 = !DIEnumerator(name: "AV_CODEC_ID_MP3ON4", value: 86030)
+!345 = !DIEnumerator(name: "AV_CODEC_ID_SHORTEN", value: 86031)
+!346 = !DIEnumerator(name: "AV_CODEC_ID_ALAC", value: 86032)
+!347 = !DIEnumerator(name: "AV_CODEC_ID_WESTWOOD_SND1", value: 86033)
+!348 = !DIEnumerator(name: "AV_CODEC_ID_GSM", value: 86034)
+!349 = !DIEnumerator(name: "AV_CODEC_ID_QDM2", value: 86035)
+!350 = !DIEnumerator(name: "AV_CODEC_ID_COOK", value: 86036)
+!351 = !DIEnumerator(name: "AV_CODEC_ID_TRUESPEECH", value: 86037)
+!352 = !DIEnumerator(name: "AV_CODEC_ID_TTA", value: 86038)
+!353 = !DIEnumerator(name: "AV_CODEC_ID_SMACKAUDIO", value: 86039)
+!354 = !DIEnumerator(name: "AV_CODEC_ID_QCELP", value: 86040)
+!355 = !DIEnumerator(name: "AV_CODEC_ID_WAVPACK", value: 86041)
+!356 = !DIEnumerator(name: "AV_CODEC_ID_DSICINAUDIO", value: 86042)
+!357 = !DIEnumerator(name: "AV_CODEC_ID_IMC", value: 86043)
+!358 = !DIEnumerator(name: "AV_CODEC_ID_MUSEPACK7", value: 86044)
+!359 = !DIEnumerator(name: "AV_CODEC_ID_MLP", value: 86045)
+!360 = !DIEnumerator(name: "AV_CODEC_ID_GSM_MS", value: 86046)
+!361 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC3", value: 86047)
+!362 = !DIEnumerator(name: "AV_CODEC_ID_APE", value: 86048)
+!363 = !DIEnumerator(name: "AV_CODEC_ID_NELLYMOSER", value: 86049)
+!364 = !DIEnumerator(name: "AV_CODEC_ID_MUSEPACK8", value: 86050)
+!365 = !DIEnumerator(name: "AV_CODEC_ID_SPEEX", value: 86051)
+!366 = !DIEnumerator(name: "AV_CODEC_ID_WMAVOICE", value: 86052)
+!367 = !DIEnumerator(name: "AV_CODEC_ID_WMAPRO", value: 86053)
+!368 = !DIEnumerator(name: "AV_CODEC_ID_WMALOSSLESS", value: 86054)
+!369 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC3P", value: 86055)
+!370 = !DIEnumerator(name: "AV_CODEC_ID_EAC3", value: 86056)
+!371 = !DIEnumerator(name: "AV_CODEC_ID_SIPR", value: 86057)
+!372 = !DIEnumerator(name: "AV_CODEC_ID_MP1", value: 86058)
+!373 = !DIEnumerator(name: "AV_CODEC_ID_TWINVQ", value: 86059)
+!374 = !DIEnumerator(name: "AV_CODEC_ID_TRUEHD", value: 86060)
+!375 = !DIEnumerator(name: "AV_CODEC_ID_MP4ALS", value: 86061)
+!376 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC1", value: 86062)
+!377 = !DIEnumerator(name: "AV_CODEC_ID_BINKAUDIO_RDFT", value: 86063)
+!378 = !DIEnumerator(name: "AV_CODEC_ID_BINKAUDIO_DCT", value: 86064)
+!379 = !DIEnumerator(name: "AV_CODEC_ID_AAC_LATM", value: 86065)
+!380 = !DIEnumerator(name: "AV_CODEC_ID_QDMC", value: 86066)
+!381 = !DIEnumerator(name: "AV_CODEC_ID_CELT", value: 86067)
+!382 = !DIEnumerator(name: "AV_CODEC_ID_G723_1", value: 86068)
+!383 = !DIEnumerator(name: "AV_CODEC_ID_G729", value: 86069)
+!384 = !DIEnumerator(name: "AV_CODEC_ID_8SVX_EXP", value: 86070)
+!385 = !DIEnumerator(name: "AV_CODEC_ID_8SVX_FIB", value: 86071)
+!386 = !DIEnumerator(name: "AV_CODEC_ID_BMV_AUDIO", value: 86072)
+!387 = !DIEnumerator(name: "AV_CODEC_ID_RALF", value: 86073)
+!388 = !DIEnumerator(name: "AV_CODEC_ID_IAC", value: 86074)
+!389 = !DIEnumerator(name: "AV_CODEC_ID_ILBC", value: 86075)
+!390 = !DIEnumerator(name: "AV_CODEC_ID_OPUS", value: 86076)
+!391 = !DIEnumerator(name: "AV_CODEC_ID_COMFORT_NOISE", value: 86077)
+!392 = !DIEnumerator(name: "AV_CODEC_ID_TAK", value: 86078)
+!393 = !DIEnumerator(name: "AV_CODEC_ID_METASOUND", value: 86079)
+!394 = !DIEnumerator(name: "AV_CODEC_ID_PAF_AUDIO", value: 86080)
+!395 = !DIEnumerator(name: "AV_CODEC_ID_ON2AVC", value: 86081)
+!396 = !DIEnumerator(name: "AV_CODEC_ID_DSS_SP", value: 86082)
+!397 = !DIEnumerator(name: "AV_CODEC_ID_CODEC2", value: 86083)
+!398 = !DIEnumerator(name: "AV_CODEC_ID_FFWAVESYNTH", value: 88064)
+!399 = !DIEnumerator(name: "AV_CODEC_ID_SONIC", value: 88065)
+!400 = !DIEnumerator(name: "AV_CODEC_ID_SONIC_LS", value: 88066)
+!401 = !DIEnumerator(name: "AV_CODEC_ID_EVRC", value: 88067)
+!402 = !DIEnumerator(name: "AV_CODEC_ID_SMV", value: 88068)
+!403 = !DIEnumerator(name: "AV_CODEC_ID_DSD_LSBF", value: 88069)
+!404 = !DIEnumerator(name: "AV_CODEC_ID_DSD_MSBF", value: 88070)
+!405 = !DIEnumerator(name: "AV_CODEC_ID_DSD_LSBF_PLANAR", value: 88071)
+!406 = !DIEnumerator(name: "AV_CODEC_ID_DSD_MSBF_PLANAR", value: 88072)
+!407 = !DIEnumerator(name: "AV_CODEC_ID_4GV", value: 88073)
+!408 = !DIEnumerator(name: "AV_CODEC_ID_INTERPLAY_ACM", value: 88074)
+!409 = !DIEnumerator(name: "AV_CODEC_ID_XMA1", value: 88075)
+!410 = !DIEnumerator(name: "AV_CODEC_ID_XMA2", value: 88076)
+!411 = !DIEnumerator(name: "AV_CODEC_ID_DST", value: 88077)
+!412 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC3AL", value: 88078)
+!413 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC3PAL", value: 88079)
+!414 = !DIEnumerator(name: "AV_CODEC_ID_DOLBY_E", value: 88080)
+!415 = !DIEnumerator(name: "AV_CODEC_ID_APTX", value: 88081)
+!416 = !DIEnumerator(name: "AV_CODEC_ID_APTX_HD", value: 88082)
+!417 = !DIEnumerator(name: "AV_CODEC_ID_SBC", value: 88083)
+!418 = !DIEnumerator(name: "AV_CODEC_ID_ATRAC9", value: 88084)
+!419 = !DIEnumerator(name: "AV_CODEC_ID_HCOM", value: 88085)
+!420 = !DIEnumerator(name: "AV_CODEC_ID_FIRST_SUBTITLE", value: 94208)
+!421 = !DIEnumerator(name: "AV_CODEC_ID_DVD_SUBTITLE", value: 94208)
+!422 = !DIEnumerator(name: "AV_CODEC_ID_DVB_SUBTITLE", value: 94209)
+!423 = !DIEnumerator(name: "AV_CODEC_ID_TEXT", value: 94210)
+!424 = !DIEnumerator(name: "AV_CODEC_ID_XSUB", value: 94211)
+!425 = !DIEnumerator(name: "AV_CODEC_ID_SSA", value: 94212)
+!426 = !DIEnumerator(name: "AV_CODEC_ID_MOV_TEXT", value: 94213)
+!427 = !DIEnumerator(name: "AV_CODEC_ID_HDMV_PGS_SUBTITLE", value: 94214)
+!428 = !DIEnumerator(name: "AV_CODEC_ID_DVB_TELETEXT", value: 94215)
+!429 = !DIEnumerator(name: "AV_CODEC_ID_SRT", value: 94216)
+!430 = !DIEnumerator(name: "AV_CODEC_ID_MICRODVD", value: 96256)
+!431 = !DIEnumerator(name: "AV_CODEC_ID_EIA_608", value: 96257)
+!432 = !DIEnumerator(name: "AV_CODEC_ID_JACOSUB", value: 96258)
+!433 = !DIEnumerator(name: "AV_CODEC_ID_SAMI", value: 96259)
+!434 = !DIEnumerator(name: "AV_CODEC_ID_REALTEXT", value: 96260)
+!435 = !DIEnumerator(name: "AV_CODEC_ID_STL", value: 96261)
+!436 = !DIEnumerator(name: "AV_CODEC_ID_SUBVIEWER1", value: 96262)
+!437 = !DIEnumerator(name: "AV_CODEC_ID_SUBVIEWER", value: 96263)
+!438 = !DIEnumerator(name: "AV_CODEC_ID_SUBRIP", value: 96264)
+!439 = !DIEnumerator(name: "AV_CODEC_ID_WEBVTT", value: 96265)
+!440 = !DIEnumerator(name: "AV_CODEC_ID_MPL2", value: 96266)
+!441 = !DIEnumerator(name: "AV_CODEC_ID_VPLAYER", value: 96267)
+!442 = !DIEnumerator(name: "AV_CODEC_ID_PJS", value: 96268)
+!443 = !DIEnumerator(name: "AV_CODEC_ID_ASS", value: 96269)
+!444 = !DIEnumerator(name: "AV_CODEC_ID_HDMV_TEXT_SUBTITLE", value: 96270)
+!445 = !DIEnumerator(name: "AV_CODEC_ID_TTML", value: 96271)
+!446 = !DIEnumerator(name: "AV_CODEC_ID_ARIB_CAPTION", value: 96272)
+!447 = !DIEnumerator(name: "AV_CODEC_ID_FIRST_UNKNOWN", value: 98304)
+!448 = !DIEnumerator(name: "AV_CODEC_ID_TTF", value: 98304)
+!449 = !DIEnumerator(name: "AV_CODEC_ID_SCTE_35", value: 98305)
+!450 = !DIEnumerator(name: "AV_CODEC_ID_BINTEXT", value: 100352)
+!451 = !DIEnumerator(name: "AV_CODEC_ID_XBIN", value: 100353)
+!452 = !DIEnumerator(name: "AV_CODEC_ID_IDF", value: 100354)
+!453 = !DIEnumerator(name: "AV_CODEC_ID_OTF", value: 100355)
+!454 = !DIEnumerator(name: "AV_CODEC_ID_SMPTE_KLV", value: 100356)
+!455 = !DIEnumerator(name: "AV_CODEC_ID_DVD_NAV", value: 100357)
+!456 = !DIEnumerator(name: "AV_CODEC_ID_TIMED_ID3", value: 100358)
+!457 = !DIEnumerator(name: "AV_CODEC_ID_BIN_DATA", value: 100359)
+!458 = !DIEnumerator(name: "AV_CODEC_ID_PROBE", value: 102400)
+!459 = !DIEnumerator(name: "AV_CODEC_ID_MPEG2TS", value: 131072)
+!460 = !DIEnumerator(name: "AV_CODEC_ID_MPEG4SYSTEMS", value: 131073)
+!461 = !DIEnumerator(name: "AV_CODEC_ID_FFMETADATA", value: 135168)
+!462 = !DIEnumerator(name: "AV_CODEC_ID_WRAPPED_AVFRAME", value: 135169)
+!463 = !DICompositeType(tag: DW_TAG_enumeration_type, file: !464, line: 29, size: 32, align: 32, elements: !465)
+!464 = !DIFile(filename: "./libavutil/log.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!465 = !{!466, !467, !468, !469, !470, !471, !472, !473, !474, !475, !476, !477, !478, !479, !480, !481, !482, !483}
+!466 = !DIEnumerator(name: "AV_CLASS_CATEGORY_NA", value: 0)
+!467 = !DIEnumerator(name: "AV_CLASS_CATEGORY_INPUT", value: 1)
+!468 = !DIEnumerator(name: "AV_CLASS_CATEGORY_OUTPUT", value: 2)
+!469 = !DIEnumerator(name: "AV_CLASS_CATEGORY_MUXER", value: 3)
+!470 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEMUXER", value: 4)
+!471 = !DIEnumerator(name: "AV_CLASS_CATEGORY_ENCODER", value: 5)
+!472 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DECODER", value: 6)
+!473 = !DIEnumerator(name: "AV_CLASS_CATEGORY_FILTER", value: 7)
+!474 = !DIEnumerator(name: "AV_CLASS_CATEGORY_BITSTREAM_FILTER", value: 8)
+!475 = !DIEnumerator(name: "AV_CLASS_CATEGORY_SWSCALER", value: 9)
+!476 = !DIEnumerator(name: "AV_CLASS_CATEGORY_SWRESAMPLER", value: 10)
+!477 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_VIDEO_OUTPUT", value: 40)
+!478 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_VIDEO_INPUT", value: 41)
+!479 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_AUDIO_OUTPUT", value: 42)
+!480 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_AUDIO_INPUT", value: 43)
+!481 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_OUTPUT", value: 44)
+!482 = !DIEnumerator(name: "AV_CLASS_CATEGORY_DEVICE_INPUT", value: 45)
+!483 = !DIEnumerator(name: "AV_CLASS_CATEGORY_NB", value: 46)
+!484 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVMediaType", file: !485, line: 199, size: 32, align: 32, elements: !486)
+!485 = !DIFile(filename: "./libavutil/avutil.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!486 = !{!487, !488, !489, !490, !491, !492, !493}
+!487 = !DIEnumerator(name: "AVMEDIA_TYPE_UNKNOWN", value: -1)
+!488 = !DIEnumerator(name: "AVMEDIA_TYPE_VIDEO", value: 0)
+!489 = !DIEnumerator(name: "AVMEDIA_TYPE_AUDIO", value: 1)
+!490 = !DIEnumerator(name: "AVMEDIA_TYPE_DATA", value: 2)
+!491 = !DIEnumerator(name: "AVMEDIA_TYPE_SUBTITLE", value: 3)
+!492 = !DIEnumerator(name: "AVMEDIA_TYPE_ATTACHMENT", value: 4)
+!493 = !DIEnumerator(name: "AVMEDIA_TYPE_NB", value: 5)
+!494 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVFieldOrder", file: !4, line: 1534, size: 32, align: 32, elements: !495)
+!495 = !{!496, !497, !498, !499, !500, !501}
+!496 = !DIEnumerator(name: "AV_FIELD_UNKNOWN", value: 0)
+!497 = !DIEnumerator(name: "AV_FIELD_PROGRESSIVE", value: 1)
+!498 = !DIEnumerator(name: "AV_FIELD_TT", value: 2)
+!499 = !DIEnumerator(name: "AV_FIELD_BB", value: 3)
+!500 = !DIEnumerator(name: "AV_FIELD_TB", value: 4)
+!501 = !DIEnumerator(name: "AV_FIELD_BT", value: 5)
+!502 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVColorRange", file: !503, line: 516, size: 32, align: 32, elements: !504)
+!503 = !DIFile(filename: "./libavutil/pixfmt.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!504 = !{!505, !506, !507, !508}
+!505 = !DIEnumerator(name: "AVCOL_RANGE_UNSPECIFIED", value: 0)
+!506 = !DIEnumerator(name: "AVCOL_RANGE_MPEG", value: 1)
+!507 = !DIEnumerator(name: "AVCOL_RANGE_JPEG", value: 2)
+!508 = !DIEnumerator(name: "AVCOL_RANGE_NB", value: 3)
+!509 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVColorPrimaries", file: !503, line: 440, size: 32, align: 32, elements: !510)
+!510 = !{!511, !512, !513, !514, !515, !516, !517, !518, !519, !520, !521, !522, !523, !524, !525, !526}
+!511 = !DIEnumerator(name: "AVCOL_PRI_RESERVED0", value: 0)
+!512 = !DIEnumerator(name: "AVCOL_PRI_BT709", value: 1)
+!513 = !DIEnumerator(name: "AVCOL_PRI_UNSPECIFIED", value: 2)
+!514 = !DIEnumerator(name: "AVCOL_PRI_RESERVED", value: 3)
+!515 = !DIEnumerator(name: "AVCOL_PRI_BT470M", value: 4)
+!516 = !DIEnumerator(name: "AVCOL_PRI_BT470BG", value: 5)
+!517 = !DIEnumerator(name: "AVCOL_PRI_SMPTE170M", value: 6)
+!518 = !DIEnumerator(name: "AVCOL_PRI_SMPTE240M", value: 7)
+!519 = !DIEnumerator(name: "AVCOL_PRI_FILM", value: 8)
+!520 = !DIEnumerator(name: "AVCOL_PRI_BT2020", value: 9)
+!521 = !DIEnumerator(name: "AVCOL_PRI_SMPTE428", value: 10)
+!522 = !DIEnumerator(name: "AVCOL_PRI_SMPTEST428_1", value: 10)
+!523 = !DIEnumerator(name: "AVCOL_PRI_SMPTE431", value: 11)
+!524 = !DIEnumerator(name: "AVCOL_PRI_SMPTE432", value: 12)
+!525 = !DIEnumerator(name: "AVCOL_PRI_JEDEC_P22", value: 22)
+!526 = !DIEnumerator(name: "AVCOL_PRI_NB", value: 23)
+!527 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVColorTransferCharacteristic", file: !503, line: 464, size: 32, align: 32, elements: !528)
+!528 = !{!529, !530, !531, !532, !533, !534, !535, !536, !537, !538, !539, !540, !541, !542, !543, !544, !545, !546, !547, !548, !549, !550}
+!529 = !DIEnumerator(name: "AVCOL_TRC_RESERVED0", value: 0)
+!530 = !DIEnumerator(name: "AVCOL_TRC_BT709", value: 1)
+!531 = !DIEnumerator(name: "AVCOL_TRC_UNSPECIFIED", value: 2)
+!532 = !DIEnumerator(name: "AVCOL_TRC_RESERVED", value: 3)
+!533 = !DIEnumerator(name: "AVCOL_TRC_GAMMA22", value: 4)
+!534 = !DIEnumerator(name: "AVCOL_TRC_GAMMA28", value: 5)
+!535 = !DIEnumerator(name: "AVCOL_TRC_SMPTE170M", value: 6)
+!536 = !DIEnumerator(name: "AVCOL_TRC_SMPTE240M", value: 7)
+!537 = !DIEnumerator(name: "AVCOL_TRC_LINEAR", value: 8)
+!538 = !DIEnumerator(name: "AVCOL_TRC_LOG", value: 9)
+!539 = !DIEnumerator(name: "AVCOL_TRC_LOG_SQRT", value: 10)
+!540 = !DIEnumerator(name: "AVCOL_TRC_IEC61966_2_4", value: 11)
+!541 = !DIEnumerator(name: "AVCOL_TRC_BT1361_ECG", value: 12)
+!542 = !DIEnumerator(name: "AVCOL_TRC_IEC61966_2_1", value: 13)
+!543 = !DIEnumerator(name: "AVCOL_TRC_BT2020_10", value: 14)
+!544 = !DIEnumerator(name: "AVCOL_TRC_BT2020_12", value: 15)
+!545 = !DIEnumerator(name: "AVCOL_TRC_SMPTE2084", value: 16)
+!546 = !DIEnumerator(name: "AVCOL_TRC_SMPTEST2084", value: 16)
+!547 = !DIEnumerator(name: "AVCOL_TRC_SMPTE428", value: 17)
+!548 = !DIEnumerator(name: "AVCOL_TRC_SMPTEST428_1", value: 17)
+!549 = !DIEnumerator(name: "AVCOL_TRC_ARIB_STD_B67", value: 18)
+!550 = !DIEnumerator(name: "AVCOL_TRC_NB", value: 19)
+!551 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVColorSpace", file: !503, line: 493, size: 32, align: 32, elements: !552)
+!552 = !{!553, !554, !555, !556, !557, !558, !559, !560, !561, !562, !563, !564, !565, !566, !567, !568, !569}
+!553 = !DIEnumerator(name: "AVCOL_SPC_RGB", value: 0)
+!554 = !DIEnumerator(name: "AVCOL_SPC_BT709", value: 1)
+!555 = !DIEnumerator(name: "AVCOL_SPC_UNSPECIFIED", value: 2)
+!556 = !DIEnumerator(name: "AVCOL_SPC_RESERVED", value: 3)
+!557 = !DIEnumerator(name: "AVCOL_SPC_FCC", value: 4)
+!558 = !DIEnumerator(name: "AVCOL_SPC_BT470BG", value: 5)
+!559 = !DIEnumerator(name: "AVCOL_SPC_SMPTE170M", value: 6)
+!560 = !DIEnumerator(name: "AVCOL_SPC_SMPTE240M", value: 7)
+!561 = !DIEnumerator(name: "AVCOL_SPC_YCGCO", value: 8)
+!562 = !DIEnumerator(name: "AVCOL_SPC_YCOCG", value: 8)
+!563 = !DIEnumerator(name: "AVCOL_SPC_BT2020_NCL", value: 9)
+!564 = !DIEnumerator(name: "AVCOL_SPC_BT2020_CL", value: 10)
+!565 = !DIEnumerator(name: "AVCOL_SPC_SMPTE2085", value: 11)
+!566 = !DIEnumerator(name: "AVCOL_SPC_CHROMA_DERIVED_NCL", value: 12)
+!567 = !DIEnumerator(name: "AVCOL_SPC_CHROMA_DERIVED_CL", value: 13)
+!568 = !DIEnumerator(name: "AVCOL_SPC_ICTCP", value: 14)
+!569 = !DIEnumerator(name: "AVCOL_SPC_NB", value: 15)
+!570 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVChromaLocation", file: !503, line: 538, size: 32, align: 32, elements: !571)
+!571 = !{!572, !573, !574, !575, !576, !577, !578, !579}
+!572 = !DIEnumerator(name: "AVCHROMA_LOC_UNSPECIFIED", value: 0)
+!573 = !DIEnumerator(name: "AVCHROMA_LOC_LEFT", value: 1)
+!574 = !DIEnumerator(name: "AVCHROMA_LOC_CENTER", value: 2)
+!575 = !DIEnumerator(name: "AVCHROMA_LOC_TOPLEFT", value: 3)
+!576 = !DIEnumerator(name: "AVCHROMA_LOC_TOP", value: 4)
+!577 = !DIEnumerator(name: "AVCHROMA_LOC_BOTTOMLEFT", value: 5)
+!578 = !DIEnumerator(name: "AVCHROMA_LOC_BOTTOM", value: 6)
+!579 = !DIEnumerator(name: "AVCHROMA_LOC_NB", value: 7)
+!580 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "AVPacketSideDataType", file: !4, line: 1175, size: 32, align: 32, elements: !581)
+!581 = !{!582, !583, !584, !585, !586, !587, !588, !589, !590, !591, !592, !593, !594, !595, !596, !597, !598, !599, !600, !601, !602, !603, !604, !605, !606, !607, !608, !609}
+!582 = !DIEnumerator(name: "AV_PKT_DATA_PALETTE", value: 0)
+!583 = !DIEnumerator(name: "AV_PKT_DATA_NEW_EXTRADATA", value: 1)
+!584 = !DIEnumerator(name: "AV_PKT_DATA_PARAM_CHANGE", value: 2)
+!585 = !DIEnumerator(name: "AV_PKT_DATA_H263_MB_INFO", value: 3)
+!586 = !DIEnumerator(name: "AV_PKT_DATA_REPLAYGAIN", value: 4)
+!587 = !DIEnumerator(name: "AV_PKT_DATA_DISPLAYMATRIX", value: 5)
+!588 = !DIEnumerator(name: "AV_PKT_DATA_STEREO3D", value: 6)
+!589 = !DIEnumerator(name: "AV_PKT_DATA_AUDIO_SERVICE_TYPE", value: 7)
+!590 = !DIEnumerator(name: "AV_PKT_DATA_QUALITY_STATS", value: 8)
+!591 = !DIEnumerator(name: "AV_PKT_DATA_FALLBACK_TRACK", value: 9)
+!592 = !DIEnumerator(name: "AV_PKT_DATA_CPB_PROPERTIES", value: 10)
+!593 = !DIEnumerator(name: "AV_PKT_DATA_SKIP_SAMPLES", value: 11)
+!594 = !DIEnumerator(name: "AV_PKT_DATA_JP_DUALMONO", value: 12)
+!595 = !DIEnumerator(name: "AV_PKT_DATA_STRINGS_METADATA", value: 13)
+!596 = !DIEnumerator(name: "AV_PKT_DATA_SUBTITLE_POSITION", value: 14)
+!597 = !DIEnumerator(name: "AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL", value: 15)
+!598 = !DIEnumerator(name: "AV_PKT_DATA_WEBVTT_IDENTIFIER", value: 16)
+!599 = !DIEnumerator(name: "AV_PKT_DATA_WEBVTT_SETTINGS", value: 17)
+!600 = !DIEnumerator(name: "AV_PKT_DATA_METADATA_UPDATE", value: 18)
+!601 = !DIEnumerator(name: "AV_PKT_DATA_MPEGTS_STREAM_ID", value: 19)
+!602 = !DIEnumerator(name: "AV_PKT_DATA_MASTERING_DISPLAY_METADATA", value: 20)
+!603 = !DIEnumerator(name: "AV_PKT_DATA_SPHERICAL", value: 21)
+!604 = !DIEnumerator(name: "AV_PKT_DATA_CONTENT_LIGHT_LEVEL", value: 22)
+!605 = !DIEnumerator(name: "AV_PKT_DATA_A53_CC", value: 23)
+!606 = !DIEnumerator(name: "AV_PKT_DATA_ENCRYPTION_INIT_INFO", value: 24)
+!607 = !DIEnumerator(name: "AV_PKT_DATA_ENCRYPTION_INFO", value: 25)
+!608 = !DIEnumerator(name: "AV_PKT_DATA_AFD", value: 26)
+!609 = !DIEnumerator(name: "AV_PKT_DATA_NB", value: 27)
+!610 = !{!611}
+!611 = !DIDerivedType(tag: DW_TAG_typedef, name: "int64_t", file: !612, line: 40, baseType: !613)
+!612 = !DIFile(filename: "/usr/include/stdint.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!613 = !DIBasicType(name: "long int", size: 64, align: 64, encoding: DW_ATE_signed)
+!614 = !{!615}
+!615 = distinct !DIGlobalVariable(name: "ff_trace_headers_bsf", scope: !0, file: !616, line: 104, type: !617, isLocal: false, isDefinition: true, variable: { i8*, i32*, %struct.AVClass*, i32, i32 (%struct.AVBSFContext*)*, i32 (%struct.AVBSFContext*, %struct.AVPacket*)*, void (%struct.AVBSFContext*)*, void (%struct.AVBSFContext*)* }* @ff_trace_headers_bsf)
+!616 = !DIFile(filename: "libavcodec/trace_headers_bsf.c", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!617 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !618)
+!618 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVBitStreamFilter", file: !4, line: 5830, baseType: !619)
+!619 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVBitStreamFilter", file: !4, line: 5796, size: 512, align: 64, elements: !620)
+!620 = !{!621, !625, !628, !671, !672, !739, !777, !781}
+!621 = !DIDerivedType(tag: DW_TAG_member, name: "name", scope: !619, file: !4, line: 5797, baseType: !622, size: 64, align: 64)
+!622 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !623, size: 64, align: 64)
+!623 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !624)
+!624 = !DIBasicType(name: "char", size: 8, align: 8, encoding: DW_ATE_signed_char)
+!625 = !DIDerivedType(tag: DW_TAG_member, name: "codec_ids", scope: !619, file: !4, line: 5804, baseType: !626, size: 64, align: 64, offset: 64)
+!626 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !627, size: 64, align: 64)
+!627 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !3)
+!628 = !DIDerivedType(tag: DW_TAG_member, name: "priv_class", scope: !619, file: !4, line: 5815, baseType: !629, size: 64, align: 64, offset: 128)
+!629 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !630, size: 64, align: 64)
+!630 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !631)
+!631 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVClass", file: !464, line: 143, baseType: !632)
+!632 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVClass", file: !464, line: 67, size: 640, align: 64, elements: !633)
+!633 = !{!634, !635, !640, !644, !646, !647, !648, !652, !658, !660, !664}
+!634 = !DIDerivedType(tag: DW_TAG_member, name: "class_name", scope: !632, file: !464, line: 72, baseType: !622, size: 64, align: 64)
+!635 = !DIDerivedType(tag: DW_TAG_member, name: "item_name", scope: !632, file: !464, line: 78, baseType: !636, size: 64, align: 64, offset: 64)
+!636 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !637, size: 64, align: 64)
+!637 = !DISubroutineType(types: !638)
+!638 = !{!622, !639}
+!639 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: null, size: 64, align: 64)
+!640 = !DIDerivedType(tag: DW_TAG_member, name: "option", scope: !632, file: !464, line: 85, baseType: !641, size: 64, align: 64, offset: 128)
+!641 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !642, size: 64, align: 64)
+!642 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !643)
+!643 = !DICompositeType(tag: DW_TAG_structure_type, name: "AVOption", file: !464, line: 85, flags: DIFlagFwdDecl)
+!644 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !632, file: !464, line: 93, baseType: !645, size: 32, align: 32, offset: 192)
+!645 = !DIBasicType(name: "int", size: 32, align: 32, encoding: DW_ATE_signed)
+!646 = !DIDerivedType(tag: DW_TAG_member, name: "log_level_offset_offset", scope: !632, file: !464, line: 99, baseType: !645, size: 32, align: 32, offset: 224)
+!647 = !DIDerivedType(tag: DW_TAG_member, name: "parent_log_context_offset", scope: !632, file: !464, line: 108, baseType: !645, size: 32, align: 32, offset: 256)
+!648 = !DIDerivedType(tag: DW_TAG_member, name: "child_next", scope: !632, file: !464, line: 113, baseType: !649, size: 64, align: 64, offset: 320)
+!649 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !650, size: 64, align: 64)
+!650 = !DISubroutineType(types: !651)
+!651 = !{!639, !639, !639}
+!652 = !DIDerivedType(tag: DW_TAG_member, name: "child_class_next", scope: !632, file: !464, line: 123, baseType: !653, size: 64, align: 64, offset: 384)
+!653 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !654, size: 64, align: 64)
+!654 = !DISubroutineType(types: !655)
+!655 = !{!656, !656}
+!656 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !657, size: 64, align: 64)
+!657 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !632)
+!658 = !DIDerivedType(tag: DW_TAG_member, name: "category", scope: !632, file: !464, line: 130, baseType: !659, size: 32, align: 32, offset: 448)
+!659 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVClassCategory", file: !464, line: 48, baseType: !463)
+!660 = !DIDerivedType(tag: DW_TAG_member, name: "get_category", scope: !632, file: !464, line: 136, baseType: !661, size: 64, align: 64, offset: 512)
+!661 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !662, size: 64, align: 64)
+!662 = !DISubroutineType(types: !663)
+!663 = !{!659, !639}
+!664 = !DIDerivedType(tag: DW_TAG_member, name: "query_ranges", scope: !632, file: !464, line: 142, baseType: !665, size: 64, align: 64, offset: 576)
+!665 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !666, size: 64, align: 64)
+!666 = !DISubroutineType(types: !667)
+!667 = !{!645, !668, !639, !622, !645}
+!668 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !669, size: 64, align: 64)
+!669 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !670, size: 64, align: 64)
+!670 = !DICompositeType(tag: DW_TAG_structure_type, name: "AVOptionRanges", file: !464, line: 60, flags: DIFlagFwdDecl)
+!671 = !DIDerivedType(tag: DW_TAG_member, name: "priv_data_size", scope: !619, file: !4, line: 5825, baseType: !645, size: 32, align: 32, offset: 192)
+!672 = !DIDerivedType(tag: DW_TAG_member, name: "init", scope: !619, file: !4, line: 5826, baseType: !673, size: 64, align: 64, offset: 256)
+!673 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !674, size: 64, align: 64)
+!674 = !DISubroutineType(types: !675)
+!675 = !{!645, !676}
+!676 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !677, size: 64, align: 64)
+!677 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVBSFContext", file: !4, line: 5794, baseType: !678)
+!678 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVBSFContext", file: !4, line: 5747, size: 512, align: 64, elements: !679)
+!679 = !{!680, !681, !684, !688, !689, !736, !737, !738}
+!680 = !DIDerivedType(tag: DW_TAG_member, name: "av_class", scope: !678, file: !4, line: 5751, baseType: !629, size: 64, align: 64)
+!681 = !DIDerivedType(tag: DW_TAG_member, name: "filter", scope: !678, file: !4, line: 5756, baseType: !682, size: 64, align: 64, offset: 64)
+!682 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !683, size: 64, align: 64)
+!683 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !619)
+!684 = !DIDerivedType(tag: DW_TAG_member, name: "internal", scope: !678, file: !4, line: 5762, baseType: !685, size: 64, align: 64, offset: 128)
+!685 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !686, size: 64, align: 64)
+!686 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVBSFInternal", file: !4, line: 5735, baseType: !687)
+!687 = !DICompositeType(tag: DW_TAG_structure_type, name: "AVBSFInternal", file: !4, line: 5735, flags: DIFlagFwdDecl)
+!688 = !DIDerivedType(tag: DW_TAG_member, name: "priv_data", scope: !678, file: !4, line: 5768, baseType: !639, size: 64, align: 64, offset: 192)
+!689 = !DIDerivedType(tag: DW_TAG_member, name: "par_in", scope: !678, file: !4, line: 5775, baseType: !690, size: 64, align: 64, offset: 256)
+!690 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !691, size: 64, align: 64)
+!691 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVCodecParameters", file: !4, line: 4085, baseType: !692)
+!692 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVCodecParameters", file: !4, line: 3936, size: 1152, align: 64, elements: !693)
+!693 = !{!694, !695, !696, !699, !703, !704, !705, !706, !707, !708, !709, !710, !711, !712, !719, !720, !721, !722, !723, !724, !725, !726, !729, !730, !731, !732, !733, !734, !735}
+!694 = !DIDerivedType(tag: DW_TAG_member, name: "codec_type", scope: !692, file: !4, line: 3940, baseType: !484, size: 32, align: 32)
+!695 = !DIDerivedType(tag: DW_TAG_member, name: "codec_id", scope: !692, file: !4, line: 3944, baseType: !3, size: 32, align: 32, offset: 32)
+!696 = !DIDerivedType(tag: DW_TAG_member, name: "codec_tag", scope: !692, file: !4, line: 3948, baseType: !697, size: 32, align: 32, offset: 64)
+!697 = !DIDerivedType(tag: DW_TAG_typedef, name: "uint32_t", file: !612, line: 51, baseType: !698)
+!698 = !DIBasicType(name: "unsigned int", size: 32, align: 32, encoding: DW_ATE_unsigned)
+!699 = !DIDerivedType(tag: DW_TAG_member, name: "extradata", scope: !692, file: !4, line: 3958, baseType: !700, size: 64, align: 64, offset: 128)
+!700 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !701, size: 64, align: 64)
+!701 = !DIDerivedType(tag: DW_TAG_typedef, name: "uint8_t", file: !612, line: 48, baseType: !702)
+!702 = !DIBasicType(name: "unsigned char", size: 8, align: 8, encoding: DW_ATE_unsigned_char)
+!703 = !DIDerivedType(tag: DW_TAG_member, name: "extradata_size", scope: !692, file: !4, line: 3962, baseType: !645, size: 32, align: 32, offset: 192)
+!704 = !DIDerivedType(tag: DW_TAG_member, name: "format", scope: !692, file: !4, line: 3968, baseType: !645, size: 32, align: 32, offset: 224)
+!705 = !DIDerivedType(tag: DW_TAG_member, name: "bit_rate", scope: !692, file: !4, line: 3973, baseType: !611, size: 64, align: 64, offset: 256)
+!706 = !DIDerivedType(tag: DW_TAG_member, name: "bits_per_coded_sample", scope: !692, file: !4, line: 3986, baseType: !645, size: 32, align: 32, offset: 320)
+!707 = !DIDerivedType(tag: DW_TAG_member, name: "bits_per_raw_sample", scope: !692, file: !4, line: 3999, baseType: !645, size: 32, align: 32, offset: 352)
+!708 = !DIDerivedType(tag: DW_TAG_member, name: "profile", scope: !692, file: !4, line: 4004, baseType: !645, size: 32, align: 32, offset: 384)
+!709 = !DIDerivedType(tag: DW_TAG_member, name: "level", scope: !692, file: !4, line: 4005, baseType: !645, size: 32, align: 32, offset: 416)
+!710 = !DIDerivedType(tag: DW_TAG_member, name: "width", scope: !692, file: !4, line: 4010, baseType: !645, size: 32, align: 32, offset: 448)
+!711 = !DIDerivedType(tag: DW_TAG_member, name: "height", scope: !692, file: !4, line: 4011, baseType: !645, size: 32, align: 32, offset: 480)
+!712 = !DIDerivedType(tag: DW_TAG_member, name: "sample_aspect_ratio", scope: !692, file: !4, line: 4020, baseType: !713, size: 64, align: 32, offset: 512)
+!713 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVRational", file: !714, line: 61, baseType: !715)
+!714 = !DIFile(filename: "./libavutil/rational.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!715 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVRational", file: !714, line: 58, size: 64, align: 32, elements: !716)
+!716 = !{!717, !718}
+!717 = !DIDerivedType(tag: DW_TAG_member, name: "num", scope: !715, file: !714, line: 59, baseType: !645, size: 32, align: 32)
+!718 = !DIDerivedType(tag: DW_TAG_member, name: "den", scope: !715, file: !714, line: 60, baseType: !645, size: 32, align: 32, offset: 32)
+!719 = !DIDerivedType(tag: DW_TAG_member, name: "field_order", scope: !692, file: !4, line: 4025, baseType: !494, size: 32, align: 32, offset: 576)
+!720 = !DIDerivedType(tag: DW_TAG_member, name: "color_range", scope: !692, file: !4, line: 4030, baseType: !502, size: 32, align: 32, offset: 608)
+!721 = !DIDerivedType(tag: DW_TAG_member, name: "color_primaries", scope: !692, file: !4, line: 4031, baseType: !509, size: 32, align: 32, offset: 640)
+!722 = !DIDerivedType(tag: DW_TAG_member, name: "color_trc", scope: !692, file: !4, line: 4032, baseType: !527, size: 32, align: 32, offset: 672)
+!723 = !DIDerivedType(tag: DW_TAG_member, name: "color_space", scope: !692, file: !4, line: 4033, baseType: !551, size: 32, align: 32, offset: 704)
+!724 = !DIDerivedType(tag: DW_TAG_member, name: "chroma_location", scope: !692, file: !4, line: 4034, baseType: !570, size: 32, align: 32, offset: 736)
+!725 = !DIDerivedType(tag: DW_TAG_member, name: "video_delay", scope: !692, file: !4, line: 4039, baseType: !645, size: 32, align: 32, offset: 768)
+!726 = !DIDerivedType(tag: DW_TAG_member, name: "channel_layout", scope: !692, file: !4, line: 4046, baseType: !727, size: 64, align: 64, offset: 832)
+!727 = !DIDerivedType(tag: DW_TAG_typedef, name: "uint64_t", file: !612, line: 55, baseType: !728)
+!728 = !DIBasicType(name: "long unsigned int", size: 64, align: 64, encoding: DW_ATE_unsigned)
+!729 = !DIDerivedType(tag: DW_TAG_member, name: "channels", scope: !692, file: !4, line: 4050, baseType: !645, size: 32, align: 32, offset: 896)
+!730 = !DIDerivedType(tag: DW_TAG_member, name: "sample_rate", scope: !692, file: !4, line: 4054, baseType: !645, size: 32, align: 32, offset: 928)
+!731 = !DIDerivedType(tag: DW_TAG_member, name: "block_align", scope: !692, file: !4, line: 4061, baseType: !645, size: 32, align: 32, offset: 960)
+!732 = !DIDerivedType(tag: DW_TAG_member, name: "frame_size", scope: !692, file: !4, line: 4065, baseType: !645, size: 32, align: 32, offset: 992)
+!733 = !DIDerivedType(tag: DW_TAG_member, name: "initial_padding", scope: !692, file: !4, line: 4073, baseType: !645, size: 32, align: 32, offset: 1024)
+!734 = !DIDerivedType(tag: DW_TAG_member, name: "trailing_padding", scope: !692, file: !4, line: 4080, baseType: !645, size: 32, align: 32, offset: 1056)
+!735 = !DIDerivedType(tag: DW_TAG_member, name: "seek_preroll", scope: !692, file: !4, line: 4084, baseType: !645, size: 32, align: 32, offset: 1088)
+!736 = !DIDerivedType(tag: DW_TAG_member, name: "par_out", scope: !678, file: !4, line: 5781, baseType: !690, size: 64, align: 64, offset: 320)
+!737 = !DIDerivedType(tag: DW_TAG_member, name: "time_base_in", scope: !678, file: !4, line: 5787, baseType: !713, size: 64, align: 32, offset: 384)
+!738 = !DIDerivedType(tag: DW_TAG_member, name: "time_base_out", scope: !678, file: !4, line: 5793, baseType: !713, size: 64, align: 32, offset: 448)
+!739 = !DIDerivedType(tag: DW_TAG_member, name: "filter", scope: !619, file: !4, line: 5827, baseType: !740, size: 64, align: 64, offset: 320)
+!740 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !741, size: 64, align: 64)
+!741 = !DISubroutineType(types: !742)
+!742 = !{!645, !676, !743}
+!743 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !744, size: 64, align: 64)
+!744 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVPacket", file: !4, line: 1499, baseType: !745)
+!745 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVPacket", file: !4, line: 1445, size: 704, align: 64, elements: !746)
+!746 = !{!747, !759, !760, !761, !762, !763, !764, !765, !773, !774, !775, !776}
+!747 = !DIDerivedType(tag: DW_TAG_member, name: "buf", scope: !745, file: !4, line: 1451, baseType: !748, size: 64, align: 64)
+!748 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !749, size: 64, align: 64)
+!749 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVBufferRef", file: !750, line: 94, baseType: !751)
+!750 = !DIFile(filename: "./libavutil/buffer.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!751 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVBufferRef", file: !750, line: 81, size: 192, align: 64, elements: !752)
+!752 = !{!753, !757, !758}
+!753 = !DIDerivedType(tag: DW_TAG_member, name: "buffer", scope: !751, file: !750, line: 82, baseType: !754, size: 64, align: 64)
+!754 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !755, size: 64, align: 64)
+!755 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVBuffer", file: !750, line: 73, baseType: !756)
+!756 = !DICompositeType(tag: DW_TAG_structure_type, name: "AVBuffer", file: !750, line: 73, flags: DIFlagFwdDecl)
+!757 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !751, file: !750, line: 89, baseType: !700, size: 64, align: 64, offset: 64)
+!758 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !751, file: !750, line: 93, baseType: !645, size: 32, align: 32, offset: 128)
+!759 = !DIDerivedType(tag: DW_TAG_member, name: "pts", scope: !745, file: !4, line: 1461, baseType: !611, size: 64, align: 64, offset: 64)
+!760 = !DIDerivedType(tag: DW_TAG_member, name: "dts", scope: !745, file: !4, line: 1467, baseType: !611, size: 64, align: 64, offset: 128)
+!761 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !745, file: !4, line: 1468, baseType: !700, size: 64, align: 64, offset: 192)
+!762 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !745, file: !4, line: 1469, baseType: !645, size: 32, align: 32, offset: 256)
+!763 = !DIDerivedType(tag: DW_TAG_member, name: "stream_index", scope: !745, file: !4, line: 1470, baseType: !645, size: 32, align: 32, offset: 288)
+!764 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !745, file: !4, line: 1474, baseType: !645, size: 32, align: 32, offset: 320)
+!765 = !DIDerivedType(tag: DW_TAG_member, name: "side_data", scope: !745, file: !4, line: 1479, baseType: !766, size: 64, align: 64, offset: 384)
+!766 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !767, size: 64, align: 64)
+!767 = !DIDerivedType(tag: DW_TAG_typedef, name: "AVPacketSideData", file: !4, line: 1415, baseType: !768)
+!768 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "AVPacketSideData", file: !4, line: 1411, size: 128, align: 64, elements: !769)
+!769 = !{!770, !771, !772}
+!770 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !768, file: !4, line: 1412, baseType: !700, size: 64, align: 64)
+!771 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !768, file: !4, line: 1413, baseType: !645, size: 32, align: 32, offset: 64)
+!772 = !DIDerivedType(tag: DW_TAG_member, name: "type", scope: !768, file: !4, line: 1414, baseType: !580, size: 32, align: 32, offset: 96)
+!773 = !DIDerivedType(tag: DW_TAG_member, name: "side_data_elems", scope: !745, file: !4, line: 1480, baseType: !645, size: 32, align: 32, offset: 448)
+!774 = !DIDerivedType(tag: DW_TAG_member, name: "duration", scope: !745, file: !4, line: 1486, baseType: !611, size: 64, align: 64, offset: 512)
+!775 = !DIDerivedType(tag: DW_TAG_member, name: "pos", scope: !745, file: !4, line: 1488, baseType: !611, size: 64, align: 64, offset: 576)
+!776 = !DIDerivedType(tag: DW_TAG_member, name: "convergence_duration", scope: !745, file: !4, line: 1497, baseType: !611, size: 64, align: 64, offset: 640)
+!777 = !DIDerivedType(tag: DW_TAG_member, name: "close", scope: !619, file: !4, line: 5828, baseType: !778, size: 64, align: 64, offset: 384)
+!778 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !779, size: 64, align: 64)
+!779 = !DISubroutineType(types: !780)
+!780 = !{null, !676}
+!781 = !DIDerivedType(tag: DW_TAG_member, name: "flush", scope: !619, file: !4, line: 5829, baseType: !778, size: 64, align: 64, offset: 448)
+!782 = !{i32 2, !"Dwarf Version", i32 4}
+!783 = !{i32 2, !"Debug Info Version", i32 3}
+!784 = !{!"clang version 3.9.0 (tags/RELEASE_390/final)"}
+!785 = distinct !DISubprogram(name: "trace_headers_init", scope: !616, file: !616, line: 34, type: !674, isLocal: true, isDefinition: true, scopeLine: 35, flags: DIFlagPrototyped, isOptimized: false, unit: !0, variables: !786)
+!786 = !{}
+!787 = !DILocalVariable(name: "bsf", arg: 1, scope: !785, file: !616, line: 34, type: !676)
+!788 = !DIExpression()
+!789 = !DILocation(line: 34, column: 45, scope: !785)
+!790 = !DILocalVariable(name: "ctx", scope: !785, file: !616, line: 36, type: !791)
+!791 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !792, size: 64, align: 64)
+!792 = !DIDerivedType(tag: DW_TAG_typedef, name: "TraceHeadersContext", file: !616, line: 31, baseType: !793)
+!793 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "TraceHeadersContext", file: !616, line: 29, size: 64, align: 64, elements: !794)
+!794 = !{!795}
+!795 = !DIDerivedType(tag: DW_TAG_member, name: "cbc", scope: !793, file: !616, line: 30, baseType: !796, size: 64, align: 64)
+!796 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !797, size: 64, align: 64)
+!797 = !DIDerivedType(tag: DW_TAG_typedef, name: "CodedBitstreamContext", file: !798, line: 204, baseType: !799)
+!798 = !DIFile(filename: "libavcodec/cbs.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!799 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "CodedBitstreamContext", file: !798, line: 159, size: 384, align: 64, elements: !800)
+!800 = !{!801, !802, !806, !807, !810, !811, !812}
+!801 = !DIDerivedType(tag: DW_TAG_member, name: "log_ctx", scope: !799, file: !798, line: 164, baseType: !639, size: 64, align: 64)
+!802 = !DIDerivedType(tag: DW_TAG_member, name: "codec", scope: !799, file: !798, line: 169, baseType: !803, size: 64, align: 64, offset: 64)
+!803 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !804, size: 64, align: 64)
+!804 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !805)
+!805 = !DICompositeType(tag: DW_TAG_structure_type, name: "CodedBitstreamType", file: !798, line: 43, flags: DIFlagFwdDecl)
+!806 = !DIDerivedType(tag: DW_TAG_member, name: "priv_data", scope: !799, file: !798, line: 180, baseType: !639, size: 64, align: 64, offset: 128)
+!807 = !DIDerivedType(tag: DW_TAG_member, name: "decompose_unit_types", scope: !799, file: !798, line: 188, baseType: !808, size: 64, align: 64, offset: 192)
+!808 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !809, size: 64, align: 64)
+!809 = !DIDerivedType(tag: DW_TAG_typedef, name: "CodedBitstreamUnitType", file: !798, line: 53, baseType: !697)
+!810 = !DIDerivedType(tag: DW_TAG_member, name: "nb_decompose_unit_types", scope: !799, file: !798, line: 192, baseType: !645, size: 32, align: 32, offset: 256)
+!811 = !DIDerivedType(tag: DW_TAG_member, name: "trace_enable", scope: !799, file: !798, line: 197, baseType: !645, size: 32, align: 32, offset: 288)
+!812 = !DIDerivedType(tag: DW_TAG_member, name: "trace_level", scope: !799, file: !798, line: 203, baseType: !645, size: 32, align: 32, offset: 320)
+!813 = !DILocation(line: 36, column: 26, scope: !785)
+!814 = !DILocation(line: 36, column: 32, scope: !785)
+!815 = !DILocation(line: 36, column: 37, scope: !785)
+!816 = !DILocalVariable(name: "err", scope: !785, file: !616, line: 37, type: !645)
+!817 = !DILocation(line: 37, column: 9, scope: !785)
+!818 = !DILocation(line: 39, column: 24, scope: !785)
+!819 = !DILocation(line: 39, column: 29, scope: !785)
+!820 = !DILocation(line: 39, column: 34, scope: !785)
+!821 = !DILocation(line: 39, column: 39, scope: !785)
+!822 = !DILocation(line: 39, column: 47, scope: !785)
+!823 = !DILocation(line: 39, column: 57, scope: !785)
+!824 = !DILocation(line: 39, column: 11, scope: !785)
+!825 = !DILocation(line: 39, column: 9, scope: !785)
+!826 = !DILocation(line: 40, column: 9, scope: !827)
+!827 = distinct !DILexicalBlock(scope: !785, file: !616, line: 40, column: 9)
+!828 = !DILocation(line: 40, column: 13, scope: !827)
+!829 = !DILocation(line: 40, column: 9, scope: !785)
+!830 = !DILocation(line: 41, column: 16, scope: !827)
+!831 = !DILocation(line: 41, column: 9, scope: !827)
+!832 = !DILocation(line: 43, column: 5, scope: !785)
+!833 = !DILocation(line: 43, column: 10, scope: !785)
+!834 = !DILocation(line: 43, column: 15, scope: !785)
+!835 = !DILocation(line: 43, column: 28, scope: !785)
+!836 = !DILocation(line: 44, column: 5, scope: !785)
+!837 = !DILocation(line: 44, column: 10, scope: !785)
+!838 = !DILocation(line: 44, column: 15, scope: !785)
+!839 = !DILocation(line: 44, column: 27, scope: !785)
+!840 = !DILocation(line: 46, column: 9, scope: !841)
+!841 = distinct !DILexicalBlock(scope: !785, file: !616, line: 46, column: 9)
+!842 = !DILocation(line: 46, column: 14, scope: !841)
+!843 = !DILocation(line: 46, column: 22, scope: !841)
+!844 = !DILocation(line: 46, column: 9, scope: !785)
+!845 = !DILocalVariable(name: "ps", scope: !846, file: !616, line: 47, type: !847)
+!846 = distinct !DILexicalBlock(scope: !841, file: !616, line: 46, column: 33)
+!847 = !DIDerivedType(tag: DW_TAG_typedef, name: "CodedBitstreamFragment", file: !798, line: 154, baseType: !848)
+!848 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "CodedBitstreamFragment", file: !798, line: 116, size: 384, align: 64, elements: !849)
+!849 = !{!850, !851, !854, !855, !856, !857}
+!850 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !848, file: !798, line: 122, baseType: !700, size: 64, align: 64)
+!851 = !DIDerivedType(tag: DW_TAG_member, name: "data_size", scope: !848, file: !798, line: 129, baseType: !852, size: 64, align: 64, offset: 64)
+!852 = !DIDerivedType(tag: DW_TAG_typedef, name: "size_t", file: !853, line: 216, baseType: !728)
+!853 = !DIFile(filename: "/usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!854 = !DIDerivedType(tag: DW_TAG_member, name: "data_bit_padding", scope: !848, file: !798, line: 133, baseType: !852, size: 64, align: 64, offset: 128)
+!855 = !DIDerivedType(tag: DW_TAG_member, name: "data_ref", scope: !848, file: !798, line: 139, baseType: !748, size: 64, align: 64, offset: 192)
+!856 = !DIDerivedType(tag: DW_TAG_member, name: "nb_units", scope: !848, file: !798, line: 147, baseType: !645, size: 32, align: 32, offset: 256)
+!857 = !DIDerivedType(tag: DW_TAG_member, name: "units", scope: !848, file: !798, line: 153, baseType: !858, size: 64, align: 64, offset: 320)
+!858 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !859, size: 64, align: 64)
+!859 = !DIDerivedType(tag: DW_TAG_typedef, name: "CodedBitstreamUnit", file: !798, line: 107, baseType: !860)
+!860 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "CodedBitstreamUnit", file: !798, line: 64, size: 448, align: 64, elements: !861)
+!861 = !{!862, !863, !864, !865, !866, !867, !868}
+!862 = !DIDerivedType(tag: DW_TAG_member, name: "type", scope: !860, file: !798, line: 68, baseType: !809, size: 32, align: 32)
+!863 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !860, file: !798, line: 75, baseType: !700, size: 64, align: 64, offset: 64)
+!864 = !DIDerivedType(tag: DW_TAG_member, name: "data_size", scope: !860, file: !798, line: 80, baseType: !852, size: 64, align: 64, offset: 128)
+!865 = !DIDerivedType(tag: DW_TAG_member, name: "data_bit_padding", scope: !860, file: !798, line: 86, baseType: !852, size: 64, align: 64, offset: 192)
+!866 = !DIDerivedType(tag: DW_TAG_member, name: "data_ref", scope: !860, file: !798, line: 92, baseType: !748, size: 64, align: 64, offset: 256)
+!867 = !DIDerivedType(tag: DW_TAG_member, name: "content", scope: !860, file: !798, line: 101, baseType: !639, size: 64, align: 64, offset: 320)
+!868 = !DIDerivedType(tag: DW_TAG_member, name: "content_ref", scope: !860, file: !798, line: 106, baseType: !748, size: 64, align: 64, offset: 384)
+!869 = !DILocation(line: 47, column: 32, scope: !846)
+!870 = !DILocation(line: 49, column: 16, scope: !846)
+!871 = !DILocation(line: 49, column: 9, scope: !846)
+!872 = !DILocation(line: 51, column: 37, scope: !846)
+!873 = !DILocation(line: 51, column: 42, scope: !846)
+!874 = !DILocation(line: 51, column: 52, scope: !846)
+!875 = !DILocation(line: 51, column: 57, scope: !846)
+!876 = !DILocation(line: 51, column: 15, scope: !846)
+!877 = !DILocation(line: 51, column: 13, scope: !846)
+!878 = !DILocation(line: 53, column: 32, scope: !846)
+!879 = !DILocation(line: 53, column: 37, scope: !846)
+!880 = !DILocation(line: 53, column: 9, scope: !846)
+!881 = !DILocation(line: 54, column: 5, scope: !846)
+!882 = !DILocation(line: 56, column: 12, scope: !785)
+!883 = !DILocation(line: 56, column: 5, scope: !785)
+!884 = !DILocation(line: 57, column: 1, scope: !785)
+!885 = distinct !DISubprogram(name: "trace_headers", scope: !616, file: !616, line: 66, type: !741, isLocal: true, isDefinition: true, scopeLine: 67, flags: DIFlagPrototyped, isOptimized: false, unit: !0, variables: !786)
+!886 = !DILocalVariable(name: "bsf", arg: 1, scope: !885, file: !616, line: 66, type: !676)
+!887 = !DILocation(line: 66, column: 40, scope: !885)
+!888 = !DILocalVariable(name: "pkt", arg: 2, scope: !885, file: !616, line: 66, type: !743)
+!889 = !DILocation(line: 66, column: 55, scope: !885)
+!890 = !DILocalVariable(name: "ctx", scope: !885, file: !616, line: 68, type: !791)
+!891 = !DILocation(line: 68, column: 26, scope: !885)
+!892 = !DILocation(line: 68, column: 32, scope: !885)
+!893 = !DILocation(line: 68, column: 37, scope: !885)
+!894 = !DILocalVariable(name: "au", scope: !885, file: !616, line: 69, type: !847)
+!895 = !DILocation(line: 69, column: 28, scope: !885)
+!896 = !DILocalVariable(name: "tmp", scope: !885, file: !616, line: 70, type: !897)
+!897 = !DICompositeType(tag: DW_TAG_array_type, baseType: !624, size: 2048, align: 8, elements: !898)
+!898 = !{!899}
+!899 = !DISubrange(count: 256)
+!900 = !DILocation(line: 70, column: 10, scope: !885)
+!901 = !DILocalVariable(name: "err", scope: !885, file: !616, line: 71, type: !645)
+!902 = !DILocation(line: 71, column: 9, scope: !885)
+!903 = !DILocation(line: 73, column: 33, scope: !885)
+!904 = !DILocation(line: 73, column: 38, scope: !885)
+!905 = !DILocation(line: 73, column: 11, scope: !885)
+!906 = !DILocation(line: 73, column: 9, scope: !885)
+!907 = !DILocation(line: 74, column: 9, scope: !908)
+!908 = distinct !DILexicalBlock(scope: !885, file: !616, line: 74, column: 9)
+!909 = !DILocation(line: 74, column: 13, scope: !908)
+!910 = !DILocation(line: 74, column: 9, scope: !885)
+!911 = !DILocation(line: 75, column: 16, scope: !908)
+!912 = !DILocation(line: 75, column: 9, scope: !908)
+!913 = !DILocation(line: 77, column: 9, scope: !914)
+!914 = distinct !DILexicalBlock(scope: !885, file: !616, line: 77, column: 9)
+!915 = !DILocation(line: 77, column: 14, scope: !914)
+!916 = !DILocation(line: 77, column: 20, scope: !914)
+!917 = !DILocation(line: 77, column: 9, scope: !885)
+!918 = !DILocation(line: 78, column: 20, scope: !914)
+!919 = !DILocation(line: 78, column: 9, scope: !914)
+!920 = !DILocation(line: 79, column: 9, scope: !921)
+!921 = distinct !DILexicalBlock(scope: !885, file: !616, line: 79, column: 9)
+!922 = !DILocation(line: 79, column: 14, scope: !921)
+!923 = !DILocation(line: 79, column: 20, scope: !921)
+!924 = !DILocation(line: 79, column: 9, scope: !885)
+!925 = !DILocation(line: 80, column: 20, scope: !921)
+!926 = !DILocation(line: 80, column: 9, scope: !921)
+!927 = !DILocation(line: 82, column: 9, scope: !928)
+!928 = distinct !DILexicalBlock(scope: !885, file: !616, line: 82, column: 9)
+!929 = !DILocation(line: 82, column: 14, scope: !928)
+!930 = !DILocation(line: 82, column: 18, scope: !928)
+!931 = !DILocation(line: 82, column: 9, scope: !885)
+!932 = !DILocation(line: 83, column: 21, scope: !928)
+!933 = !DILocation(line: 83, column: 55, scope: !928)
+!934 = !DILocation(line: 83, column: 60, scope: !928)
+!935 = !DILocation(line: 83, column: 9, scope: !928)
+!936 = !DILocation(line: 85, column: 20, scope: !928)
+!937 = !DILocation(line: 85, column: 9, scope: !928)
+!938 = !DILocation(line: 86, column: 9, scope: !939)
+!939 = distinct !DILexicalBlock(scope: !885, file: !616, line: 86, column: 9)
+!940 = !DILocation(line: 86, column: 14, scope: !939)
+!941 = !DILocation(line: 86, column: 18, scope: !939)
+!942 = !DILocation(line: 86, column: 9, scope: !885)
+!943 = !DILocation(line: 87, column: 21, scope: !939)
+!944 = !DILocation(line: 87, column: 55, scope: !939)
+!945 = !DILocation(line: 87, column: 60, scope: !939)
+!946 = !DILocation(line: 87, column: 9, scope: !939)
+!947 = !DILocation(line: 89, column: 20, scope: !939)
+!948 = !DILocation(line: 89, column: 9, scope: !939)
+!949 = !DILocation(line: 90, column: 9, scope: !950)
+!950 = distinct !DILexicalBlock(scope: !885, file: !616, line: 90, column: 9)
+!951 = !DILocation(line: 90, column: 14, scope: !950)
+!952 = !DILocation(line: 90, column: 23, scope: !950)
+!953 = !DILocation(line: 90, column: 9, scope: !885)
+!954 = !DILocation(line: 91, column: 21, scope: !950)
+!955 = !DILocation(line: 91, column: 60, scope: !950)
+!956 = !DILocation(line: 91, column: 65, scope: !950)
+!957 = !DILocation(line: 91, column: 9, scope: !950)
+!958 = !DILocation(line: 93, column: 12, scope: !885)
+!959 = !DILocation(line: 93, column: 46, scope: !885)
+!960 = !DILocation(line: 93, column: 51, scope: !885)
+!961 = !DILocation(line: 93, column: 57, scope: !885)
+!962 = !DILocation(line: 93, column: 5, scope: !885)
+!963 = !DILocation(line: 95, column: 30, scope: !885)
+!964 = !DILocation(line: 95, column: 35, scope: !885)
+!965 = !DILocation(line: 95, column: 45, scope: !885)
+!966 = !DILocation(line: 95, column: 11, scope: !885)
+!967 = !DILocation(line: 95, column: 9, scope: !885)
+!968 = !DILocation(line: 97, column: 28, scope: !885)
+!969 = !DILocation(line: 97, column: 33, scope: !885)
+!970 = !DILocation(line: 97, column: 5, scope: !885)
+!971 = !DILocation(line: 99, column: 9, scope: !972)
+!972 = distinct !DILexicalBlock(scope: !885, file: !616, line: 99, column: 9)
+!973 = !DILocation(line: 99, column: 13, scope: !972)
+!974 = !DILocation(line: 99, column: 9, scope: !885)
+!975 = !DILocation(line: 100, column: 25, scope: !972)
+!976 = !DILocation(line: 100, column: 9, scope: !972)
+!977 = !DILocation(line: 101, column: 12, scope: !885)
+!978 = !DILocation(line: 101, column: 5, scope: !885)
+!979 = !DILocation(line: 102, column: 1, scope: !885)
+!980 = distinct !DISubprogram(name: "trace_headers_close", scope: !616, file: !616, line: 59, type: !779, isLocal: true, isDefinition: true, scopeLine: 60, flags: DIFlagPrototyped, isOptimized: false, unit: !0, variables: !786)
+!981 = !DILocalVariable(name: "bsf", arg: 1, scope: !980, file: !616, line: 59, type: !676)
+!982 = !DILocation(line: 59, column: 47, scope: !980)
+!983 = !DILocalVariable(name: "ctx", scope: !980, file: !616, line: 61, type: !791)
+!984 = !DILocation(line: 61, column: 26, scope: !980)
+!985 = !DILocation(line: 61, column: 32, scope: !980)
+!986 = !DILocation(line: 61, column: 37, scope: !980)
+!987 = !DILocation(line: 63, column: 19, scope: !980)
+!988 = !DILocation(line: 63, column: 24, scope: !980)
+!989 = !DILocation(line: 63, column: 5, scope: !980)
+!990 = !DILocation(line: 64, column: 1, scope: !980)

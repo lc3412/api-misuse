@@ -1,0 +1,236 @@
+; ModuleID = '/home/ubuntu_1604/Desktop/openssl_bcmake_outputs/[inter]crypto--pkcs7--libcrypto-lib-bio_pk7.o.i'
+source_filename = "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs/[inter]crypto--pkcs7--libcrypto-lib-bio_pk7.o.i"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.ASN1_ITEM_st = type opaque
+%struct.bio_st = type opaque
+%struct.pkcs7_st = type { i8*, i64, i32, i32, %struct.asn1_object_st*, %union.anon }
+%struct.asn1_object_st = type opaque
+%union.anon = type { i8* }
+%struct.ASN1_VALUE_st = type opaque
+
+@PKCS7_it = external constant %struct.ASN1_ITEM_st, align 1
+
+; Function Attrs: nounwind uwtable
+define %struct.bio_st* @BIO_new_PKCS7(%struct.bio_st* %out, %struct.pkcs7_st* %p7) #0 !dbg !11 {
+entry:
+  %out.addr = alloca %struct.bio_st*, align 8
+  %p7.addr = alloca %struct.pkcs7_st*, align 8
+  store %struct.bio_st* %out, %struct.bio_st** %out.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.bio_st** %out.addr, metadata !183, metadata !184), !dbg !185
+  store %struct.pkcs7_st* %p7, %struct.pkcs7_st** %p7.addr, align 8
+  call void @llvm.dbg.declare(metadata %struct.pkcs7_st** %p7.addr, metadata !186, metadata !184), !dbg !187
+  %0 = load %struct.bio_st*, %struct.bio_st** %out.addr, align 8, !dbg !188
+  %1 = load %struct.pkcs7_st*, %struct.pkcs7_st** %p7.addr, align 8, !dbg !189
+  %2 = bitcast %struct.pkcs7_st* %1 to %struct.ASN1_VALUE_st*, !dbg !190
+  %call = call %struct.bio_st* @BIO_new_NDEF(%struct.bio_st* %0, %struct.ASN1_VALUE_st* %2, %struct.ASN1_ITEM_st* @PKCS7_it), !dbg !191
+  ret %struct.bio_st* %call, !dbg !192
+}
+
+; Function Attrs: nounwind readnone
+declare void @llvm.dbg.declare(metadata, metadata, metadata) #1
+
+declare %struct.bio_st* @BIO_new_NDEF(%struct.bio_st*, %struct.ASN1_VALUE_st*, %struct.ASN1_ITEM_st*) #2
+
+attributes #0 = { nounwind uwtable "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind readnone }
+attributes #2 = { "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!8, !9}
+!llvm.ident = !{!10}
+
+!0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 3.9.0 (tags/RELEASE_390/final)", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !2, retainedTypes: !3)
+!1 = !DIFile(filename: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs/[inter]crypto--pkcs7--libcrypto-lib-bio_pk7.o.i", directory: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs")
+!2 = !{}
+!3 = !{!4}
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !5, size: 64, align: 64)
+!5 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_VALUE", file: !6, line: 213, baseType: !7)
+!6 = !DIFile(filename: "include/openssl/asn1.h", directory: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs")
+!7 = !DICompositeType(tag: DW_TAG_structure_type, name: "ASN1_VALUE_st", file: !6, line: 213, flags: DIFlagFwdDecl)
+!8 = !{i32 2, !"Dwarf Version", i32 4}
+!9 = !{i32 2, !"Debug Info Version", i32 3}
+!10 = !{!"clang version 3.9.0 (tags/RELEASE_390/final)"}
+!11 = distinct !DISubprogram(name: "BIO_new_PKCS7", scope: !12, file: !12, line: 21, type: !13, isLocal: false, isDefinition: true, scopeLine: 22, flags: DIFlagPrototyped, isOptimized: false, unit: !0, variables: !2)
+!12 = !DIFile(filename: "crypto/pkcs7/bio_pk7.c", directory: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs")
+!13 = !DISubroutineType(types: !14)
+!14 = !{!15, !15, !19}
+!15 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !16, size: 64, align: 64)
+!16 = !DIDerivedType(tag: DW_TAG_typedef, name: "BIO", file: !17, line: 79, baseType: !18)
+!17 = !DIFile(filename: "include/openssl/ossl_typ.h", directory: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs")
+!18 = !DICompositeType(tag: DW_TAG_structure_type, name: "bio_st", file: !17, line: 79, flags: DIFlagFwdDecl)
+!19 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !20, size: 64, align: 64)
+!20 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7", file: !21, line: 144, baseType: !22)
+!21 = !DIFile(filename: "include/openssl/pkcs7.h", directory: "/home/ubuntu_1604/Desktop/openssl_bcmake_outputs")
+!22 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_st", file: !21, line: 109, size: 320, align: 64, elements: !23)
+!23 = !{!24, !27, !29, !31, !32, !36}
+!24 = !DIDerivedType(tag: DW_TAG_member, name: "asn1", scope: !22, file: !21, line: 114, baseType: !25, size: 64, align: 64)
+!25 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !26, size: 64, align: 64)
+!26 = !DIBasicType(name: "unsigned char", size: 8, align: 8, encoding: DW_ATE_unsigned_char)
+!27 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !22, file: !21, line: 115, baseType: !28, size: 64, align: 64, offset: 64)
+!28 = !DIBasicType(name: "long int", size: 64, align: 64, encoding: DW_ATE_signed)
+!29 = !DIDerivedType(tag: DW_TAG_member, name: "state", scope: !22, file: !21, line: 119, baseType: !30, size: 32, align: 32, offset: 128)
+!30 = !DIBasicType(name: "int", size: 32, align: 32, encoding: DW_ATE_signed)
+!31 = !DIDerivedType(tag: DW_TAG_member, name: "detached", scope: !22, file: !21, line: 120, baseType: !30, size: 32, align: 32, offset: 160)
+!32 = !DIDerivedType(tag: DW_TAG_member, name: "type", scope: !22, file: !21, line: 121, baseType: !33, size: 64, align: 64, offset: 192)
+!33 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !34, size: 64, align: 64)
+!34 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_OBJECT", file: !17, line: 60, baseType: !35)
+!35 = !DICompositeType(tag: DW_TAG_structure_type, name: "asn1_object_st", file: !17, line: 60, flags: DIFlagFwdDecl)
+!36 = !DIDerivedType(tag: DW_TAG_member, name: "d", scope: !22, file: !21, line: 143, baseType: !37, size: 64, align: 64, offset: 256)
+!37 = distinct !DICompositeType(tag: DW_TAG_union_type, scope: !22, file: !21, line: 127, size: 64, align: 64, elements: !38)
+!38 = !{!39, !42, !51, !73, !98, !110, !119, !126}
+!39 = !DIDerivedType(tag: DW_TAG_member, name: "ptr", scope: !37, file: !21, line: 128, baseType: !40, size: 64, align: 64)
+!40 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !41, size: 64, align: 64)
+!41 = !DIBasicType(name: "char", size: 8, align: 8, encoding: DW_ATE_signed_char)
+!42 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !37, file: !21, line: 130, baseType: !43, size: 64, align: 64)
+!43 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !44, size: 64, align: 64)
+!44 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_OCTET_STRING", file: !17, line: 43, baseType: !45)
+!45 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "asn1_string_st", file: !6, line: 146, size: 192, align: 64, elements: !46)
+!46 = !{!47, !48, !49, !50}
+!47 = !DIDerivedType(tag: DW_TAG_member, name: "length", scope: !45, file: !6, line: 147, baseType: !30, size: 32, align: 32)
+!48 = !DIDerivedType(tag: DW_TAG_member, name: "type", scope: !45, file: !6, line: 148, baseType: !30, size: 32, align: 32, offset: 32)
+!49 = !DIDerivedType(tag: DW_TAG_member, name: "data", scope: !45, file: !6, line: 149, baseType: !25, size: 64, align: 64, offset: 64)
+!50 = !DIDerivedType(tag: DW_TAG_member, name: "flags", scope: !45, file: !6, line: 155, baseType: !28, size: 64, align: 64, offset: 128)
+!51 = !DIDerivedType(tag: DW_TAG_member, name: "sign", scope: !37, file: !21, line: 132, baseType: !52, size: 64, align: 64)
+!52 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !53, size: 64, align: 64)
+!53 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_SIGNED", file: !21, line: 68, baseType: !54)
+!54 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_signed_st", file: !21, line: 61, size: 384, align: 64, elements: !55)
+!55 = !{!56, !59, !62, !65, !68, !71}
+!56 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !54, file: !21, line: 62, baseType: !57, size: 64, align: 64)
+!57 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !58, size: 64, align: 64)
+!58 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_INTEGER", file: !17, line: 40, baseType: !45)
+!59 = !DIDerivedType(tag: DW_TAG_member, name: "md_algs", scope: !54, file: !21, line: 63, baseType: !60, size: 64, align: 64, offset: 64)
+!60 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !61, size: 64, align: 64)
+!61 = !DICompositeType(tag: DW_TAG_structure_type, name: "stack_st_X509_ALGOR", file: !6, line: 119, flags: DIFlagFwdDecl)
+!62 = !DIDerivedType(tag: DW_TAG_member, name: "cert", scope: !54, file: !21, line: 64, baseType: !63, size: 64, align: 64, offset: 128)
+!63 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !64, size: 64, align: 64)
+!64 = !DICompositeType(tag: DW_TAG_structure_type, name: "stack_st_X509", file: !21, line: 64, flags: DIFlagFwdDecl)
+!65 = !DIDerivedType(tag: DW_TAG_member, name: "crl", scope: !54, file: !21, line: 65, baseType: !66, size: 64, align: 64, offset: 192)
+!66 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !67, size: 64, align: 64)
+!67 = !DICompositeType(tag: DW_TAG_structure_type, name: "stack_st_X509_CRL", file: !21, line: 65, flags: DIFlagFwdDecl)
+!68 = !DIDerivedType(tag: DW_TAG_member, name: "signer_info", scope: !54, file: !21, line: 66, baseType: !69, size: 64, align: 64, offset: 256)
+!69 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !70, size: 64, align: 64)
+!70 = !DICompositeType(tag: DW_TAG_structure_type, name: "stack_st_PKCS7_SIGNER_INFO", file: !21, line: 49, flags: DIFlagFwdDecl)
+!71 = !DIDerivedType(tag: DW_TAG_member, name: "contents", scope: !54, file: !21, line: 67, baseType: !72, size: 64, align: 64, offset: 320)
+!72 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !22, size: 64, align: 64)
+!73 = !DIDerivedType(tag: DW_TAG_member, name: "enveloped", scope: !37, file: !21, line: 134, baseType: !74, size: 64, align: 64)
+!74 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !75, size: 64, align: 64)
+!75 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_ENVELOPE", file: !21, line: 85, baseType: !76)
+!76 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_enveloped_st", file: !21, line: 81, size: 192, align: 64, elements: !77)
+!77 = !{!78, !79, !82}
+!78 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !76, file: !21, line: 82, baseType: !57, size: 64, align: 64)
+!79 = !DIDerivedType(tag: DW_TAG_member, name: "recipientinfo", scope: !76, file: !21, line: 83, baseType: !80, size: 64, align: 64, offset: 64)
+!80 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !81, size: 64, align: 64)
+!81 = !DICompositeType(tag: DW_TAG_structure_type, name: "stack_st_PKCS7_RECIP_INFO", file: !21, line: 59, flags: DIFlagFwdDecl)
+!82 = !DIDerivedType(tag: DW_TAG_member, name: "enc_data", scope: !76, file: !21, line: 84, baseType: !83, size: 64, align: 64, offset: 128)
+!83 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !84, size: 64, align: 64)
+!84 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_ENC_CONTENT", file: !21, line: 79, baseType: !85)
+!85 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_enc_content_st", file: !21, line: 74, size: 256, align: 64, elements: !86)
+!86 = !{!87, !88, !92, !93}
+!87 = !DIDerivedType(tag: DW_TAG_member, name: "content_type", scope: !85, file: !21, line: 75, baseType: !33, size: 64, align: 64)
+!88 = !DIDerivedType(tag: DW_TAG_member, name: "algorithm", scope: !85, file: !21, line: 76, baseType: !89, size: 64, align: 64, offset: 64)
+!89 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !90, size: 64, align: 64)
+!90 = !DIDerivedType(tag: DW_TAG_typedef, name: "X509_ALGOR", file: !17, line: 125, baseType: !91)
+!91 = !DICompositeType(tag: DW_TAG_structure_type, name: "X509_algor_st", file: !17, line: 125, flags: DIFlagFwdDecl)
+!92 = !DIDerivedType(tag: DW_TAG_member, name: "enc_data", scope: !85, file: !21, line: 77, baseType: !43, size: 64, align: 64, offset: 128)
+!93 = !DIDerivedType(tag: DW_TAG_member, name: "cipher", scope: !85, file: !21, line: 78, baseType: !94, size: 64, align: 64, offset: 192)
+!94 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !95, size: 64, align: 64)
+!95 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !96)
+!96 = !DIDerivedType(tag: DW_TAG_typedef, name: "EVP_CIPHER", file: !17, line: 89, baseType: !97)
+!97 = !DICompositeType(tag: DW_TAG_structure_type, name: "evp_cipher_st", file: !17, line: 89, flags: DIFlagFwdDecl)
+!98 = !DIDerivedType(tag: DW_TAG_member, name: "signed_and_enveloped", scope: !37, file: !21, line: 136, baseType: !99, size: 64, align: 64)
+!99 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !100, size: 64, align: 64)
+!100 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_SIGN_ENVELOPE", file: !21, line: 95, baseType: !101)
+!101 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_signedandenveloped_st", file: !21, line: 87, size: 448, align: 64, elements: !102)
+!102 = !{!103, !104, !105, !106, !107, !108, !109}
+!103 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !101, file: !21, line: 88, baseType: !57, size: 64, align: 64)
+!104 = !DIDerivedType(tag: DW_TAG_member, name: "md_algs", scope: !101, file: !21, line: 89, baseType: !60, size: 64, align: 64, offset: 64)
+!105 = !DIDerivedType(tag: DW_TAG_member, name: "cert", scope: !101, file: !21, line: 90, baseType: !63, size: 64, align: 64, offset: 128)
+!106 = !DIDerivedType(tag: DW_TAG_member, name: "crl", scope: !101, file: !21, line: 91, baseType: !66, size: 64, align: 64, offset: 192)
+!107 = !DIDerivedType(tag: DW_TAG_member, name: "signer_info", scope: !101, file: !21, line: 92, baseType: !69, size: 64, align: 64, offset: 256)
+!108 = !DIDerivedType(tag: DW_TAG_member, name: "enc_data", scope: !101, file: !21, line: 93, baseType: !83, size: 64, align: 64, offset: 320)
+!109 = !DIDerivedType(tag: DW_TAG_member, name: "recipientinfo", scope: !101, file: !21, line: 94, baseType: !80, size: 64, align: 64, offset: 384)
+!110 = !DIDerivedType(tag: DW_TAG_member, name: "digest", scope: !37, file: !21, line: 138, baseType: !111, size: 64, align: 64)
+!111 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !112, size: 64, align: 64)
+!112 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_DIGEST", file: !21, line: 102, baseType: !113)
+!113 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_digest_st", file: !21, line: 97, size: 256, align: 64, elements: !114)
+!114 = !{!115, !116, !117, !118}
+!115 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !113, file: !21, line: 98, baseType: !57, size: 64, align: 64)
+!116 = !DIDerivedType(tag: DW_TAG_member, name: "md", scope: !113, file: !21, line: 99, baseType: !89, size: 64, align: 64, offset: 64)
+!117 = !DIDerivedType(tag: DW_TAG_member, name: "contents", scope: !113, file: !21, line: 100, baseType: !72, size: 64, align: 64, offset: 128)
+!118 = !DIDerivedType(tag: DW_TAG_member, name: "digest", scope: !113, file: !21, line: 101, baseType: !43, size: 64, align: 64, offset: 192)
+!119 = !DIDerivedType(tag: DW_TAG_member, name: "encrypted", scope: !37, file: !21, line: 140, baseType: !120, size: 64, align: 64)
+!120 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !121, size: 64, align: 64)
+!121 = !DIDerivedType(tag: DW_TAG_typedef, name: "PKCS7_ENCRYPT", file: !21, line: 107, baseType: !122)
+!122 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "pkcs7_encrypted_st", file: !21, line: 104, size: 128, align: 64, elements: !123)
+!123 = !{!124, !125}
+!124 = !DIDerivedType(tag: DW_TAG_member, name: "version", scope: !122, file: !21, line: 105, baseType: !57, size: 64, align: 64)
+!125 = !DIDerivedType(tag: DW_TAG_member, name: "enc_data", scope: !122, file: !21, line: 106, baseType: !83, size: 64, align: 64, offset: 64)
+!126 = !DIDerivedType(tag: DW_TAG_member, name: "other", scope: !37, file: !21, line: 142, baseType: !127, size: 64, align: 64)
+!127 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !128, size: 64, align: 64)
+!128 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_TYPE", file: !6, line: 473, baseType: !129)
+!129 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "asn1_type_st", file: !6, line: 444, size: 128, align: 64, elements: !130)
+!130 = !{!131, !132}
+!131 = !DIDerivedType(tag: DW_TAG_member, name: "type", scope: !129, file: !6, line: 445, baseType: !30, size: 32, align: 32)
+!132 = !DIDerivedType(tag: DW_TAG_member, name: "value", scope: !129, file: !6, line: 472, baseType: !133, size: 64, align: 64, offset: 64)
+!133 = distinct !DICompositeType(tag: DW_TAG_union_type, scope: !129, file: !6, line: 446, size: 64, align: 64, elements: !134)
+!134 = !{!135, !136, !138, !141, !142, !143, !146, !149, !150, !153, !156, !159, !162, !165, !168, !171, !174, !177, !180, !181, !182}
+!135 = !DIDerivedType(tag: DW_TAG_member, name: "ptr", scope: !133, file: !6, line: 447, baseType: !40, size: 64, align: 64)
+!136 = !DIDerivedType(tag: DW_TAG_member, name: "boolean", scope: !133, file: !6, line: 448, baseType: !137, size: 32, align: 32)
+!137 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_BOOLEAN", file: !17, line: 56, baseType: !30)
+!138 = !DIDerivedType(tag: DW_TAG_member, name: "asn1_string", scope: !133, file: !6, line: 449, baseType: !139, size: 64, align: 64)
+!139 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !140, size: 64, align: 64)
+!140 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_STRING", file: !17, line: 55, baseType: !45)
+!141 = !DIDerivedType(tag: DW_TAG_member, name: "object", scope: !133, file: !6, line: 450, baseType: !33, size: 64, align: 64)
+!142 = !DIDerivedType(tag: DW_TAG_member, name: "integer", scope: !133, file: !6, line: 451, baseType: !57, size: 64, align: 64)
+!143 = !DIDerivedType(tag: DW_TAG_member, name: "enumerated", scope: !133, file: !6, line: 452, baseType: !144, size: 64, align: 64)
+!144 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !145, size: 64, align: 64)
+!145 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_ENUMERATED", file: !17, line: 41, baseType: !45)
+!146 = !DIDerivedType(tag: DW_TAG_member, name: "bit_string", scope: !133, file: !6, line: 453, baseType: !147, size: 64, align: 64)
+!147 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !148, size: 64, align: 64)
+!148 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_BIT_STRING", file: !17, line: 42, baseType: !45)
+!149 = !DIDerivedType(tag: DW_TAG_member, name: "octet_string", scope: !133, file: !6, line: 454, baseType: !43, size: 64, align: 64)
+!150 = !DIDerivedType(tag: DW_TAG_member, name: "printablestring", scope: !133, file: !6, line: 455, baseType: !151, size: 64, align: 64)
+!151 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !152, size: 64, align: 64)
+!152 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_PRINTABLESTRING", file: !17, line: 44, baseType: !45)
+!153 = !DIDerivedType(tag: DW_TAG_member, name: "t61string", scope: !133, file: !6, line: 456, baseType: !154, size: 64, align: 64)
+!154 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !155, size: 64, align: 64)
+!155 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_T61STRING", file: !17, line: 45, baseType: !45)
+!156 = !DIDerivedType(tag: DW_TAG_member, name: "ia5string", scope: !133, file: !6, line: 457, baseType: !157, size: 64, align: 64)
+!157 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !158, size: 64, align: 64)
+!158 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_IA5STRING", file: !17, line: 46, baseType: !45)
+!159 = !DIDerivedType(tag: DW_TAG_member, name: "generalstring", scope: !133, file: !6, line: 458, baseType: !160, size: 64, align: 64)
+!160 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !161, size: 64, align: 64)
+!161 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_GENERALSTRING", file: !17, line: 47, baseType: !45)
+!162 = !DIDerivedType(tag: DW_TAG_member, name: "bmpstring", scope: !133, file: !6, line: 459, baseType: !163, size: 64, align: 64)
+!163 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !164, size: 64, align: 64)
+!164 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_BMPSTRING", file: !17, line: 49, baseType: !45)
+!165 = !DIDerivedType(tag: DW_TAG_member, name: "universalstring", scope: !133, file: !6, line: 460, baseType: !166, size: 64, align: 64)
+!166 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !167, size: 64, align: 64)
+!167 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_UNIVERSALSTRING", file: !17, line: 48, baseType: !45)
+!168 = !DIDerivedType(tag: DW_TAG_member, name: "utctime", scope: !133, file: !6, line: 461, baseType: !169, size: 64, align: 64)
+!169 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !170, size: 64, align: 64)
+!170 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_UTCTIME", file: !17, line: 50, baseType: !45)
+!171 = !DIDerivedType(tag: DW_TAG_member, name: "generalizedtime", scope: !133, file: !6, line: 462, baseType: !172, size: 64, align: 64)
+!172 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !173, size: 64, align: 64)
+!173 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_GENERALIZEDTIME", file: !17, line: 52, baseType: !45)
+!174 = !DIDerivedType(tag: DW_TAG_member, name: "visiblestring", scope: !133, file: !6, line: 463, baseType: !175, size: 64, align: 64)
+!175 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !176, size: 64, align: 64)
+!176 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_VISIBLESTRING", file: !17, line: 53, baseType: !45)
+!177 = !DIDerivedType(tag: DW_TAG_member, name: "utf8string", scope: !133, file: !6, line: 464, baseType: !178, size: 64, align: 64)
+!178 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !179, size: 64, align: 64)
+!179 = !DIDerivedType(tag: DW_TAG_typedef, name: "ASN1_UTF8STRING", file: !17, line: 54, baseType: !45)
+!180 = !DIDerivedType(tag: DW_TAG_member, name: "set", scope: !133, file: !6, line: 469, baseType: !139, size: 64, align: 64)
+!181 = !DIDerivedType(tag: DW_TAG_member, name: "sequence", scope: !133, file: !6, line: 470, baseType: !139, size: 64, align: 64)
+!182 = !DIDerivedType(tag: DW_TAG_member, name: "asn1_value", scope: !133, file: !6, line: 471, baseType: !4, size: 64, align: 64)
+!183 = !DILocalVariable(name: "out", arg: 1, scope: !11, file: !12, line: 21, type: !15)
+!184 = !DIExpression()
+!185 = !DILocation(line: 21, column: 25, scope: !11)
+!186 = !DILocalVariable(name: "p7", arg: 2, scope: !11, file: !12, line: 21, type: !19)
+!187 = !DILocation(line: 21, column: 37, scope: !11)
+!188 = !DILocation(line: 23, column: 25, scope: !11)
+!189 = !DILocation(line: 23, column: 44, scope: !11)
+!190 = !DILocation(line: 23, column: 30, scope: !11)
+!191 = !DILocation(line: 23, column: 12, scope: !11)
+!192 = !DILocation(line: 23, column: 5, scope: !11)

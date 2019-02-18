@@ -1,0 +1,49 @@
+; ModuleID = '/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a/[inter]libavcodec--cavsdata.o.i'
+source_filename = "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a/[inter]libavcodec--cavsdata.o.i"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.cavs_vector = type { i16, i16, i16, i16 }
+
+@ff_cavs_partition_flags = constant [30 x i8] c"\00\00\00@\80\C0\C0\C0\00\00\00C\83L\8CI\89F\86c\A3f\A6S\93Y\99s\B3\C0", align 16
+@ff_cavs_chroma_qp = constant [64 x i8] c"\00\01\02\03\04\05\06\07\08\09\0A\0B\0C\0D\0E\0F\10\11\12\13\14\15\16\17\18\19\1A\1B\1C\1D\1E\1F !\22#$%&'()**++,,--..//0001112223", align 16
+@ff_cavs_dir_mv = constant %struct.cavs_vector { i16 0, i16 0, i16 1, i16 -3 }, align 8
+@ff_cavs_intra_mv = constant %struct.cavs_vector { i16 0, i16 0, i16 1, i16 -2 }, align 8
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!30, !31}
+!llvm.ident = !{!32}
+
+!0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 3.9.0 (tags/RELEASE_390/final)", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !2, globals: !3)
+!1 = !DIFile(filename: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a/[inter]libavcodec--cavsdata.o.i", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a")
+!2 = !{}
+!3 = !{!4, !13, !17, !29}
+!4 = distinct !DIGlobalVariable(name: "ff_cavs_partition_flags", scope: !0, file: !5, line: 24, type: !6, isLocal: false, isDefinition: true, variable: [30 x i8]* @ff_cavs_partition_flags)
+!5 = !DIFile(filename: "libavcodec/cavsdata.c", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a")
+!6 = !DICompositeType(tag: DW_TAG_array_type, baseType: !7, size: 240, align: 8, elements: !11)
+!7 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !8)
+!8 = !DIDerivedType(tag: DW_TAG_typedef, name: "uint8_t", file: !9, line: 48, baseType: !10)
+!9 = !DIFile(filename: "/usr/include/stdint.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a")
+!10 = !DIBasicType(name: "unsigned char", size: 8, align: 8, encoding: DW_ATE_unsigned_char)
+!11 = !{!12}
+!12 = !DISubrange(count: 30)
+!13 = distinct !DIGlobalVariable(name: "ff_cavs_chroma_qp", scope: !0, file: !5, line: 57, type: !14, isLocal: false, isDefinition: true, variable: [64 x i8]* @ff_cavs_chroma_qp)
+!14 = !DICompositeType(tag: DW_TAG_array_type, baseType: !7, size: 512, align: 8, elements: !15)
+!15 = !{!16}
+!16 = !DISubrange(count: 64)
+!17 = distinct !DIGlobalVariable(name: "ff_cavs_dir_mv", scope: !0, file: !5, line: 66, type: !18, isLocal: false, isDefinition: true, variable: %struct.cavs_vector* @ff_cavs_dir_mv)
+!18 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !19)
+!19 = !DIDerivedType(tag: DW_TAG_typedef, name: "cavs_vector", file: !20, line: 148, baseType: !21)
+!20 = !DIFile(filename: "libavcodec/cavs.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[lib]libavcodec--libavcodec.a")
+!21 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !20, line: 143, size: 64, align: 16, elements: !22)
+!22 = !{!23, !26, !27, !28}
+!23 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !21, file: !20, line: 144, baseType: !24, size: 16, align: 16)
+!24 = !DIDerivedType(tag: DW_TAG_typedef, name: "int16_t", file: !9, line: 37, baseType: !25)
+!25 = !DIBasicType(name: "short", size: 16, align: 16, encoding: DW_ATE_signed)
+!26 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !21, file: !20, line: 145, baseType: !24, size: 16, align: 16, offset: 16)
+!27 = !DIDerivedType(tag: DW_TAG_member, name: "dist", scope: !21, file: !20, line: 146, baseType: !24, size: 16, align: 16, offset: 32)
+!28 = !DIDerivedType(tag: DW_TAG_member, name: "ref", scope: !21, file: !20, line: 147, baseType: !24, size: 16, align: 16, offset: 48)
+!29 = distinct !DIGlobalVariable(name: "ff_cavs_intra_mv", scope: !0, file: !5, line: 69, type: !18, isLocal: false, isDefinition: true, variable: %struct.cavs_vector* @ff_cavs_intra_mv)
+!30 = !{i32 2, !"Dwarf Version", i32 4}
+!31 = !{i32 2, !"Debug Info Version", i32 3}
+!32 = !{!"clang version 3.9.0 (tags/RELEASE_390/final)"}

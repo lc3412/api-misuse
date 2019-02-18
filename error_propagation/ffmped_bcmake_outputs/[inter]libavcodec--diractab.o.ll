@@ -1,0 +1,47 @@
+; ModuleID = '/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--diractab.o.i'
+source_filename = "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--diractab.o.i"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@ff_dirac_default_qmat = constant [7 x [4 x [4 x i8]]] [[4 x [4 x i8]] [[4 x i8] c"\05\03\03\00", [4 x i8] c"\00\04\04\01", [4 x i8] c"\00\05\05\02", [4 x i8] c"\00\06\06\03"], [4 x [4 x i8]] [[4 x i8] c"\04\02\02\00", [4 x i8] c"\00\04\04\02", [4 x i8] c"\00\05\05\03", [4 x i8] c"\00\07\07\05"], [4 x [4 x i8]] [[4 x i8] c"\05\03\03\00", [4 x i8] c"\00\04\04\01", [4 x i8] c"\00\05\05\02", [4 x i8] c"\00\06\06\03"], [4 x [4 x i8]] [[4 x i8] c"\08\04\04\00", [4 x i8] c"\00\04\04\00", [4 x i8] c"\00\04\04\00", [4 x i8] c"\00\04\04\00"], [4 x [4 x i8]] [[4 x i8] c"\08\04\04\00", [4 x i8] c"\00\04\04\00", [4 x i8] c"\00\04\04\00", [4 x i8] c"\00\04\04\00"], [4 x [4 x i8]] [[4 x i8] c"\00\04\04\08", [4 x i8] c"\00\08\08\0C", [4 x i8] c"\00\0D\0D\11", [4 x i8] c"\00\11\11\15"], [4 x [4 x i8]] [[4 x i8] c"\03\01\01\00", [4 x i8] c"\00\04\04\02", [4 x i8] c"\00\06\06\05", [4 x i8] c"\00\09\09\07"]], align 16
+@ff_dirac_qscale_tab = constant [116 x i32] [i32 4, i32 5, i32 6, i32 7, i32 8, i32 10, i32 11, i32 13, i32 16, i32 19, i32 23, i32 27, i32 32, i32 38, i32 45, i32 54, i32 64, i32 76, i32 91, i32 108, i32 128, i32 152, i32 181, i32 215, i32 256, i32 304, i32 362, i32 431, i32 512, i32 609, i32 724, i32 861, i32 1024, i32 1218, i32 1448, i32 1722, i32 2048, i32 2435, i32 2896, i32 3444, i32 4096, i32 4871, i32 5793, i32 6889, i32 8192, i32 9742, i32 11585, i32 13777, i32 16384, i32 19484, i32 23170, i32 27554, i32 32768, i32 38968, i32 46341, i32 55109, i32 65536, i32 77936, i32 92682, i32 110218, i32 131072, i32 155872, i32 185364, i32 220436, i32 262144, i32 311744, i32 370728, i32 440872, i32 524288, i32 623487, i32 741455, i32 881744, i32 1048576, i32 1246974, i32 1482910, i32 1763488, i32 2097152, i32 2493948, i32 2965821, i32 3526975, i32 4194304, i32 4987896, i32 5931642, i32 7053950, i32 8388608, i32 9975792, i32 11863283, i32 14107901, i32 16777216, i32 19951585, i32 23726566, i32 28215802, i32 33554432, i32 39903169, i32 47453133, i32 56431603, i32 67108864, i32 79806339, i32 94906266, i32 112863206, i32 134217728, i32 159612677, i32 189812531, i32 225726413, i32 268435456, i32 319225354, i32 379625062, i32 451452825, i32 536870912, i32 638450708, i32 759250125, i32 902905651, i32 1073741824, i32 1276901417, i32 1518500250, i32 1805811301], align 16
+@ff_dirac_qoffset_intra_tab = constant [120 x i32] [i32 1, i32 2, i32 3, i32 4, i32 4, i32 5, i32 6, i32 7, i32 8, i32 10, i32 12, i32 14, i32 16, i32 19, i32 23, i32 27, i32 32, i32 38, i32 46, i32 54, i32 64, i32 76, i32 91, i32 108, i32 128, i32 152, i32 181, i32 216, i32 256, i32 305, i32 362, i32 431, i32 512, i32 609, i32 724, i32 861, i32 1024, i32 1218, i32 1448, i32 1722, i32 2048, i32 2436, i32 2897, i32 3445, i32 4096, i32 4871, i32 5793, i32 6889, i32 8192, i32 9742, i32 11585, i32 13777, i32 16384, i32 19484, i32 23171, i32 27555, i32 32768, i32 38968, i32 46341, i32 55109, i32 65536, i32 77936, i32 92682, i32 110218, i32 131072, i32 155872, i32 185364, i32 220436, i32 262144, i32 311744, i32 370728, i32 440872, i32 524288, i32 623487, i32 741455, i32 881744, i32 1048576, i32 1246974, i32 1482911, i32 1763488, i32 2097152, i32 2493948, i32 2965821, i32 3526975, i32 4194304, i32 4987896, i32 5931642, i32 7053951, i32 8388608, i32 9975793, i32 11863283, i32 14107901, i32 16777216, i32 19951585, i32 23726567, i32 28215802, i32 33554432, i32 39903170, i32 47453133, i32 56431603, i32 67108864, i32 79806339, i32 94906266, i32 112863207, i32 134217728, i32 159612677, i32 189812531, i32 225726413, i32 268435456, i32 319225354, i32 379625063, i32 451452826, i32 536870912, i32 638450709, i32 759250125, i32 902905651, i32 1073741824, i32 1276901417, i32 1518500250, i32 1805811302], align 16
+@ff_dirac_qoffset_inter_tab = constant [122 x i32] [i32 1, i32 2, i32 2, i32 3, i32 3, i32 4, i32 4, i32 5, i32 6, i32 7, i32 9, i32 10, i32 12, i32 14, i32 17, i32 20, i32 24, i32 29, i32 34, i32 41, i32 48, i32 57, i32 68, i32 81, i32 96, i32 114, i32 136, i32 162, i32 192, i32 228, i32 272, i32 323, i32 384, i32 457, i32 543, i32 646, i32 768, i32 913, i32 1086, i32 1292, i32 1536, i32 1827, i32 2172, i32 2583, i32 3072, i32 3653, i32 4344, i32 5166, i32 6144, i32 7307, i32 8689, i32 10333, i32 12288, i32 14613, i32 17378, i32 20666, i32 24576, i32 29226, i32 34756, i32 41332, i32 49152, i32 58452, i32 69512, i32 82664, i32 98304, i32 116904, i32 139023, i32 165327, i32 196608, i32 233808, i32 278046, i32 330654, i32 393216, i32 467615, i32 556091, i32 661308, i32 786432, i32 935231, i32 1112183, i32 1322616, i32 1572864, i32 1870461, i32 2224366, i32 2645231, i32 3145728, i32 3740922, i32 4448731, i32 5290463, i32 6291456, i32 7481844, i32 8897462, i32 10580926, i32 12582912, i32 14963688, i32 17794925, i32 21161851, i32 25165824, i32 29927377, i32 35589850, i32 42323702, i32 50331648, i32 59854754, i32 71179699, i32 84647405, i32 100663296, i32 119709508, i32 142359398, i32 169294809, i32 201326592, i32 239419016, i32 284718797, i32 338589619, i32 402653184, i32 478838031, i32 569437594, i32 677179238, i32 805306368, i32 957676063, i32 1138875188, i32 1354358476, i32 1610612736, i32 1915352125], align 16
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!30, !31}
+!llvm.ident = !{!32}
+
+!0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 3.9.0 (tags/RELEASE_390/final)", isOptimized: false, runtimeVersion: 0, emissionKind: FullDebug, enums: !2, globals: !3)
+!1 = !DIFile(filename: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs/[inter]libavcodec--diractab.o.i", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!2 = !{}
+!3 = !{!4, !14, !21, !25}
+!4 = distinct !DIGlobalVariable(name: "ff_dirac_default_qmat", scope: !0, file: !5, line: 24, type: !6, isLocal: false, isDefinition: true, variable: [7 x [4 x [4 x i8]]]* @ff_dirac_default_qmat)
+!5 = !DIFile(filename: "libavcodec/diractab.c", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!6 = !DICompositeType(tag: DW_TAG_array_type, baseType: !7, size: 896, align: 8, elements: !11)
+!7 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !8)
+!8 = !DIDerivedType(tag: DW_TAG_typedef, name: "uint8_t", file: !9, line: 48, baseType: !10)
+!9 = !DIFile(filename: "/usr/include/stdint.h", directory: "/home/ubuntu_1604/Desktop/ffmped_bcmake_outputs")
+!10 = !DIBasicType(name: "unsigned char", size: 8, align: 8, encoding: DW_ATE_unsigned_char)
+!11 = !{!12, !13, !13}
+!12 = !DISubrange(count: 7)
+!13 = !DISubrange(count: 4)
+!14 = distinct !DIGlobalVariable(name: "ff_dirac_qscale_tab", scope: !0, file: !5, line: 34, type: !15, isLocal: false, isDefinition: true, variable: [116 x i32]* @ff_dirac_qscale_tab)
+!15 = !DICompositeType(tag: DW_TAG_array_type, baseType: !16, size: 3712, align: 32, elements: !19)
+!16 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !17)
+!17 = !DIDerivedType(tag: DW_TAG_typedef, name: "int32_t", file: !9, line: 38, baseType: !18)
+!18 = !DIBasicType(name: "int", size: 32, align: 32, encoding: DW_ATE_signed)
+!19 = !{!20}
+!20 = !DISubrange(count: 116)
+!21 = distinct !DIGlobalVariable(name: "ff_dirac_qoffset_intra_tab", scope: !0, file: !5, line: 53, type: !22, isLocal: false, isDefinition: true, variable: [120 x i32]* @ff_dirac_qoffset_intra_tab)
+!22 = !DICompositeType(tag: DW_TAG_array_type, baseType: !16, size: 3840, align: 32, elements: !23)
+!23 = !{!24}
+!24 = !DISubrange(count: 120)
+!25 = distinct !DIGlobalVariable(name: "ff_dirac_qoffset_inter_tab", scope: !0, file: !5, line: 72, type: !26, isLocal: false, isDefinition: true, variable: [122 x i32]* @ff_dirac_qoffset_inter_tab)
+!26 = !DICompositeType(tag: DW_TAG_array_type, baseType: !27, size: 3904, align: 32, elements: !28)
+!27 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !18)
+!28 = !{!29}
+!29 = !DISubrange(count: 122)
+!30 = !{i32 2, !"Dwarf Version", i32 4}
+!31 = !{i32 2, !"Debug Info Version", i32 3}
+!32 = !{!"clang version 3.9.0 (tags/RELEASE_390/final)"}
