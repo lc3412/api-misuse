@@ -1,0 +1,11583 @@
+a_weighting:
+$
+
+acalc_magnitudes:
+$
+
+update16:
+$
+
+acolor16_column:
+0 -> []
+
+acolor16_column_mirror:
+0 -> []
+
+acolor16_row:
+0 -> []
+
+acolor16_row_mirror:
+0 -> []
+
+update:
+$
+
+acolor_column:
+0 -> []
+
+acolor_column_mirror:
+0 -> []
+
+acolor_row:
+0 -> []
+
+acolor_row_mirror:
+0 -> []
+
+ff_frame_pool_get_audio_config:
+-22 -> []
+0 -> []
+
+ff_frame_pool_get:
+$
+
+ff_frame_pool_uninit:
+$
+
+ff_frame_pool_audio_init:
+$
+
+ff_default_get_audio_buffer:
+$
+
+ff_get_audio_buffer:
+$
+
+ff_tlog_ref:
+$
+
+filter_unblock:
+$
+
+bucket:
+$
+
+check_consistency:
+$
+
+ff_framequeue_add:
+-12 -> []
+0 -> []
+
+ff_tlog_link:
+$
+
+ff_filter_set_ready:
+$
+
+ff_filter_frame:
+-1163346256 -> []
+-12 -> [ff_framequeue_add: [-inf, -1]]
+0 -> [ff_framequeue_add: [0, +inf]]
+
+hermite_interpolation.8502:
+$
+
+output_gain.8501:
+$
+
+compressor:
+$
+
+acompressor_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+ff_all_samplerates:
+$
+
+ff_formats_unref:
+$
+
+ff_formats_ref:
+-12 -> [av_realloc_array: [0, 0]]
+0 -> [av_realloc_array: [-inf, -1],[1, +inf]]
+
+ff_set_common_samplerates:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+ff_set_common_formats:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+ff_make_format_list:
+$
+
+ff_channel_layouts_unref:
+$
+
+ff_channel_layouts_ref:
+-12 -> [av_realloc_array: [0, 0]]
+0 -> [av_realloc_array: [-inf, -1],[1, +inf]]
+
+ff_set_common_channel_layouts:
+-12 -> [ff_channel_layouts_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf]]
+
+ff_all_channel_counts:
+$
+
+acompressor_query_formats:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+aconfig_input:
+-12 -> []
+0 -> []
+
+config_output.3750:
+0 -> []
+
+acrossfade_config_output:
+-22 -> []
+0 -> []
+
+ff_framequeue_take:
+$
+
+heap_bubble_down:
+$
+
+heap_bubble_up:
+$
+
+ff_avfilter_graph_update_heap:
+$
+
+ff_update_link_current_pts:
+$
+
+ff_avfilter_link_set_out_status:
+$
+
+ff_framequeue_queued_frames:
+$
+
+ff_inlink_set_status:
+$
+
+ff_outlink_frame_wanted:
+$
+
+ff_framequeue_peek:
+$
+
+ff_framequeue_queued_samples:
+$
+
+ff_inlink_check_available_samples:
+$
+
+ff_command_queue_pop:
+$
+
+set_enable_expr:
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_expr_parse: [0, +inf]]
+
+avfilter_process_command:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+0 -> [strcmp: [0, 0]]
+
+av_q2d.1012:
+$
+
+ff_inlink_process_commands:
+0 -> []
+
+ff_inlink_evaluate_timeline_at_frame:
+$
+
+consume_update:
+$
+
+ff_framequeue_update_peeked:
+$
+
+av_make_q.9405:
+$
+
+ff_framequeue_skip_samples:
+$
+
+take_samples:
+0 -> [av_frame_copy_props: [0, +inf]]
+
+ff_inlink_consume_samples:
+0 -> [ff_inlink_check_available_samples: [0, 0]]
+1 -> [take_samples: [0, +inf]]
+
+ff_inlink_check_available_frame:
+$
+
+ff_inlink_consume_frame:
+0 -> [ff_inlink_check_available_frame: [0, 0]]
+
+ff_frame_pool_video_init:
+$
+
+ff_frame_pool_get_video_config:
+-22 -> []
+0 -> []
+
+ff_default_get_video_buffer:
+$
+
+ff_get_video_buffer:
+$
+
+ff_inlink_request_frame:
+$
+
+ff_inlink_queued_frames:
+$
+
+ff_outlink_get_status:
+$
+
+ff_inlink_peek_frame:
+$
+
+pointer_at:
+$
+
+ff_fill_rectangle:
+$
+
+ff_inlink_acknowledge_status:
+0 -> [ff_framequeue_queued_frames: [-inf, -1],[1, +inf]]
+
+ff_avfilter_link_set_in_status:
+$
+
+ff_outlink_set_status:
+$
+
+activate:
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted: [-inf, -1],[1, +inf]]
+
+framesync_inject_frame:
+$
+
+ff_outlink_set_status.282:
+$
+
+framesync_eof:
+$
+
+framesync_sync_level_update:
+$
+
+framesync_pts_extrapolate:
+$
+
+framesync_inject_status:
+$
+
+ff_outlink_frame_wanted.290:
+$
+
+consume_from_fifos:
+-1497649742 -> [ff_outlink_frame_wanted.290: [0, 0]]
+0 -> [ff_outlink_frame_wanted.290: [-inf, -1],[1, +inf]]
+
+framesync_advance:
+$
+
+ff_framesync_activate:
+0 -> [framesync_advance: [0, +inf]]
+
+activate.1056:
+$
+
+ff_outlink_set_status.1388:
+$
+
+ff_filter_get_nb_threads:
+$
+
+get_scene_score:
+$
+
+blend_frames:
+-12 -> []
+0 -> []
+1 -> []
+
+process_work_frame:
+-12 -> [blend_frames: [-inf, -1], av_rescale: [-inf, 0]]
+0 -> [av_rescale: [1, +inf]]
+1 -> [blend_frames: [0, +inf], av_rescale: [-inf, 0]]
+
+ff_outlink_frame_wanted.1389:
+$
+
+activate.1382:
+-1497649742 -> [ff_outlink_get_status: [0, 0], process_work_frame: [-inf, 0],[2, +inf], ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.1389: [0, 0]]
+-12 -> [ff_outlink_get_status: [0, 0], process_work_frame: [-inf, -1], ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], process_work_frame: [-inf, 0],[2, +inf], ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.1389: [-inf, -1],[1, +inf]]
+1 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+
+activate.1500:
+$
+
+push_frame:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.1600:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+ff_outlink_set_status.1601:
+$
+
+ff_outlink_frame_wanted.1602:
+$
+
+activate.1599:
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf]]
+
+ff_outlink_frame_wanted.166:
+$
+
+ff_outlink_set_status.165:
+$
+
+activate.163:
+-1497649742 -> [ff_outlink_frame_wanted.166: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.166: [-inf, -1],[1, +inf]]
+
+activate.1832:
+$
+
+activate.238:
+$
+
+fir_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+ff_inlink_queued_samples:
+$
+
+check_ir.2569:
+-22 -> []
+0 -> []
+
+ff_outlink_frame_wanted.2570:
+$
+
+ff_outlink_set_status.2572:
+$
+
+init_segment:
+-12 -> []
+0 -> []
+
+draw_line:
+$
+
+drawtext:
+$
+
+draw_response:
+$
+
+convert_coeffs.2571:
+-558323010 -> [ff_inlink_consume_samples: [0, +inf]]
+-12 -> [init_segment: [-inf, -1]]
+0 -> [ff_inlink_consume_samples: [-inf, +inf]]
+
+activate.2566:
+-1497649742 -> [ff_outlink_get_status: [-inf, +inf], check_ir.2569: [0, +inf], convert_coeffs.2571: [0, +inf], ff_inlink_consume_samples: [1, +inf], ff_outlink_frame_wanted.2570: [0, 0]]
+-22 -> [check_ir.2569: [-inf, -1]]
+0 -> [check_ir.2569: [0, +inf], convert_coeffs.2571: [0, +inf], ff_inlink_consume_samples: [1, +inf], ff_outlink_frame_wanted.2570: [-inf, +inf], ff_outlink_get_status: [-inf, +inf]]
+
+activate.2770:
+$
+
+read_frame:
+1 -> [ff_inlink_consume_frame: [0, +inf]]
+
+ff_outlink_set_status.2887:
+$
+
+update_eof_pts:
+$
+
+ff_outlink_frame_wanted.2886:
+$
+
+shift_frame:
+$
+
+write_frame:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+activate.2885:
+-1497649742 -> [ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+-1163346256 -> [ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+-12 -> [ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [0, 0]]
+
+ff_outlink_frame_wanted.2981:
+$
+
+ff_outlink_set_status.2980:
+$
+
+filter_frame.2979:
+-12 -> []
+0 -> []
+
+activate.2977:
+-12 -> [filter_frame.2979: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf], ff_inlink_consume_frame: [0, +inf]]
+
+activate.3019:
+$
+
+activate.347:
+$
+
+find_next_delta_ts:
+$
+
+send_silence:
+-1163346256 -> [av_rescale_q: [-inf, -1],[1, +inf], ff_filter_frame: [-inf, -1]]
+-558323010 -> []
+-12 -> [av_rescale_q: [-inf, -1],[1, +inf], ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf], av_rescale_q: [0, 0]]
+
+flush_segment:
+-1163346256 -> [send_silence: [-inf, -1]]
+-558323010 -> [send_silence: [-inf, -1]]
+-12 -> [send_silence: [-inf, -1]]
+0 -> [send_silence: [0, +inf]]
+
+av_make_q.3655:
+$
+
+push_frame.3650:
+$
+
+ff_outlink_set_status.3651:
+$
+
+close_input:
+$
+
+ff_outlink_frame_wanted.3652:
+$
+
+activate.3649:
+-1497649742 -> [ff_inlink_acknowledge_status: [-inf, 0], ff_outlink_frame_wanted.3652: [0, 0]]
+-1163346256 -> [ff_inlink_acknowledge_status: [1, +inf], flush_segment: [-inf, -1]]
+-558323010 -> [ff_inlink_acknowledge_status: [1, +inf], flush_segment: [-inf, -1]]
+-12 -> [ff_inlink_acknowledge_status: [1, +inf], flush_segment: [-inf, -1]]
+0 -> [ff_inlink_acknowledge_status: [1, +inf], flush_segment: [0, +inf], ff_outlink_frame_wanted.3652: [-inf, -1],[1, +inf]]
+
+get_width:
+$
+
+get_height:
+$
+
+fill_buf:
+$
+
+calc_combed_score:
+$
+
+copy_fields:
+$
+
+create_weave_frame:
+$
+
+checkmm:
+$
+
+luma_abs_diff:
+$
+
+av_q2d:
+$
+
+av_ts_make_time_string:
+$
+
+build_abs_diff_mask:
+$
+
+build_diff_map:
+$
+
+get_field_base:
+$
+
+select_frame:
+$
+
+compare_fields:
+$
+
+filter_frame.369:
+0 -> []
+
+ff_outlink_frame_wanted.371:
+$
+
+ff_outlink_set_status.370:
+$
+
+activate.367:
+0 -> [ff_inlink_consume_frame: [1, +inf], ff_inlink_acknowledge_status: [0, 0]]
+
+ff_outlink_frame_wanted.3687:
+$
+
+ff_outlink_set_status.3686:
+$
+
+activate.3685:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_inlink_consume_samples: [0, +inf], ff_filter_frame: [0, +inf]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+
+activate.3909:
+$
+
+av_q2d.3952:
+$
+
+av_ts_make_time_string.3943:
+$
+
+is_frozen:
+$
+
+set_meta.3945:
+$
+
+ff_outlink_frame_wanted.3949:
+$
+
+ff_outlink_set_status.3948:
+$
+
+activate.3941:
+-1497649742 -> [ff_outlink_get_status: [0, 0], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.3949: [0, 0]]
+-12 -> [ff_outlink_get_status: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.3949: [-inf, -1],[1, +inf]]
+
+ff_outlink_frame_wanted.3972:
+$
+
+ff_outlink_set_status.3971:
+$
+
+filter_frame.3970:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+activate.3968:
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf]]
+
+ff_outlink_frame_wanted.3996:
+$
+
+ff_outlink_set_status.3995:
+$
+
+hermite_interpolation:
+$
+
+output_gain:
+$
+
+gate:
+$
+
+activate.3994:
+-1163346256 -> [ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [-inf, -1]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [0, +inf]]
+
+activate.4101:
+$
+
+activate.4570:
+$
+
+activate.4660:
+$
+
+activate.4728:
+$
+
+drawtext.4840:
+$
+
+clear_image.4839:
+$
+
+filter_have_queued:
+0 -> [ff_inlink_queued_frames: [0, 0]]
+1 -> [ff_inlink_queued_frames: [-inf, -1],[1, +inf]]
+
+av_q2d.4858:
+$
+
+av_ts_make_time_string.4855:
+$
+
+av_ts_make_string.4853:
+$
+
+draw_items:
+$
+
+create_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+ff_outlink_frame_wanted.4837:
+$
+
+ff_outlink_set_status.4838:
+$
+
+activate.4833:
+-1497649742 -> [ff_inlink_queued_frames: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.4837: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_queued_frames: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.4837: [-inf, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+
+ff_outlink_frame_wanted.5459:
+$
+
+ff_outlink_set_status.5458:
+$
+
+activate.5456:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_outlink_get_status: [0, 0], ff_filter_frame: [-inf, -1]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_filter_frame: [0, +inf]]
+
+ff_outlink_set_status.5797:
+$
+
+frame_list_next_pts:
+$
+
+frame_list_clear:
+$
+
+frame_list_remove_samples:
+$
+
+calculate_scales:
+$
+
+frame_list_next_frame_size:
+$
+
+output_frame:
+-1163346256 -> [frame_list_next_frame_size: [-inf, -1],[1, +inf], av_audio_fifo_size: [-inf, -1],[1, +inf]]
+-12 -> [frame_list_next_frame_size: [-inf, -1],[1, +inf], av_audio_fifo_size: [-inf, -1],[1, +inf]]
+0 -> [frame_list_next_frame_size: [0, 0], av_audio_fifo_size: [0, 0]]
+
+ff_outlink_frame_wanted.5798:
+$
+
+request_samples:
+$
+
+calc_active_inputs:
+-541478725 -> []
+0 -> []
+
+frame_list_add_frame:
+-12 -> []
+0 -> []
+
+activate.5796:
+-1163346256 -> [ff_inlink_consume_frame: [1, +inf], av_audio_fifo_write: [0, +inf], output_frame: [-inf, -1], frame_list_add_frame: [0, +inf]]
+-12 -> [ff_inlink_consume_frame: [1, +inf], av_audio_fifo_write: [0, +inf], output_frame: [-inf, -1], frame_list_add_frame: [-inf, -1]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_consume_frame: [1, +inf], av_audio_fifo_write: [0, +inf], frame_list_add_frame: [0, +inf], calc_active_inputs: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.5798: [0, 0]]
+
+activate.5867:
+$
+
+drawtext.5961:
+$
+
+clear_combine_buffer:
+$
+
+get_time:
+$
+
+plot_spectrum_column:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+1 -> []
+
+ff_outlink_frame_wanted.5960:
+$
+
+ff_outlink_set_status.5959:
+$
+
+activate.5952:
+-1497649742 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], av_audio_fifo_peek: [0, +inf], plot_spectrum_column: [1, +inf], ff_inlink_acknowledge_status: [0, 0]]
+-1163346256 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], av_audio_fifo_peek: [0, +inf], plot_spectrum_column: [-inf, 0]]
+-12 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], av_audio_fifo_peek: [0, +inf], plot_spectrum_column: [-inf, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_consume_frame: [0, +inf], av_audio_fifo_peek: [0, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf]]
+1 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], av_audio_fifo_peek: [0, +inf]]
+
+ff_outlink_set_status.6762:
+$
+
+ff_outlink_frame_wanted.6763:
+$
+
+activate.6761:
+-1497649742 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_samples: [-inf, 0], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.6763: [0, 0]]
+-12 -> [ff_outlink_get_status: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_consume_samples: [-inf, 0], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.6763: [-inf, -1],[1, +inf]]
+
+activate.7269:
+$
+
+ff_framequeue_queued_frames.7309:
+$
+
+av_x_if_null.7310:
+$
+
+activate.7306:
+0 -> []
+
+ff_outlink_set_status.7514:
+$
+
+ff_outlink_frame_wanted.7513:
+$
+
+av_q2d.7515:
+$
+
+output_single_frame:
+-1163346256 -> [sws_init_context: [0, +inf]]
+-12 -> [sws_init_context: [0, +inf]]
+0 -> [sws_init_context: [0, +inf]]
+
+activate.7510:
+0 -> [output_single_frame: [0, +inf], ff_inlink_consume_frame: [0, +inf]]
+
+ff_outlink_frame_wanted.7580:
+$
+
+filter_frame.7578:
+-12 -> []
+0 -> []
+
+ff_outlink_set_status.7579:
+$
+
+activate.7576:
+-12 -> [filter_frame.7578: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf], ff_inlink_consume_frame: [0, +inf]]
+
+ff_outlink_set_status.7808:
+$
+
+ff_outlink_frame_wanted.7809:
+$
+
+activate.7804:
+-1497649742 -> [ff_outlink_get_status: [0, 0], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.7809: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.7809: [-inf, -1],[1, +inf]]
+
+init_sample_noise:
+$
+
+finish_sample_noise:
+$
+
+get_auto_noise_levels:
+$
+
+solve:
+$
+
+set_noise_profile:
+$
+
+process_get_band_noise:
+$
+
+get_band_centre:
+$
+
+set_band_parameters:
+$
+
+preprocess:
+$
+
+sample_noise_block:
+$
+
+set_parameters:
+$
+
+output_frame.7828:
+-1163346256 -> [av_audio_fifo_peek: [0, +inf]]
+-558323010 -> [av_audio_fifo_peek: [0, +inf]]
+-12 -> [av_audio_fifo_peek: [0, +inf]]
+0 -> [av_audio_fifo_peek: [0, +inf]]
+
+ff_outlink_set_status.7829:
+$
+
+ff_outlink_frame_wanted.7830:
+$
+
+activate.7826:
+-1497649742 -> [ff_outlink_get_status: [0, 0], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.7830: [0, 0]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.7830: [-inf, -1],[1, +inf]]
+
+activate.785:
+$
+
+ff_outlink_set_status.8066:
+$
+
+draw_frame:
+$
+
+ff_outlink_frame_wanted.8067:
+$
+
+activate.8065:
+-1497649742 -> [ff_outlink_get_status: [-inf, +inf], ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [0, 0], ff_outlink_frame_wanted.8067: [0, 0]]
+-1163346256 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf]]
+-12 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf]]
+0 -> [ff_inlink_consume_frame: [0, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.8067: [-inf, -1],[1, +inf], ff_outlink_get_status: [-inf, +inf]]
+
+ff_outlink_set_status.831:
+$
+
+check_ir:
+-22 -> []
+0 -> []
+
+ff_outlink_frame_wanted.830:
+$
+
+convert_coeffs:
+$
+
+headphone_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+activate.829:
+-1163346256 -> [ff_inlink_consume_samples: [1, +inf], headphone_frame: [-inf, -1]]
+-22 -> [ff_outlink_get_status: [0, 0]]
+-12 -> [ff_inlink_consume_samples: [1, +inf], headphone_frame: [-inf, -1]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], convert_coeffs: [0, +inf], headphone_frame: [0, +inf], ff_inlink_consume_samples: [0, +inf]]
+
+activate.8307:
+$
+
+ff_outlink_set_status.8334:
+$
+
+copy_samples:
+$
+
+free_frames:
+$
+
+try_push_frame.8333:
+$
+
+ff_outlink_frame_wanted.8335:
+$
+
+activate.8332:
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], try_push_frame.8333: [0, +inf], ff_inlink_queued_samples: [0, 0]]
+
+ff_outlink_set_status.8499:
+$
+
+ff_outlink_frame_wanted.8500:
+$
+
+activate.8494:
+-1163346256 -> [ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [ff_outlink_get_status: [0, 0], ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [-inf, -1]]
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_consume_frame: [0, +inf], ff_filter_frame: [0, +inf]]
+
+ff_outlink_set_status.8542:
+$
+
+try_push_frame.8544:
+-1163346256 -> [av_frame_alloc: [-inf, -1],[1, +inf], av_frame_get_plane_buffer: [-inf, -1],[1, +inf]]
+-22 -> [av_frame_alloc: [-inf, -1],[1, +inf], av_frame_get_plane_buffer: [0, 0]]
+-12 -> [av_frame_get_plane_buffer: [-inf, -1],[1, +inf], av_frame_alloc: [0, 0]]
+0 -> [av_frame_alloc: [-inf, -1],[1, +inf], av_frame_get_plane_buffer: [-inf, -1],[1, +inf]]
+
+ff_outlink_frame_wanted.8543:
+$
+
+activate.8541:
+0 -> [ff_outlink_get_status: [-inf, -1],[1, +inf], ff_inlink_acknowledge_status: [-inf, -1],[1, +inf], ff_outlink_frame_wanted.8543: [-inf, -1],[1, +inf]]
+
+activate.8850:
+$
+
+activate.8877:
+$
+
+activate.9278:
+$
+
+add_dc:
+$
+
+butterworth_compute_bw_gain_db:
+$
+
+chebyshev2_fo_section:
+$
+
+chebyshev2_bp_filter:
+$
+
+hz_2_rad:
+$
+
+chebyshev1_fo_section:
+$
+
+chebyshev1_bp_filter:
+$
+
+chebyshev2_compute_bw_gain_db:
+$
+
+chebyshev1_compute_bw_gain_db:
+$
+
+butterworth_fo_section:
+$
+
+butterworth_bp_filter:
+$
+
+equalizer:
+$
+
+add_filter:
+-12 -> []
+0 -> []
+
+add_mv_data:
+$
+
+add_to_queue:
+-12 -> []
+0 -> []
+
+aderivative_dblp:
+$
+
+aderivative_fltp:
+$
+
+aderivative_s16p:
+$
+
+aderivative_s32p:
+$
+
+parse_channel_expressions:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], av_dynarray2_add: [-inf, -1],[1, +inf]]
+-12 -> [av_strtok: [-inf, -1],[1, +inf], av_dynarray2_add: [0, 0], av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf]]
+
+aeval_config_output:
+-12 -> [parse_channel_expressions: [0, +inf]]
+0 -> [parse_channel_expressions: [0, +inf]]
+
+ff_add_channel_layout:
+-12 -> []
+0 -> []
+
+aeval_query_formats:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+
+push_samples:
+-1163346256 -> [av_audio_fifo_peek_at: [0, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [av_audio_fifo_peek_at: [0, +inf], ff_filter_frame: [-inf, -1]]
+0 -> [av_audio_fifo_peek_at: [0, +inf], ff_filter_frame: [0, +inf]]
+
+afilter_frame:
+$
+
+aflat16_column:
+0 -> []
+
+aflat16_column_mirror:
+0 -> []
+
+aflat16_row:
+0 -> []
+
+aflat16_row_mirror:
+0 -> []
+
+aflat_column:
+0 -> []
+
+aflat_column_mirror:
+0 -> []
+
+aflat_row:
+0 -> []
+
+aflat_row_mirror:
+0 -> []
+
+agate_config_input:
+0 -> []
+
+aintegral_dblp:
+$
+
+aintegral_fltp:
+$
+
+alloc_frame:
+$
+
+alloc_frame_empty:
+$
+
+av_make_q.5708:
+$
+
+alloc_out_frame:
+-12 -> []
+0 -> []
+
+init.7707:
+-22 -> []
+0 -> []
+
+allpass_init:
+$
+
+ff_fill_rgba_map:
+-22 -> []
+0 -> []
+
+config_props.8771:
+0 -> []
+
+allrgb_config_props:
+$
+
+allrgb_fill_picture:
+$
+
+init.8720:
+0 -> []
+
+allrgb_init:
+$
+
+allrgb_query_formats:
+-12 -> []
+0 -> []
+
+allyuv_fill_picture:
+$
+
+allyuv_init:
+$
+
+allyuv_query_formats:
+-12 -> []
+0 -> []
+
+alpha:
+$
+
+alpha_composite:
+$
+
+amplify_frame:
+0 -> []
+
+cqueue_dequeue:
+0 -> []
+
+fade.7147:
+$
+
+amplify_frame.7138:
+$
+
+cqueue_empty:
+$
+
+update_value:
+$
+
+pow_2.7146:
+$
+
+compute_frame_std_dev:
+$
+
+bound:
+$
+
+setup_compress_thresh:
+$
+
+perform_compression:
+$
+
+perform_dc_correction:
+$
+
+compute_frame_rms:
+$
+
+find_peak_magnitude:
+$
+
+get_max_local_gain:
+$
+
+cqueue_peek:
+$
+
+cqueue_enqueue:
+0 -> []
+
+cqueue_size:
+$
+
+gaussian_filter.7145:
+$
+
+minimum_filter:
+$
+
+cqueue_pop:
+0 -> []
+
+update_gain_history:
+$
+
+analyze_frame:
+$
+
+append_inout:
+$
+
+apply_1d_lut:
+$
+
+apply_luma_lut:
+$
+
+apply_luma_lut10:
+$
+
+apply_lut:
+$
+
+apply_lut.3854:
+$
+
+apply_lut.6703:
+$
+
+apply_lut10:
+$
+
+apply_lut16:
+0 -> []
+
+apply_lut16_p:
+0 -> []
+
+apply_lut8:
+0 -> []
+
+apply_lut8_p:
+0 -> []
+
+debug_mean_error:
+$
+
+set_processing_window:
+$
+
+apply_palette:
+-12 -> [av_frame_make_writable: [-inf, -1], av_frame_ref: [-inf, -1]]
+0 -> [av_frame_make_writable: [0, +inf], av_frame_ref: [0, +inf]]
+
+apply_unsharp:
+$
+
+apply_unsharp_c:
+0 -> []
+
+are_gains_pure:
+0 -> []
+1 -> []
+
+ff_request_frame:
+0 -> [ff_framequeue_queued_frames: [-inf, -1],[1, +inf]]
+
+arequest_frame:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [av_audio_fifo_size: [1, +inf], ff_filter_frame: [-inf, -1]]
+
+reverse_samples_planar:
+$
+
+reverse_samples_packed:
+$
+
+areverse_request_frame:
+$
+
+ff_insert_pad:
+-12 -> []
+0 -> []
+
+ff_insert_outpad.3217:
+$
+
+init.3212:
+-12 -> [av_expr_parse: [0, +inf]]
+0 -> [av_expr_parse: [0, +inf]]
+
+aselect_init:
+-22 -> [init.3212: [0, +inf]]
+0 -> [init.3212: [0, +inf]]
+
+common_init:
+0 -> []
+
+asink_init:
+$
+
+ff_add_format:
+-12 -> []
+0 -> []
+
+asink_query_formats:
+-22 -> []
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_all_channel_counts: [0, 0]]
+0 -> [ff_all_channel_counts: [-inf, -1],[1, +inf], ff_set_common_samplerates: [0, +inf]]
+
+atrim_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+auninit:
+$
+
+autocorrelation:
+$
+
+autoregression:
+$
+
+av_abuffersink_params_alloc:
+$
+
+av_buffersink_get_channel_layout:
+$
+
+av_buffersink_get_channels:
+$
+
+av_buffersink_get_format:
+$
+
+guess_status_pts:
+$
+
+ff_request_frame_to_filter:
+0 -> [ff_request_frame: [-541478725, -541478725]]
+
+ff_inlink_make_frame_writable:
+-22 -> [av_frame_is_writable: [0, 0]]
+-12 -> [av_frame_is_writable: [0, 0]]
+0 -> [av_frame_is_writable: [-inf, -1],[1, +inf], av_frame_copy_props: [0, +inf]]
+
+ff_filter_frame_framed:
+$
+
+ff_filter_frame_to_filter:
+$
+
+forward_status_change:
+$
+
+samples_ready:
+$
+
+ff_filter_activate_default:
+$
+
+ff_filter_activate:
+$
+
+ff_filter_graph_run_once:
+$
+
+return_or_keep_frame:
+$
+
+get_frame_internal:
+$
+
+av_buffersink_get_frame_flags:
+$
+
+av_buffersink_get_frame:
+$
+
+av_buffersink_get_frame_rate:
+$
+
+av_buffersink_get_h:
+$
+
+av_buffersink_get_hw_frames_ctx:
+$
+
+av_buffersink_get_sample_aspect_ratio:
+$
+
+av_buffersink_get_sample_rate:
+$
+
+av_buffersink_get_samples:
+$
+
+av_buffersink_get_time_base:
+$
+
+av_buffersink_get_type:
+$
+
+av_buffersink_get_w:
+$
+
+av_buffersink_params_alloc:
+$
+
+av_buffersink_set_frame_size:
+$
+
+av_q2d.5753:
+$
+
+av_ts_make_time_string.5759:
+$
+
+push_frame.5764:
+0 -> [ff_filter_graph_run_once: [-11, -11]]
+
+av_buffersrc_close:
+$
+
+av_buffersrc_add_frame_internal:
+-12 -> [av_frame_alloc: [0, 0]]
+0 -> [push_frame.5764: [0, +inf]]
+
+av_buffersrc_add_frame_flags:
+-12 -> [av_frame_alloc: [0, 0]]
+
+av_buffersrc_add_frame:
+$
+
+av_buffersrc_get_nb_failed_requests:
+$
+
+av_buffersrc_parameters_alloc:
+$
+
+av_buffersrc_parameters_set:
+-558323010 -> []
+-12 -> []
+0 -> []
+
+av_buffersrc_write_frame:
+$
+
+av_cmp_q:
+$
+
+av_cmp_q.2475:
+$
+
+av_cmp_q.8289:
+$
+
+uintpow:
+$
+
+av_dict_set_fxp:
+$
+
+av_filter_iterate:
+$
+
+av_filter_init_next:
+$
+
+av_isdigit:
+$
+
+av_isdigit.2447:
+$
+
+av_isdigit.7045:
+$
+
+av_isgraph:
+$
+
+av_isgraph.5440:
+$
+
+av_isspace:
+$
+
+av_lfg_get:
+$
+
+av_lfg_get.1718:
+$
+
+av_lfg_get.1794:
+$
+
+av_lfg_get.2045:
+$
+
+av_lfg_get.5434:
+$
+
+av_lfg_get.5942:
+$
+
+av_make_error_string:
+$
+
+av_make_error_string.1504:
+$
+
+av_make_error_string.3070:
+$
+
+av_make_error_string.4999:
+$
+
+av_make_error_string.6967:
+$
+
+av_make_error_string.9125:
+$
+
+av_make_error_string.9689:
+$
+
+av_make_error_string.990:
+$
+
+av_make_q:
+$
+
+av_make_q.1909:
+$
+
+av_make_q.2388:
+$
+
+av_make_q.4368:
+$
+
+av_make_q.4509:
+$
+
+av_make_q.4823:
+$
+
+av_make_q.6070:
+$
+
+av_make_q.8732:
+$
+
+av_q2d.1119:
+$
+
+av_q2d.1360:
+$
+
+av_q2d.1414:
+$
+
+av_q2d.2096:
+$
+
+av_q2d.2129:
+$
+
+av_q2d.2230:
+$
+
+av_q2d.2295:
+$
+
+av_q2d.2466:
+$
+
+av_q2d.2752:
+$
+
+av_q2d.2846:
+$
+
+av_q2d.3197:
+$
+
+av_q2d.3264:
+$
+
+av_q2d.3639:
+$
+
+av_q2d.4174:
+$
+
+av_q2d.4227:
+$
+
+av_q2d.4394:
+$
+
+av_q2d.4717:
+$
+
+av_q2d.503:
+$
+
+av_q2d.5250:
+$
+
+av_q2d.5389:
+$
+
+av_q2d.5711:
+$
+
+av_q2d.6308:
+$
+
+av_q2d.6466:
+$
+
+av_q2d.6699:
+$
+
+av_q2d.6844:
+$
+
+av_q2d.6951:
+$
+
+av_q2d.7071:
+$
+
+av_q2d.8198:
+$
+
+av_q2d.8414:
+$
+
+av_q2d.8729:
+$
+
+av_q2d.8965:
+$
+
+av_q2d.9013:
+$
+
+av_q2d.9045:
+$
+
+av_q2d.9335:
+$
+
+av_q2d.9557:
+$
+
+av_q2d.9620:
+$
+
+av_strnlen:
+$
+
+av_ts_make_string:
+$
+
+av_ts_make_string.2053:
+$
+
+av_ts_make_string.2189:
+$
+
+av_ts_make_string.4705:
+$
+
+av_ts_make_string.9050:
+$
+
+av_ts_make_time_string.1353:
+$
+
+av_ts_make_time_string.2054:
+$
+
+av_ts_make_time_string.2190:
+$
+
+av_ts_make_time_string.4163:
+$
+
+av_ts_make_time_string.4706:
+$
+
+av_ts_make_time_string.5381:
+$
+
+av_ts_make_time_string.9042:
+$
+
+av_x_if_null:
+$
+
+av_x_if_null.3009:
+$
+
+av_x_if_null.3374:
+$
+
+av_x_if_null.5756:
+$
+
+averageiir2d:
+$
+
+avfilter_add_matrix:
+$
+
+avfilter_config_links:
+$
+
+avfilter_configuration:
+$
+
+ff_filter_graph_remove_filter:
+$
+
+ff_framequeue_free:
+$
+
+avfilter_link_free:
+$
+
+free_link:
+$
+
+avfilter_free:
+$
+
+avfilter_get_by_name:
+$
+
+avfilter_get_class:
+$
+
+avfilter_get_matrix:
+$
+
+ff_framequeue_global_init:
+$
+
+avfilter_graph_alloc:
+$
+
+thread_init_internal:
+$
+
+ff_graph_thread_init:
+0 -> [thread_init_internal: [2, +inf]]
+
+avfilter_pad_count:
+$
+
+ff_filter_alloc:
+$
+
+avfilter_graph_alloc_filter:
+$
+
+graph_check_validity:
+-22 -> []
+0 -> []
+
+graph_config_pointers:
+-22 -> []
+-12 -> []
+0 -> []
+
+formats_declared:
+0 -> []
+1 -> []
+
+sanitize_channel_layouts:
+$
+
+ff_all_channel_layouts:
+$
+
+ff_all_formats:
+$
+
+filter_query_formats:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf], ff_set_common_channel_layouts: [0, +inf]]
+
+ff_merge_channel_layouts:
+$
+
+ff_merge_samplerates:
+$
+
+clone_filter_formats:
+$
+
+ff_merge_formats:
+$
+
+can_merge_formats:
+0 -> [clone_filter_formats: [0, 0]]
+1 -> [clone_filter_formats: [-inf, -1],[1, +inf]]
+
+avfilter_init_dict:
+$
+
+process_options:
+$
+
+avfilter_init_str:
+-1414549496 -> [strcmp: [-inf, -1],[1, +inf], av_dict_get: [-inf, -1],[1, +inf]]
+-12 -> [av_strdup: [0, 0]]
+
+avfilter_graph_create_filter:
+0 -> [avfilter_init_str: [0, +inf]]
+
+ff_framequeue_init:
+$
+
+avfilter_link:
+-22 -> []
+-12 -> []
+0 -> []
+
+ff_channel_layouts_changeref:
+$
+
+ff_formats_changeref:
+$
+
+avfilter_insert_filter:
+-22 -> [avfilter_link: [-inf, -1]]
+-12 -> [avfilter_link: [-inf, -1]]
+0 -> [avfilter_link: [0, +inf]]
+
+default_query_formats_common:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_set_common_channel_layouts: [-inf, -1], ff_set_common_samplerates: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf], ff_set_common_channel_layouts: [0, +inf], ff_set_common_samplerates: [0, +inf]]
+
+ff_default_query_formats:
+$
+
+query_formats.6974:
+-38 -> [formats_declared: [0, 0], avfilter_get_by_name: [-inf, -1],[1, +inf], avfilter_graph_create_filter: [0, +inf]]
+-22 -> [formats_declared: [0, 0], avfilter_get_by_name: [0, 0], avfilter_graph_create_filter: [0, +inf], avfilter_insert_filter: [-inf, -1]]
+-12 -> [avfilter_graph_create_filter: [0, +inf], avfilter_insert_filter: [-inf, -1]]
+-11 -> [formats_declared: [0, 0], avfilter_get_by_name: [-inf, -1],[1, +inf], avfilter_graph_create_filter: [0, +inf]]
+-5 -> [formats_declared: [-inf, +inf], avfilter_get_by_name: [-inf, -1],[1, +inf], avfilter_graph_create_filter: [0, +inf]]
+0 -> [formats_declared: [0, 0], avfilter_get_by_name: [-inf, -1],[1, +inf], avfilter_graph_create_filter: [0, +inf], avfilter_insert_filter: [-inf, -1]]
+
+get_fmt_score:
+$
+
+find_best_sample_fmt_of_2:
+$
+
+pick_format:
+-22 -> []
+0 -> []
+
+pick_formats:
+-22 -> []
+0 -> []
+
+swap_sample_fmts_on_filter:
+$
+
+swap_sample_fmts:
+$
+
+swap_samplerates_on_filter:
+$
+
+swap_samplerates:
+$
+
+swap_channel_layouts_on_filter:
+$
+
+swap_channel_layouts:
+$
+
+reduce_formats_on_filter:
+-12 -> [ff_add_format: [-inf, -1]]
+0 -> [ff_add_format: [-inf, -1], ff_add_channel_layout: [0, +inf]]
+1 -> [ff_add_format: [0, +inf], ff_add_channel_layout: [-inf, -1]]
+
+reduce_formats:
+-12 -> []
+0 -> []
+1 -> []
+
+graph_config_formats:
+-22 -> [reduce_formats: [0, +inf], pick_formats: [-inf, -1]]
+-12 -> [reduce_formats: [-inf, -1]]
+0 -> [query_formats.6974: [-11, -11],[0, +inf], pick_formats: [0, +inf]]
+1 -> [reduce_formats: [-inf, -1]]
+
+graph_config_links:
+$
+
+graph_insert_fifos:
+-22 -> [avfilter_graph_create_filter: [0, +inf], avfilter_insert_filter: [-inf, -1]]
+-12 -> [avfilter_graph_create_filter: [0, +inf], avfilter_insert_filter: [-inf, -1]]
+0 -> [avfilter_graph_create_filter: [0, +inf]]
+
+graph_check_links:
+0 -> [av_image_check_size2: [0, +inf]]
+
+avfilter_graph_config:
+-22 -> [graph_check_validity: [-inf, -1],[1, +inf], graph_check_links: [0, 0], graph_config_pointers: [-inf, -1],[1, +inf]]
+-12 -> [graph_check_links: [0, 0], graph_config_pointers: [-inf, -1],[1, +inf]]
+0 -> [graph_check_validity: [0, 0], graph_insert_fifos: [0, +inf], graph_config_formats: [0, 0], graph_config_links: [0, 0], graph_check_links: [0, 0], graph_config_pointers: [0, 0]]
+
+print_link_prop:
+$
+
+avfilter_graph_dump_to_buf:
+$
+
+avfilter_graph_dump:
+$
+
+slice_thread_uninit:
+$
+
+ff_graph_thread_free:
+$
+
+avfilter_graph_free:
+$
+
+avfilter_graph_get_filter:
+$
+
+extract_inout:
+$
+
+create_filter:
+-12 -> [av_asprintf: [0, 0]]
+
+parse_filter:
+$
+
+parse_sws_flags:
+-22 -> [strncmp: [0, 0], strchr: [0, 0]]
+-12 -> [strncmp: [0, 0], strchr: [-inf, -1],[1, +inf], av_mallocz: [0, 0]]
+0 -> [strncmp: [-inf, -1],[1, +inf], strchr: [-inf, -1],[1, +inf], av_mallocz: [-inf, -1],[1, +inf]]
+
+parse_link_name:
+$
+
+parse_inputs:
+$
+
+link_filter:
+-22 -> [avfilter_link: [-inf, -1],[1, +inf]]
+-12 -> [avfilter_link: [-inf, -1],[1, +inf]]
+0 -> [avfilter_link: [0, 0]]
+
+insert_inout:
+$
+
+link_filter_inouts:
+-22 -> [link_filter: [-inf, -1]]
+-12 -> [link_filter: [-inf, -1]]
+0 -> [link_filter: [0, +inf]]
+
+parse_outputs:
+-22 -> [link_filter: [-inf, -1]]
+-12 -> [link_filter: [-inf, -1]]
+0 -> [link_filter: [-inf, -1]]
+
+avfilter_inout_free:
+$
+
+avfilter_graph_parse2:
+-22 -> [parse_inputs: [0, +inf], parse_filter: [0, +inf], parse_sws_flags: [-inf, -1], link_filter_inouts: [0, +inf]]
+-12 -> [link_filter_inouts: [-inf, -1], parse_sws_flags: [-inf, -1]]
+0 -> [parse_inputs: [0, +inf], parse_filter: [0, +inf], parse_sws_flags: [-inf, -1], link_filter_inouts: [0, +inf]]
+
+avfilter_graph_parse:
+-22 -> [extract_inout: [-inf, -1],[1, +inf]]
+-12 -> [extract_inout: [-inf, -1],[1, +inf]]
+0 -> [extract_inout: [-inf, -1],[1, +inf]]
+
+avfilter_graph_parse_ptr:
+-22 -> [parse_sws_flags: [0, +inf], parse_filter: [0, +inf], parse_inputs: [0, +inf], link_filter_inouts: [0, +inf]]
+-12 -> [link_filter_inouts: [-inf, -1], parse_sws_flags: [-inf, -1]]
+0 -> [link_filter_inouts: [-inf, -1], parse_sws_flags: [-inf, -1]]
+
+avfilter_graph_queue_command:
+-12 -> []
+0 -> []
+
+avfilter_graph_request_oldest:
+$
+
+avfilter_graph_send_command:
+$
+
+avfilter_graph_set_auto_convert:
+$
+
+avfilter_inout_alloc:
+$
+
+avfilter_license:
+$
+
+avfilter_link_get_channels:
+$
+
+avfilter_link_set_closed:
+$
+
+avfilter_make_format64_list:
+$
+
+avfilter_mul_matrix:
+$
+
+avfilter_next:
+$
+
+avfilter_pad_get_name:
+$
+
+avfilter_pad_get_type:
+$
+
+avfilter_register:
+0 -> []
+
+avfilter_register_all:
+$
+
+avfilter_sub_matrix:
+$
+
+avfilter_transform:
+-22 -> []
+0 -> []
+
+avfilter_version:
+471140 -> []
+
+b_func:
+$
+
+b_weighting:
+$
+
+bandpass_init:
+$
+
+bandreject_init:
+$
+
+basic_block_filtering:
+$
+
+bass_init:
+$
+
+bcd2uint:
+$
+
+bessel_I_0:
+$
+
+bidirectional_obmc:
+$
+
+ff_me_search_umh:
+$
+
+ff_me_search_fss:
+$
+
+ff_me_search_esa:
+$
+
+ff_me_search_tss:
+$
+
+ff_me_search_tdls:
+$
+
+ff_me_search_ds:
+$
+
+ff_me_search_epzs:
+$
+
+ff_me_search_ntss:
+$
+
+mid_pred.3153:
+$
+
+ff_me_search_hexbs:
+$
+
+search_mv:
+$
+
+bilateral_me:
+$
+
+get_sbad:
+$
+
+bilateral_obmc:
+$
+
+biquad:
+$
+
+biquad_dbl:
+$
+
+biquad_flt:
+$
+
+biquad_init:
+$
+
+biquad_process:
+$
+
+biquad_s16:
+$
+
+biquad_s32:
+$
+
+bit_depth:
+$
+
+factor:
+$
+
+remove_dc:
+$
+
+bitreduction:
+$
+
+blend_addition_10bit:
+$
+
+blend_addition_12bit:
+$
+
+blend_addition_16bit:
+$
+
+blend_addition_8bit:
+$
+
+blend_and_10bit:
+$
+
+blend_and_12bit:
+$
+
+blend_and_16bit:
+$
+
+blend_and_8bit:
+$
+
+blend_average_10bit:
+$
+
+blend_average_12bit:
+$
+
+blend_average_16bit:
+$
+
+blend_average_8bit:
+$
+
+blend_burn_10bit:
+$
+
+blend_burn_12bit:
+$
+
+blend_burn_16bit:
+$
+
+blend_burn_8bit:
+$
+
+ff_framesync_get_class:
+$
+
+blend_child_class_next:
+$
+
+blend_child_next:
+$
+
+blend_copybottom_16:
+$
+
+blend_copybottom_8:
+$
+
+blend_copytop_16:
+$
+
+blend_copytop_8:
+$
+
+blend_darken_10bit:
+$
+
+blend_darken_12bit:
+$
+
+blend_darken_16bit:
+$
+
+blend_darken_8bit:
+$
+
+blend_difference_10bit:
+$
+
+blend_difference_12bit:
+$
+
+blend_difference_16bit:
+$
+
+blend_difference_8bit:
+$
+
+blend_divide_10bit:
+$
+
+blend_divide_12bit:
+$
+
+blend_divide_16bit:
+$
+
+blend_divide_8bit:
+$
+
+blend_dodge_10bit:
+$
+
+blend_dodge_12bit:
+$
+
+blend_dodge_16bit:
+$
+
+blend_dodge_8bit:
+$
+
+blend_exclusion_10bit:
+$
+
+blend_exclusion_12bit:
+$
+
+blend_exclusion_16bit:
+$
+
+blend_exclusion_8bit:
+$
+
+blend_expr_16bit:
+$
+
+blend_expr_8bit:
+$
+
+blend_extremity_10bit:
+$
+
+blend_extremity_12bit:
+$
+
+blend_extremity_16bit:
+$
+
+blend_extremity_8bit:
+$
+
+blend_frame:
+$
+
+ff_framesync_get_frame:
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf], av_frame_make_writable: [0, +inf]]
+
+ff_framesync_dualinput_get:
+0 -> [ff_framesync_get_frame: [0, +inf]]
+
+blend_frame_for_dualinput:
+$
+
+blend_frames16_c:
+$
+
+blend_frames_c:
+$
+
+ff_framesync_preinit:
+$
+
+blend_framesync_preinit:
+0 -> []
+
+blend_freeze_10bit:
+$
+
+blend_freeze_12bit:
+$
+
+blend_freeze_16bit:
+$
+
+blend_freeze_8bit:
+$
+
+blend_glow_10bit:
+$
+
+blend_glow_12bit:
+$
+
+blend_glow_16bit:
+$
+
+blend_glow_8bit:
+$
+
+blend_grainextract_10bit:
+$
+
+blend_grainextract_12bit:
+$
+
+blend_grainextract_16bit:
+$
+
+blend_grainextract_8bit:
+$
+
+blend_grainmerge_10bit:
+$
+
+blend_grainmerge_12bit:
+$
+
+blend_grainmerge_16bit:
+$
+
+blend_grainmerge_8bit:
+$
+
+blend_hardlight_10bit:
+$
+
+blend_hardlight_12bit:
+$
+
+blend_hardlight_16bit:
+$
+
+blend_hardlight_8bit:
+$
+
+blend_hardmix_10bit:
+$
+
+blend_hardmix_12bit:
+$
+
+blend_hardmix_16bit:
+$
+
+blend_hardmix_8bit:
+$
+
+blend_heat_10bit:
+$
+
+blend_heat_12bit:
+$
+
+blend_heat_16bit:
+$
+
+blend_heat_8bit:
+$
+
+blend_hline:
+$
+
+blend_hline16:
+$
+
+blend_lighten_10bit:
+$
+
+blend_lighten_12bit:
+$
+
+blend_lighten_16bit:
+$
+
+blend_lighten_8bit:
+$
+
+blend_line:
+$
+
+blend_line16:
+$
+
+blend_pixel:
+$
+
+blend_line_hv:
+$
+
+blend_pixel16:
+$
+
+blend_line_hv16:
+$
+
+blend_linearlight_10bit:
+$
+
+blend_linearlight_12bit:
+$
+
+blend_linearlight_16bit:
+$
+
+blend_linearlight_8bit:
+$
+
+blend_multiply128_10bit:
+$
+
+blend_multiply128_12bit:
+$
+
+blend_multiply128_16bit:
+$
+
+blend_multiply128_8bit:
+$
+
+blend_multiply_10bit:
+$
+
+blend_multiply_12bit:
+$
+
+blend_multiply_16bit:
+$
+
+blend_multiply_8bit:
+$
+
+blend_negation_10bit:
+$
+
+blend_negation_12bit:
+$
+
+blend_negation_16bit:
+$
+
+blend_negation_8bit:
+$
+
+blend_normal_16bit:
+$
+
+blend_normal_8bit:
+$
+
+blend_or_10bit:
+$
+
+blend_or_12bit:
+$
+
+blend_or_16bit:
+$
+
+blend_or_8bit:
+$
+
+blend_overlay_10bit:
+$
+
+blend_overlay_12bit:
+$
+
+blend_overlay_16bit:
+$
+
+blend_overlay_8bit:
+$
+
+blend_phoenix_10bit:
+$
+
+blend_phoenix_12bit:
+$
+
+blend_phoenix_16bit:
+$
+
+blend_phoenix_8bit:
+$
+
+blend_pinlight_10bit:
+$
+
+blend_pinlight_12bit:
+$
+
+blend_pinlight_16bit:
+$
+
+blend_pinlight_8bit:
+$
+
+blend_reflect_10bit:
+$
+
+blend_reflect_12bit:
+$
+
+blend_reflect_16bit:
+$
+
+blend_reflect_8bit:
+$
+
+blend_screen_10bit:
+$
+
+blend_screen_12bit:
+$
+
+blend_screen_16bit:
+$
+
+blend_screen_8bit:
+$
+
+blend_slice_gbrap:
+0 -> []
+
+blend_slice_gbrap_pm:
+0 -> []
+
+blend_slice_gbrp:
+0 -> []
+
+blend_slice_gbrp_pm:
+0 -> []
+
+blend_slice_rgb:
+0 -> []
+
+blend_slice_rgb_pm:
+0 -> []
+
+blend_slice_rgba:
+0 -> []
+
+blend_slice_rgba_pm:
+0 -> []
+
+blend_slice_yuv420:
+0 -> []
+
+blend_slice_yuv420_pm:
+0 -> []
+
+blend_slice_yuv422:
+0 -> []
+
+blend_slice_yuv422_pm:
+0 -> []
+
+blend_slice_yuv444:
+0 -> []
+
+blend_slice_yuv444_pm:
+0 -> []
+
+blend_slice_yuva420:
+0 -> []
+
+blend_slice_yuva420_pm:
+0 -> []
+
+blend_slice_yuva422:
+0 -> []
+
+blend_slice_yuva422_pm:
+0 -> []
+
+blend_slice_yuva444:
+0 -> []
+
+blend_slice_yuva444_pm:
+0 -> []
+
+blend_softlight_10bit:
+$
+
+blend_softlight_12bit:
+$
+
+blend_softlight_16bit:
+$
+
+blend_softlight_8bit:
+$
+
+blend_subtract_10bit:
+$
+
+blend_subtract_12bit:
+$
+
+blend_subtract_16bit:
+$
+
+blend_subtract_8bit:
+$
+
+blend_vividlight_10bit:
+$
+
+blend_vividlight_12bit:
+$
+
+blend_vividlight_16bit:
+$
+
+blend_vividlight_8bit:
+$
+
+blend_vline:
+$
+
+blend_vline16:
+$
+
+blend_xor_10bit:
+$
+
+blend_xor_12bit:
+$
+
+blend_xor_16bit:
+$
+
+blend_xor_8bit:
+$
+
+block_angle:
+$
+
+block_contrast:
+$
+
+do_search_boundary:
+$
+
+search_boundary:
+$
+
+do_block_matching_multi:
+$
+
+block_matching_multi:
+$
+
+block_matching:
+$
+
+blue_filter:
+$
+
+blur_pixel:
+$
+
+blur_image:
+$
+
+brown_filter:
+$
+
+buffer_needs_copy:
+0 -> []
+1 -> []
+
+buffer_offset:
+$
+
+burn_frame16:
+$
+
+burn_frame8:
+$
+
+butter_filter_stereo_samples:
+$
+
+c_weighting:
+$
+
+calc_avgy16:
+$
+
+calc_avgy8:
+$
+
+calc_channel_magnitudes:
+0 -> []
+
+calc_channel_phases:
+0 -> []
+
+calc_diffs:
+$
+
+calc_max_draw:
+$
+
+calc_persistent_max:
+$
+
+calc_ptr_alignment:
+$
+
+calc_replaygain:
+$
+
+calc_stereo_peak:
+$
+
+calc_stereo_rms:
+$
+
+calculate_gamma:
+$
+
+calculate_sfm:
+$
+
+channelmap_config_input:
+-22 -> []
+0 -> []
+
+channelmap_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+split:
+$
+
+get_channel:
+-22 -> [av_get_channel_layout_nb_channels: [-inf, 0],[2, +inf]]
+0 -> [av_get_channel_layout_nb_channels: [1, 1]]
+
+get_channel_idx:
+-22 -> []
+0 -> []
+
+channelmap_init:
+-22 -> [get_channel_idx: [-inf, -1], get_channel: [-inf, -1], av_get_channel_layout: [0, 0]]
+0 -> [get_channel_idx: [0, +inf], get_channel: [0, +inf], av_get_channel_layout: [-inf, -1],[1, +inf]]
+
+ff_planar_sample_fmts:
+$
+
+channelmap_query_formats:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_set_common_samplerates: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+0 -> [ff_add_channel_layout: [0, +inf], ff_set_common_formats: [0, +inf], ff_set_common_samplerates: [0, +inf], ff_channel_layouts_ref: [0, +inf]]
+
+check_black_end:
+$
+
+checkstride:
+0 -> []
+1 -> []
+
+child_class_next:
+$
+
+chroma16_column:
+0 -> []
+
+chroma16_column_mirror:
+0 -> []
+
+chroma16_row:
+0 -> []
+
+chroma16_row_mirror:
+0 -> []
+
+chroma_column:
+0 -> []
+
+chroma_column_mirror:
+0 -> []
+
+chroma_row:
+0 -> []
+
+chroma_row_mirror:
+0 -> []
+
+chromatic_adaptation:
+$
+
+cmp:
+$
+
+clean_mean:
+$
+
+cleanup_derivative_buffers:
+$
+
+clear_image:
+$
+
+clear_picture:
+$
+
+clear_window:
+$
+
+clip:
+$
+
+clip_interval:
+$
+
+clip_line:
+$
+
+clip_with_log:
+$
+
+var_size_bme:
+$
+
+cluster_mvs:
+$
+
+cmp_a:
+$
+
+cmp_b:
+$
+
+cmp_b.3025:
+$
+
+cmp_color:
+$
+
+cmp_g:
+$
+
+cmp_g.3024:
+$
+
+cmp_int:
+$
+
+cmp_intervals:
+$
+
+cmp_pal_entry:
+$
+
+cmp_r:
+$
+
+cmp_r.3023:
+$
+
+cmp_scores:
+$
+
+color16_column:
+0 -> []
+
+color16_column_mirror:
+0 -> []
+
+color16_row:
+0 -> []
+
+color16_row_mirror:
+0 -> []
+
+color_column:
+0 -> []
+
+color_column_mirror:
+0 -> []
+
+ff_draw_color:
+$
+
+ff_draw_round_to_sub:
+$
+
+ff_draw_init:
+-38 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+-22 -> [av_pix_fmt_desc_get: [0, 0]]
+0 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+
+color_config_props:
+-22 -> [av_image_check_size: [-inf, -1]]
+0 -> [av_image_check_size: [0, +inf]]
+
+color_correlation_bgr:
+$
+
+color_correlation_gbrp:
+$
+
+color_correlation_rgb:
+$
+
+color_decorrelation_bgr:
+$
+
+color_decorrelation_gbrp:
+$
+
+color_decorrelation_rgb:
+$
+
+color_fill_picture:
+$
+
+color_gradient:
+$
+
+draw_htext.8646:
+$
+
+draw_dots:
+$
+
+color_graticule:
+$
+
+draw_htext16.8645:
+$
+
+draw_dots16:
+$
+
+color_graticule16:
+$
+
+color_hash:
+$
+
+color_inc:
+-12 -> []
+0 -> []
+1 -> []
+
+color_init:
+$
+
+color_mix:
+$
+
+color_process_command:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+0 -> [strcmp: [0, 0], av_parse_color: [0, +inf]]
+
+ff_draw_supported_pixel_formats:
+$
+
+color_query_formats:
+$
+
+color_range:
+$
+
+color_row:
+0 -> []
+
+color_row_mirror:
+0 -> []
+
+get_next_color:
+$
+
+colormap_insert:
+-1 -> [get_next_color: [-inf, -1]]
+
+colormap_nearest_node:
+$
+
+common_uninit:
+$
+
+common_uninit.4355:
+$
+
+comp_adjust:
+$
+
+update_volume.5126:
+$
+
+get_volume.5127:
+$
+
+compand_delay:
+$
+
+compand_drain:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+compand_nodelay:
+$
+
+comparef:
+$
+
+complex_divide:
+0 -> []
+
+complex_multiply:
+0 -> []
+
+component_used:
+$
+
+compressor_config_output:
+0 -> []
+
+compute_bit_depth:
+$
+
+compute_cache_c:
+$
+
+compute_contrast_change:
+$
+
+compute_dar:
+$
+
+compute_distance_ssd_c:
+$
+
+compute_gammaval:
+$
+
+compute_gammaval709:
+$
+
+compute_histogram16:
+$
+
+compute_histogram8:
+$
+
+compute_images_mse:
+$
+
+compute_peak:
+$
+
+compute_rms:
+$
+
+compute_safe_ssd_integral_image_c:
+$
+
+compute_sat_hue_metrics16:
+0 -> []
+
+compute_sat_hue_metrics8:
+0 -> []
+
+compute_sin_and_cos:
+$
+
+compute_unsafe_ssd_integral_image:
+$
+
+compute_ssd_integral_image:
+$
+
+config_audio_input:
+0 -> []
+
+config_audio_output:
+-12 -> [swr_init: [0, +inf]]
+0 -> [swr_init: [0, +inf]]
+
+config_clut:
+-1094995529 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+-22 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+0 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+
+config_filter:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input:
+-12 -> []
+0 -> []
+
+config_input.1113:
+-12 -> []
+0 -> []
+
+config_input.1208:
+0 -> []
+
+register_range:
+-22 -> []
+0 -> []
+
+parse_psfile:
+-1094995529 -> [register_range: [0, +inf]]
+-22 -> [register_range: [-inf, -1]]
+0 -> [register_range: [-inf, -1]]
+
+config_input.1267:
+-22 -> [ff_fill_rgba_map: [-inf, -1], register_range: [-inf, -1]]
+0 -> [register_range: [0, +inf]]
+
+config_input.1309:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.131:
+0 -> []
+
+ff_framerate_init_x86:
+$
+
+ff_framerate_init:
+$
+
+ff_scene_sad_get_fn_x86:
+$
+
+ff_scene_sad_get_fn:
+$
+
+config_input.1420:
+-22 -> []
+0 -> []
+
+config_input.1454:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input.1493:
+0 -> []
+
+config_input.1533:
+0 -> []
+
+config_input.155:
+-12 -> []
+0 -> []
+
+ff_w3fdif_init_x86:
+$
+
+config_input.1588:
+-12 -> [av_image_fill_linesizes: [0, +inf]]
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.1721:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.1825:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.1955:
+0 -> []
+
+config_input.2004:
+-12 -> []
+0 -> []
+
+config_input.2020:
+0 -> []
+
+config_input.2034:
+-12 -> []
+0 -> []
+
+config_input.214:
+0 -> []
+
+config_input.2294:
+-12 -> []
+0 -> []
+
+config_input.233:
+-12 -> [av_image_fill_linesizes: [0, +inf]]
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+generate_min_phase_kernel:
+$
+
+dump_fir:
+$
+
+generate_kernel:
+-22 -> [av_expr_parse_and_eval: [0, +inf], av_expr_parse: [0, +inf]]
+0 -> [av_expr_parse_and_eval: [0, +inf], av_expr_parse: [0, +inf]]
+
+config_input.2389:
+-12 -> [av_fft_init: [0, 0], av_rdft_init: [0, 0]]
+
+config_input.2408:
+-12 -> []
+0 -> []
+
+config_input.2437:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.244:
+0 -> []
+
+freq_gain:
+$
+
+set_lp_rbj:
+$
+
+set_highshelf_rbj:
+$
+
+config_input.2512:
+-12 -> []
+0 -> []
+
+config_input.2524:
+-12 -> []
+0 -> []
+
+config_input.2554:
+0 -> []
+
+config_input.2751:
+-22 -> [av_expr_parse_and_eval: [0, +inf]]
+0 -> [av_expr_parse_and_eval: [0, +inf]]
+
+config_input.2845:
+0 -> []
+
+config_input.2989:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+ff_me_init_context:
+$
+
+config_input.3151:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input.3263:
+-22 -> []
+0 -> []
+
+config_input.341:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input.3463:
+-22 -> [av_expr_parse_and_eval: [0, +inf]]
+0 -> [av_expr_parse_and_eval: [0, +inf]]
+
+generate_window_func:
+$
+
+config_input.3481:
+-22 -> [av_strdup: [-inf, -1],[1, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf]]
+
+config_input.361:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.3614:
+-12 -> []
+0 -> []
+
+config_input.3638:
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf]]
+
+config_input.3961:
+-22 -> []
+0 -> []
+
+config_input.3976:
+-12 -> [av_strtok: [0, 0]]
+0 -> [av_strtok: [0, 0]]
+
+config_input.4113:
+-12 -> []
+0 -> []
+
+config_input.4145:
+0 -> [strcmp: [-inf, -1],[1, +inf]]
+
+config_input.4178:
+-12 -> []
+0 -> []
+
+config_input.4226:
+0 -> []
+
+config_input.4248:
+0 -> []
+
+config_input.427:
+-12 -> [av_image_alloc: [0, +inf]]
+0 -> [av_image_alloc: [0, +inf]]
+
+config_input.4542:
+-12 -> []
+0 -> []
+
+config_input.4559:
+0 -> []
+
+ff_threshold_init_x86:
+$
+
+ff_threshold_init:
+$
+
+config_input.4670:
+0 -> []
+
+config_input.4680:
+-22 -> [av_expr_parse: [0, +inf], strchr: [0, 0]]
+0 -> [av_expr_parse: [0, +inf], strchr: [-inf, -1],[1, +inf]]
+
+ebur128_init_filter:
+$
+
+ebur128_init_channel_map:
+-12 -> []
+0 -> []
+
+ff_ebur128_init:
+$
+
+frame_size:
+$
+
+ff_ebur128_set_channel:
+0 -> []
+1 -> []
+
+init_gaussian_filter:
+$
+
+config_input.4801:
+-12 -> []
+0 -> []
+
+ff_generate_wave_table:
+$
+
+config_input.4815:
+-12 -> []
+0 -> []
+
+config_input.5038:
+-12 -> [av_expr_parse: [0, +inf]]
+0 -> [av_expr_parse: [0, +inf]]
+
+config_input.5072:
+-12 -> []
+0 -> []
+
+config_input.5163:
+-12 -> []
+0 -> []
+
+config_input.5193:
+0 -> []
+
+config_input.5235:
+0 -> []
+
+config_input.5501:
+0 -> []
+
+config_input.555:
+$
+
+config_input.5578:
+0 -> []
+
+config_input.5652:
+0 -> []
+
+config_input.5788:
+$
+
+set_lp:
+$
+
+set_hp:
+$
+
+config_input.5856:
+-12 -> []
+0 -> []
+
+config_input.591:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_input.5912:
+-12 -> []
+0 -> []
+
+config_input.6174:
+0 -> []
+
+config_input.622:
+-22 -> [av_image_fill_linesizes: [0, +inf], av_expr_parse: [-inf, -1]]
+0 -> [av_image_fill_linesizes: [0, +inf], av_expr_parse: [0, +inf]]
+
+config_input.6240:
+$
+
+config_input.6278:
+0 -> []
+
+frand:
+$
+
+config_input.6340:
+$
+
+hdcd_detect_reset:
+$
+
+hdcd_reset:
+$
+
+config_input.6419:
+$
+
+config_input.6589:
+-12 -> []
+
+config_input.6843:
+0 -> []
+
+invert_matrix3x3:
+$
+
+get_rgb2xyz_matrix:
+$
+
+config_input.6902:
+0 -> []
+
+config_input.7054:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+normalize_double:
+-22 -> []
+0 -> []
+
+config_input.7069:
+-22 -> [av_expr_parse: [-inf, -1], normalize_double: [-inf, -1], av_expr_parse_and_eval: [0, +inf]]
+0 -> [av_expr_parse: [0, +inf], normalize_double: [0, +inf], av_expr_parse_and_eval: [0, +inf]]
+
+frame_size.7150:
+$
+
+precalculate_fade_factors:
+$
+
+cqueue_create:
+$
+
+init_gaussian_filter.7152:
+$
+
+ff_bufqueue_get.7130:
+$
+
+ff_bufqueue_discard_all.7129:
+$
+
+cqueue_free:
+$
+
+uninit.7108:
+$
+
+config_input.7149:
+-12 -> []
+0 -> []
+
+config_input.7180:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input.7223:
+$
+
+config_input.7254:
+-22 -> []
+0 -> []
+
+config_input.734:
+-12 -> []
+0 -> []
+
+config_input.7369:
+-12 -> []
+0 -> []
+
+config_input.7395:
+-22 -> []
+0 -> []
+
+config_input.7499:
+-12 -> []
+0 -> []
+
+config_input.7613:
+-12 -> []
+0 -> []
+
+config_input.7799:
+-12 -> []
+0 -> []
+
+config_input.780:
+-12 -> []
+0 -> []
+
+factor.7879:
+$
+
+read_custom_noise:
+$
+
+freq2bark:
+$
+
+get_band_noise:
+$
+
+get_band_edge:
+$
+
+config_input.7878:
+-558323010 -> []
+-12 -> []
+0 -> []
+
+ff_removegrain_init_x86:
+$
+
+config_input.7899:
+0 -> []
+
+ff_maskedmerge_init_x86:
+$
+
+config_input.796:
+0 -> []
+
+config_input.8017:
+0 -> []
+
+config_input.8056:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], add_filter: [0, +inf], __isoc99_sscanf: [-inf, 3],[5, +inf]]
+-12 -> [av_strtok: [-inf, -1],[1, +inf], add_filter: [-inf, -1], __isoc99_sscanf: [4, 4], av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], add_filter: [-inf, -1], __isoc99_sscanf: [4, 4]]
+
+config_input.8197:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_input.8235:
+$
+
+config_input.8322:
+0 -> []
+
+config_input.862:
+-22 -> []
+0 -> []
+
+config_input.8643:
+-22 -> []
+0 -> []
+
+config_input.886:
+0 -> []
+
+ff_fmt_is_in:
+0 -> []
+1 -> []
+
+config_input.9048:
+0 -> []
+
+config_input.9448:
+0 -> []
+
+config_input.9619:
+-558323010 -> []
+-12 -> []
+0 -> []
+
+get_nb_points:
+$
+
+interpolate.9702:
+-12 -> [get_nb_points: [-inf, +inf]]
+0 -> [get_nb_points: [0, 1]]
+
+interpolate16:
+$
+
+interpolate14:
+$
+
+make_point:
+$
+
+parse_points_str:
+-22 -> []
+-12 -> []
+0 -> []
+
+interpolate12:
+$
+
+interpolate8:
+$
+
+interpolate10:
+$
+
+interpolate9:
+$
+
+dump_curves:
+$
+
+config_input.9685:
+$
+
+config_input.9734:
+-12 -> []
+0 -> []
+
+config_input0:
+-12 -> []
+0 -> []
+
+config_input1:
+0 -> []
+
+config_input_1d:
+0 -> []
+
+config_input_impulse:
+-22 -> []
+0 -> []
+
+config_input_main:
+-12 -> []
+0 -> []
+
+config_input_main.8072:
+0 -> []
+
+ff_overlay_init_x86:
+$
+
+config_input_main.9340:
+0 -> []
+
+normalize_xy:
+$
+
+eval_expr:
+$
+
+set_expr.9330:
+0 -> [av_expr_parse: [0, +inf]]
+
+config_input_overlay:
+0 -> [set_expr.9330: [0, +inf]]
+
+config_input_palette:
+-22 -> []
+0 -> []
+
+vmafmotiondsp_init:
+$
+
+ff_vmafmotion_init:
+-12 -> []
+0 -> []
+
+config_input_ref:
+$
+
+ff_psnr_init_x86:
+$
+
+config_input_ref.2810:
+-22 -> []
+
+ff_ssim_init_x86:
+$
+
+config_input_ref.3932:
+-22 -> []
+-12 -> []
+
+config_inputx:
+0 -> []
+
+config_inputy:
+0 -> []
+
+config_out_props:
+0 -> []
+
+config_output:
+0 -> []
+
+config_output.1078:
+$
+
+config_output.1143:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_output.1185:
+-12 -> []
+0 -> []
+
+config_output.1304:
+-22 -> []
+0 -> []
+
+config_output.1412:
+0 -> []
+
+ff_framesync_configure:
+-22 -> []
+0 -> []
+
+ff_framesync_init:
+-12 -> []
+0 -> []
+
+ff_framesync_init_dualinput:
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [0, +inf]]
+
+config_output.1545:
+-22 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [-inf, -1]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [0, +inf]]
+
+config_output.1586:
+0 -> []
+
+config_output.1761:
+-12 -> []
+0 -> []
+
+config_output.180:
+-558323010 -> []
+0 -> []
+
+config_output.1847:
+-22 -> [av_image_fill_linesizes: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+parse_points:
+-22 -> [__isoc99_sscanf: [-inf, 1],[3, +inf], av_strtok: [0, 0]]
+0 -> [av_strtok: [-inf, -1],[1, +inf], __isoc99_sscanf: [2, 2]]
+
+square_quadratic:
+$
+
+crossover_setup:
+-22 -> []
+-12 -> []
+0 -> []
+
+count_items:
+$
+
+uninit.1859:
+$
+
+config_output.1867:
+-22 -> [parse_points: [-inf, -1], crossover_setup: [-inf, -1], av_strtok: [0, 0]]
+-12 -> [parse_points: [0, +inf], av_strtok: [-inf, -1],[1, +inf], crossover_setup: [-inf, -1]]
+0 -> [parse_points: [0, +inf], av_strtok: [-inf, -1],[1, +inf], crossover_setup: [0, +inf]]
+
+config_output.1908:
+0 -> []
+
+config_output.1953:
+0 -> []
+
+config_output.2292:
+-12 -> []
+0 -> []
+
+config_output.241:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [0, +inf]]
+
+config_output.2434:
+0 -> []
+
+config_output.2632:
+0 -> []
+
+config_output.2807:
+-22 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [-inf, -1]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [0, +inf]]
+
+config_output.2961:
+$
+
+config_output.2993:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.3065:
+-22 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [-inf, -1]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [0, +inf]]
+
+config_output.3149:
+0 -> []
+
+config_output.3410:
+0 -> []
+
+config_output.3460:
+0 -> []
+
+config_output.356:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.3636:
+0 -> []
+
+config_output.3670:
+-22 -> []
+0 -> []
+
+config_output.3895:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_output.3929:
+-22 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [-inf, -1]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [0, +inf]]
+
+invert:
+$
+
+safe_log:
+$
+
+fir_to_phase:
+-12 -> []
+0 -> []
+
+make_lpf:
+$
+
+kaiser_beta:
+$
+
+kaiser_params:
+$
+
+lpf:
+$
+
+config_output.4061:
+-22 -> []
+-12 -> [fir_to_phase: [-inf, -1]]
+0 -> [fir_to_phase: [0, +inf]]
+
+config_output.4108:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.429:
+0 -> []
+
+init_cqt:
+-12 -> [av_expr_parse: [0, +inf]]
+0 -> [av_expr_parse: [0, +inf]]
+
+create_freq_table:
+$
+
+init_volume:
+0 -> [av_expr_parse: [0, +inf]]
+
+convert_axis_pixel_format:
+$
+
+init_axis_empty:
+-12 -> [alloc_frame_empty: [0, 0]]
+0 -> [alloc_frame_empty: [-inf, -1],[1, +inf]]
+
+ff_scale_image:
+-22 -> [sws_getContext: [0, 0]]
+0 -> [sws_getContext: [-inf, -1],[1, +inf], av_image_alloc: [0, +inf]]
+
+ff_load_image:
+-22 -> [avformat_open_input: [0, +inf], avformat_find_stream_info: [0, +inf], avcodec_find_decoder: [0, 0]]
+-12 -> [avformat_open_input: [0, +inf], avformat_find_stream_info: [0, +inf], avcodec_find_decoder: [-inf, -1],[1, +inf], avcodec_alloc_context3: [0, 0], avcodec_parameters_to_context: [0, +inf], avcodec_open2: [0, +inf], av_frame_alloc: [0, 0]]
+-1 -> [avformat_open_input: [0, +inf], avformat_find_stream_info: [0, +inf], avcodec_find_decoder: [-inf, -1],[1, +inf], avcodec_alloc_context3: [-inf, -1],[1, +inf], avcodec_open2: [0, +inf], avcodec_parameters_to_context: [0, +inf], av_frame_alloc: [-inf, -1],[1, +inf], av_read_frame: [0, +inf], avcodec_decode_video2: [0, +inf]]
+0 -> [av_image_alloc: [0, +inf], avformat_open_input: [0, +inf], avformat_find_stream_info: [0, +inf], avcodec_find_decoder: [-inf, -1],[1, +inf], avcodec_alloc_context3: [-inf, -1],[1, +inf], avcodec_open2: [0, +inf], avcodec_parameters_to_context: [0, +inf], av_frame_alloc: [-inf, -1],[1, +inf], av_read_frame: [0, +inf]]
+
+init_axis_from_file:
+-12 -> [av_frame_alloc: [0, 0]]
+0 -> [ff_scale_image: [0, +inf]]
+
+ff_showcqt_init_x86:
+$
+
+render_fontconfig:
+-22 -> []
+
+render_freetype:
+-22 -> []
+
+render_default_font:
+0 -> []
+
+init_axis_color:
+-12 -> [create_freq_table: [0, 0]]
+0 -> [create_freq_table: [-inf, -1],[1, +inf], av_expr_parse: [0, +inf]]
+
+init_axis_from_font:
+-12 -> [av_frame_alloc: [0, 0], alloc_frame_empty: [0, 0]]
+0 -> [alloc_frame_empty: [-inf, -1],[1, +inf], av_frame_alloc: [-inf, -1],[1, +inf], ff_scale_image: [0, +inf]]
+
+config_output.4367:
+-12 -> [init_volume: [0, +inf], create_freq_table: [0, 0], init_cqt: [0, +inf]]
+0 -> [create_freq_table: [-inf, -1],[1, +inf], init_volume: [0, +inf], init_cqt: [0, +inf]]
+
+generate_window_func.4507:
+$
+
+config_output.4505:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_output.4588:
+-22 -> [ff_framesync_init_dualinput: [0, +inf], ff_framesync_configure: [-inf, -1]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1], ff_framesync_configure: [0, +inf]]
+0 -> [ff_framesync_init_dualinput: [0, +inf]]
+
+config_output.4665:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.4750:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.4889:
+0 -> []
+
+config_output.5085:
+-22 -> []
+0 -> []
+
+config_output.51:
+0 -> []
+
+count_items.5116:
+$
+
+uninit.5093:
+$
+
+config_output.5115:
+-22 -> [__isoc99_sscanf: [-inf, 1],[3, +inf], av_strtok: [0, 0]]
+-12 -> [__isoc99_sscanf: [2, 2], av_strtok: [-inf, -1],[1, +inf]]
+0 -> [__isoc99_sscanf: [2, 2], av_strtok: [-inf, -1],[1, +inf], av_frame_get_buffer: [0, 0]]
+
+config_output.5461:
+0 -> []
+
+config_output.5576:
+0 -> []
+
+config_output.5710:
+-558323010 -> []
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf]]
+
+config_output.5825:
+-12 -> []
+0 -> []
+
+config_output.5872:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+generate_window_func.6068:
+$
+
+pick_color:
+$
+
+draw_legend:
+-12 -> [av_asprintf: [0, 0]]
+0 -> [av_asprintf: [-inf, -1],[1, +inf]]
+
+config_output.6064:
+-22 -> []
+-12 -> []
+0 -> []
+
+reset_stats:
+$
+
+config_output.6118:
+-12 -> []
+0 -> []
+
+ff_anlmdn_init_x86:
+$
+
+ff_anlmdn_init:
+$
+
+config_output.6753:
+0 -> [av_audio_fifo_write: [0, +inf]]
+
+config_output.6841:
+0 -> []
+
+config_output.6900:
+0 -> []
+
+config_output.694:
+0 -> []
+
+config_output.7049:
+-22 -> []
+0 -> []
+
+config_output.7070:
+0 -> []
+
+config_output.7299:
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [av_image_fill_linesizes: [0, +inf], ff_framesync_init: [-inf, -1]]
+
+config_output.7351:
+-12 -> []
+0 -> []
+
+config_output.7564:
+0 -> [av_expr_parse: [0, +inf]]
+
+config_output.7617:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.7646:
+-558323010 -> []
+0 -> []
+
+config_output.7754:
+$
+
+izero:
+$
+
+win:
+$
+
+hn_imp:
+$
+
+hn_lpf:
+$
+
+hn:
+$
+
+process_param:
+$
+
+make_fir:
+$
+
+config_output.778:
+0 -> []
+
+config_output.7797:
+-12 -> []
+0 -> []
+
+config_output.790:
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+config_output.8015:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_output.8069:
+-22 -> []
+0 -> []
+
+read_gains:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], __isoc99_sscanf: [-inf, 0],[2, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], __isoc99_sscanf: [1, 1]]
+
+multiply:
+$
+
+expand:
+-22 -> []
+0 -> []
+
+convert_zp2tf:
+-22 -> [expand: [-inf, -1]]
+-12 -> [expand: [0, +inf]]
+0 -> [expand: [-inf, -1]]
+
+convert_pd2zp:
+$
+
+decompose_zp2biquads:
+-22 -> [expand: [-inf, -1]]
+-12 -> [expand: [0, +inf]]
+0 -> [expand: [0, +inf]]
+
+count_coefficients:
+$
+
+read_tf_coefficients:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], __isoc99_sscanf: [-inf, 0],[2, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], __isoc99_sscanf: [1, 1]]
+
+read_zp_coefficients:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], __isoc99_sscanf: [-inf, 1],[3, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], __isoc99_sscanf: [2, 2]]
+
+read_channels:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], read_tf_coefficients: [-inf, -1], read_zp_coefficients: [-inf, -1]]
+-12 -> [av_strtok: [-inf, -1],[1, +inf], read_tf_coefficients: [-inf, -1], read_zp_coefficients: [-inf, -1], av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], read_tf_coefficients: [0, +inf], read_zp_coefficients: [0, +inf]]
+
+draw_line.8154:
+$
+
+drawtext.8156:
+$
+
+draw_response.8145:
+$
+
+convert_pr2zp:
+$
+
+config_output.8141:
+-1163346256 -> [read_gains: [0, +inf], read_channels: [0, +inf]]
+-22 -> [read_gains: [-inf, -1], read_channels: [-inf, -1], convert_zp2tf: [-inf, -1], decompose_zp2biquads: [-inf, -1]]
+-12 -> [read_channels: [-inf, -1], convert_zp2tf: [-inf, -1], decompose_zp2biquads: [-inf, -1]]
+0 -> [read_gains: [0, +inf], read_channels: [0, +inf], decompose_zp2biquads: [0, +inf], convert_zp2tf: [0, +inf]]
+
+config_output.816:
+-1094995529 -> [av_cmp_q: [-inf, -1],[1, +inf]]
+-558323010 -> [av_cmp_q: [0, 0]]
+0 -> [av_cmp_q: [0, 0]]
+
+generate_window_func.8293:
+$
+
+config_output.8287:
+-1094995529 -> [av_cmp_q.8289: [-inf, -1],[1, +inf]]
+-22 -> [av_cmp_q.8289: [0, 0]]
+-12 -> [av_cmp_q.8289: [0, 0]]
+0 -> [av_cmp_q.8289: [0, 0]]
+
+config_output.8317:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [0, +inf]]
+
+config_output.8345:
+-22 -> []
+0 -> []
+
+ff_volume_init_x86:
+$
+
+volume_init:
+$
+
+set_volume:
+-22 -> []
+0 -> []
+
+config_output.8413:
+$
+
+config_output.8533:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_output.8641:
+-12 -> []
+0 -> []
+
+config_output.865:
+-22 -> []
+0 -> []
+
+config_output.8685:
+0 -> []
+
+config_output.879:
+0 -> []
+
+config_output.8863:
+-22 -> [ff_framesync_init: [0, +inf]]
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+ff_blend_init_x86:
+$
+
+ff_blend_init:
+$
+
+config_output.8966:
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [-inf, -1]]
+
+config_output.9009:
+-22 -> []
+0 -> []
+
+config_output.9068:
+0 -> []
+
+config_output.9260:
+0 -> [swr_init: [0, +inf]]
+
+config_output.9338:
+-22 -> [ff_framesync_init_dualinput: [0, +inf]]
+-12 -> [ff_framesync_init_dualinput: [-inf, -1]]
+0 -> [ff_framesync_init_dualinput: [-inf, -1]]
+
+config_output.9478:
+$
+
+config_output.9617:
+0 -> []
+
+config_output_props:
+0 -> []
+
+config_output_props.2464:
+-22 -> [av_expr_parse_and_eval: [0, +inf]]
+0 -> [av_expr_parse_and_eval: [0, +inf]]
+
+do_eval:
+$
+
+config_props:
+-558323010 -> [av_rdft_init: [-inf, -1],[1, +inf]]
+-12 -> [av_rdft_init: [0, 0]]
+0 -> [av_rdft_init: [-inf, -1],[1, +inf]]
+
+config_props.1048:
+0 -> []
+
+config_props.1639:
+-22 -> []
+0 -> []
+
+config_props.1793:
+0 -> []
+
+config_props.195:
+0 -> []
+
+config_props.1981:
+0 -> []
+
+config_props.2128:
+0 -> []
+
+config_props.2184:
+$
+
+config_props.2560:
+-12 -> []
+0 -> []
+
+config_props.2711:
+-12 -> []
+0 -> []
+
+ff_bwdif_init_x86:
+$
+
+config_props.2877:
+-22 -> []
+0 -> []
+
+config_props.2919:
+-22 -> []
+0 -> []
+
+ff_yadif_init_x86:
+$
+
+config_props.2928:
+-22 -> []
+0 -> []
+
+config_props.3193:
+$
+
+ff_scale_eval_dimensions:
+$
+
+config_props.3289:
+-12 -> [ff_scale_eval_dimensions: [0, +inf], av_opt_set: [0, +inf], sws_init_context: [0, +inf]]
+0 -> [ff_scale_eval_dimensions: [0, +inf], av_opt_set: [0, +inf], sws_init_context: [0, +inf]]
+
+config_props.3851:
+-1163346256 -> []
+0 -> []
+
+yae_clear:
+$
+
+yae_release_buffers:
+$
+
+yae_reset:
+-12 -> []
+0 -> []
+
+config_props.4093:
+$
+
+config_props.4650:
+-22 -> [av_image_check_size: [-inf, -1]]
+0 -> [av_image_check_size: [0, +inf]]
+
+ff_hflip_init_x86:
+$
+
+ff_hflip_init:
+-558323010 -> []
+0 -> []
+
+config_props.4693:
+$
+
+config_props.472:
+0 -> []
+
+config_props.4948:
+-22 -> [av_expr_parse: [-inf, -1]]
+0 -> [av_expr_parse: [0, +inf]]
+
+config_props.510:
+0 -> []
+
+config_props.5253:
+0 -> []
+
+config_props.5445:
+0 -> []
+
+config_props.5748:
+-22 -> []
+-12 -> []
+0 -> []
+
+init_filter_param:
+-22 -> []
+-12 -> []
+0 -> []
+
+config_props.6210:
+-22 -> [init_filter_param: [-inf, -1]]
+-12 -> [init_filter_param: [-inf, -1]]
+0 -> [init_filter_param: [0, +inf]]
+
+config_props.6307:
+0 -> []
+
+set_gauss:
+-12 -> []
+0 -> []
+
+config_props.65:
+-22 -> []
+-12 -> [set_gauss: [-inf, -1],[1, +inf]]
+0 -> [set_gauss: [0, 0]]
+
+config_props.6652:
+-22 -> [av_opt_set_int: [-inf, -1]]
+0 -> [av_opt_set_int: [0, +inf], swr_init: [0, +inf]]
+
+config_props.6698:
+0 -> []
+
+config_props.6950:
+0 -> []
+
+generate_window_func.7462:
+$
+
+config_props.7461:
+-12 -> []
+0 -> []
+
+config_props.8486:
+0 -> []
+
+ff_limiter_init_x86:
+$
+
+config_props.8673:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_props.8810:
+-12 -> []
+0 -> []
+
+config_props.9094:
+-12 -> []
+-5 -> []
+0 -> []
+
+get_natural_factor:
+$
+
+update_context:
+$
+
+config_props.9556:
+-12 -> []
+0 -> []
+
+config_props_in:
+$
+
+config_props_input:
+-22 -> []
+0 -> []
+
+config_props_out:
+$
+
+config_props_output:
+0 -> []
+
+config_props_output.1159:
+$
+
+config_props_output.4269:
+0 -> [av_image_fill_linesizes: [0, +inf]]
+
+config_props_output.9433:
+-1094995529 -> []
+0 -> []
+
+config_props_ref:
+0 -> []
+
+config_video:
+-12 -> []
+0 -> []
+
+draw_curves:
+$
+
+config_video.8052:
+-12 -> []
+0 -> []
+
+config_video.8143:
+0 -> []
+
+config_video_output:
+-22 -> [strcmp: [-inf, -1],[1, +inf], av_parse_color: [-inf, -1]]
+0 -> [av_parse_color: [0, +inf], strcmp: [0, 0]]
+
+get_graph_color:
+$
+
+drawline:
+$
+
+lu_to_y:
+$
+
+drawtext.5365:
+$
+
+config_video_output.5350:
+-22 -> []
+-12 -> []
+0 -> []
+
+constrain_rgb:
+0 -> []
+1 -> []
+
+convert:
+0 -> []
+
+convert_mask_to_strength_mask:
+$
+
+convolution_x:
+$
+
+convolution_y_10bit:
+$
+
+convolution_y_8bit:
+$
+
+convolve:
+$
+
+convolve_child_class_next:
+$
+
+convolve_child_next:
+$
+
+convolve_framesync_preinit:
+0 -> []
+
+copy_rev:
+$
+
+count_bits:
+$
+
+count_items.2951:
+$
+
+count_items.9470:
+$
+
+cqt_calc:
+$
+
+create_chrominance_lut:
+$
+
+fill_rgb2yuv_table:
+$
+
+ff_matrix_invert_3x3:
+$
+
+ff_matrix_mul_3x3:
+$
+
+fill_whitepoint_conv_table:
+$
+
+get_color_primaries:
+$
+
+get_luma_coefficients:
+$
+
+get_transfer_characteristics:
+$
+
+get_range_off:
+-22 -> []
+0 -> []
+
+ff_fill_rgb2xyz_table:
+$
+
+fill_gamma_table:
+-12 -> []
+0 -> []
+
+create_filtergraph:
+-22 -> [fill_gamma_table: [0, +inf], av_pix_fmt_desc_get: [0, 0], get_range_off: [-inf, -1]]
+-12 -> [fill_gamma_table: [-inf, -1]]
+0 -> [get_range_off: [0, +inf], fill_gamma_table: [0, +inf], av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+
+create_luma_lut:
+$
+
+fade_gain:
+$
+
+crossfade_samples_dbl:
+$
+
+crossfade_samples_dblp:
+$
+
+crossfade_samples_flt:
+$
+
+crossfade_samples_fltp:
+$
+
+crossfade_samples_s16:
+$
+
+crossfade_samples_s16p:
+$
+
+crossfade_samples_s32:
+$
+
+crossfade_samples_s32p:
+$
+
+crossover:
+$
+
+cubic_interpolate_func:
+$
+
+parse_psfile.9680:
+$
+
+curves_init:
+-12 -> [parse_psfile.9680: [0, +inf]]
+0 -> [parse_psfile.9680: [0, +inf]]
+
+curves_uninit:
+$
+
+get_avg:
+$
+
+deband_16_c:
+0 -> []
+
+deband_16_coupling_c:
+0 -> []
+
+deband_8_c:
+0 -> []
+
+deband_8_coupling_c:
+0 -> []
+
+deblockh16_strong:
+$
+
+deblockh16_weak:
+$
+
+deblockh8_strong:
+$
+
+deblockh8_weak:
+$
+
+deblockv16_strong:
+$
+
+deblockv16_weak:
+$
+
+deblockv8_strong:
+$
+
+deblockv8_weak:
+$
+
+debug_accuracy:
+0 -> []
+1 -> []
+
+ff_insert_inpad.5073:
+$
+
+decimate_init:
+-22 -> [ff_insert_inpad.5073: [0, +inf]]
+-12 -> [ff_insert_inpad.5073: [-inf, -1]]
+0 -> [ff_insert_inpad.5073: [-inf, -1]]
+
+decimate_uninit:
+$
+
+deconvolve_child_class_next:
+$
+
+deconvolve_child_next:
+$
+
+deconvolve_framesync_preinit:
+0 -> []
+
+dedotcrawl16:
+0 -> []
+
+dedotcrawl8:
+0 -> []
+
+default_execute:
+0 -> []
+
+default_filter_frame:
+$
+
+default_filter_name:
+$
+
+deflate:
+$
+
+deflate16:
+$
+
+deflicker16:
+0 -> []
+
+deflicker8:
+0 -> []
+
+deinterlace_slice:
+0 -> []
+
+dejudder_init:
+-12 -> []
+0 -> []
+
+dejudder_uninit:
+$
+
+delay_channel_dblp:
+$
+
+delay_channel_fltp:
+$
+
+delay_channel_s16p:
+$
+
+delay_channel_s32p:
+$
+
+delay_channel_u8p:
+$
+
+depth_to_space:
+$
+
+derainbow16:
+0 -> []
+
+derainbow8:
+0 -> []
+
+deshake_transform_c:
+-22 -> [avfilter_transform: [-inf, -1]]
+0 -> [avfilter_transform: [0, +inf]]
+
+detect_clicks:
+$
+
+detect_clips:
+$
+
+detect_peak:
+$
+
+detect_scene_change:
+$
+
+diagonal_transformation:
+0 -> []
+
+dilation:
+$
+
+dilation16:
+$
+
+disp_node:
+$
+
+disp_palette:
+0 -> []
+
+disp_tree:
+0 -> [av_fopen_utf8: [-inf, -1],[1, +inf]]
+
+displace_packed:
+$
+
+displace_planar:
+$
+
+dither_value:
+$
+
+ff_framesync_dualinput_get_writable:
+0 -> [ff_inlink_make_frame_writable: [0, +inf]]
+
+do_blend:
+$
+
+do_block_ssd:
+$
+
+do_block_ssd16:
+$
+
+do_chromahold_slice:
+0 -> []
+
+do_chromakey_pixel:
+$
+
+do_chromakey_slice:
+0 -> []
+
+do_colorkey_pixel:
+$
+
+do_colorkey_slice:
+0 -> []
+
+get_input:
+$
+
+get_output:
+$
+
+do_convolve:
+$
+
+do_despill_slice:
+0 -> []
+
+factorization:
+-1 -> []
+0 -> []
+
+do_interpolation:
+-12 -> [factorization: [0, +inf]]
+-1 -> [factorization: [-inf, -1]]
+0 -> [factorization: [0, +inf]]
+
+do_lumakey_slice16:
+0 -> []
+
+do_lumakey_slice8:
+0 -> []
+
+do_output:
+$
+
+do_output16:
+$
+
+set_meta.2786:
+$
+
+pow_2:
+$
+
+get_psnr:
+$
+
+do_psnr:
+$
+
+ssim_db:
+$
+
+set_meta.3920:
+$
+
+do_ssim:
+$
+
+do_swap:
+$
+
+set_meta:
+$
+
+ff_vmafmotion_process:
+$
+
+do_vmafmotion:
+$
+
+double2int64str:
+$
+
+double_threshold:
+$
+
+draw_line.5502:
+$
+
+draw_arrow:
+$
+
+draw_axis_rgb:
+$
+
+draw_axis_yuv:
+$
+
+upvp_to_xy:
+$
+
+uv_to_xy:
+$
+
+find_tongue:
+$
+
+xyz_to_rgb:
+$
+
+gamma_correct:
+$
+
+gamma_correct_rgb:
+$
+
+fill_in_tongue:
+$
+
+xy_to_upvp:
+$
+
+xy_to_uv:
+$
+
+monochrome_color_location:
+$
+
+draw_line.6906:
+$
+
+tongue_outline:
+$
+
+draw_background:
+-12 -> [ff_get_video_buffer: [0, 0]]
+0 -> [ff_get_video_buffer: [-inf, -1],[1, +inf]]
+
+draw_bar:
+$
+
+draw_bar_rgb:
+$
+
+draw_bar_yuv:
+$
+
+get_tile_pos:
+$
+
+draw_blank_frame:
+$
+
+draw_rectangle:
+$
+
+draw_digit:
+$
+
+draw_dot:
+$
+
+draw_dot.4516:
+$
+
+draw_dot.6845:
+$
+
+draw_htext:
+$
+
+draw_htext16:
+$
+
+draw_line.5552:
+$
+
+draw_line.6846:
+$
+
+interpol:
+0 -> []
+1 -> []
+
+fill_from_cache:
+$
+
+draw_mandelbrot:
+$
+
+draw_max_line:
+$
+
+draw_rline:
+$
+
+draw_sample_cline_gray:
+$
+
+draw_sample_cline_rgba_full:
+$
+
+draw_sample_cline_rgba_scale:
+$
+
+draw_sample_line_gray:
+$
+
+draw_sample_line_rgba_full:
+$
+
+draw_sample_line_rgba_scale:
+$
+
+draw_sample_p2p_gray:
+$
+
+draw_sample_p2p_rgba_full:
+$
+
+draw_sample_p2p_rgba_scale:
+$
+
+draw_sample_point_gray:
+$
+
+draw_sample_point_rgba_full:
+$
+
+draw_sample_point_rgba_scale:
+$
+
+draw_scope:
+$
+
+draw_sono:
+$
+
+subsampling_bounds:
+$
+
+ff_blend_mask:
+$
+
+draw_text:
+$
+
+draw_text.8734:
+$
+
+draw_trace16:
+$
+
+draw_trace8:
+$
+
+draw_vtext:
+$
+
+draw_vtext16:
+$
+
+drawgrid_filter_frame:
+$
+
+drawtext.9621:
+$
+
+dump_audio_service_type:
+$
+
+dump_color_property:
+$
+
+dump_downmix:
+$
+
+dump_matrixenc:
+$
+
+print_peak:
+$
+
+print_gain:
+$
+
+dump_replaygain:
+$
+
+dump_spherical:
+$
+
+dump_stereo3d:
+$
+
+dump_unknown:
+$
+
+find_histogram_index:
+$
+
+ebur128_calc_gating_block:
+$
+
+ebur128_calc_relative_threshold:
+$
+
+ebur128_energy_in_interval:
+-22 -> []
+0 -> []
+
+ebur128_energy_shortterm:
+$
+
+ebur128_energy_to_loudness:
+$
+
+ebur128_filter_double:
+$
+
+ebur128_filter_float:
+$
+
+ebur128_filter_int:
+$
+
+ebur128_filter_short:
+$
+
+ebur128_gated_loudness:
+-22 -> []
+0 -> []
+
+echo_samples_dblp:
+$
+
+echo_samples_fltp:
+$
+
+echo_samples_s16p:
+$
+
+echo_samples_s32p:
+$
+
+end_last_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+entry_func:
+$
+
+envelope_instant:
+$
+
+envelope_peak:
+$
+
+envelope:
+$
+
+envelope_instant.8654:
+$
+
+envelope_peak.8655:
+$
+
+envelope.8653:
+$
+
+envelope_instant16:
+$
+
+envelope_peak16:
+$
+
+envelope16:
+$
+
+envelope_instant16.8651:
+$
+
+envelope_peak16.8652:
+$
+
+envelope16.8650:
+$
+
+equ_init:
+-12 -> []
+0 -> []
+
+equal:
+$
+
+equalizer_init:
+$
+
+erosion:
+$
+
+erosion16:
+$
+
+evolve:
+$
+
+evolve.5446:
+$
+
+export_plane:
+$
+
+export_row16:
+$
+
+export_row8:
+$
+
+extract_field:
+$
+
+extract_from_packed:
+$
+
+extract_line:
+$
+
+fade:
+$
+
+fade_samples_dbl:
+$
+
+fade_samples_dblp:
+$
+
+fade_samples_flt:
+$
+
+fade_samples_fltp:
+$
+
+fade_samples_s16:
+$
+
+fade_samples_s16p:
+$
+
+fade_samples_s32:
+$
+
+fade_samples_s32p:
+$
+
+fast_convolute:
+$
+
+fast_convolute2:
+$
+
+fast_convolute_nonlinear:
+$
+
+fcmul_add_c:
+$
+
+ff_afir_init_x86:
+$
+
+ff_afir_init:
+$
+
+ff_blend_rectangle:
+$
+
+ff_bufqueue_is_full:
+$
+
+ff_bufqueue_add:
+$
+
+ff_bufqueue_is_full.5233:
+$
+
+ff_bufqueue_add.5232:
+$
+
+ff_bufqueue_is_full.7140:
+$
+
+ff_bufqueue_add.7139:
+$
+
+ff_bufqueue_is_full.9023:
+$
+
+ff_bufqueue_add.9022:
+$
+
+ff_bufqueue_get:
+$
+
+ff_bufqueue_discard_all:
+$
+
+ff_bufqueue_get.5223:
+$
+
+ff_bufqueue_discard_all.5222:
+$
+
+ff_bufqueue_get.8998:
+$
+
+ff_bufqueue_discard_all.8997:
+$
+
+ff_bufqueue_peek:
+$
+
+ff_bufqueue_peek.5230:
+$
+
+ff_bufqueue_peek.9012:
+$
+
+ff_calculate_bounding_box:
+0 -> []
+1 -> []
+
+ff_colorspacedsp_x86_init:
+$
+
+ff_colorspacedsp_init:
+$
+
+ff_copy_rectangle:
+$
+
+ff_copy_rectangle2:
+$
+
+ff_determine_signal_peak:
+$
+
+ff_dnn_execute_model_native:
+0 -> []
+1 -> []
+
+ff_dnn_free_model_native:
+$
+
+ff_dnn_load_model_native:
+$
+
+ff_draw_rectangle:
+$
+
+ff_ebur128_add_frames_planar_double:
+$
+
+ff_ebur128_add_frames_double:
+$
+
+ff_ebur128_add_frames_planar_float:
+$
+
+ff_ebur128_add_frames_float:
+$
+
+ff_ebur128_add_frames_planar_int:
+$
+
+ff_ebur128_add_frames_int:
+$
+
+ff_ebur128_add_frames_planar_short:
+$
+
+ff_ebur128_add_frames_short:
+$
+
+ff_ebur128_destroy:
+$
+
+ff_ebur128_loudness_global:
+$
+
+ff_ebur128_loudness_global_multiple:
+$
+
+ff_ebur128_loudness_momentary:
+-22 -> [ebur128_energy_in_interval: [-inf, -1],[1, +inf]]
+0 -> [ebur128_energy_in_interval: [0, 0]]
+
+ff_ebur128_loudness_range_multiple:
+-22 -> []
+0 -> []
+
+ff_ebur128_loudness_range:
+$
+
+ff_ebur128_loudness_shortterm:
+-22 -> [ebur128_energy_shortterm: [-inf, -1],[1, +inf]]
+0 -> [ebur128_energy_shortterm: [0, 0]]
+
+ff_ebur128_loudness_window:
+-22 -> [ebur128_energy_in_interval: [-inf, -1],[1, +inf]]
+0 -> [ebur128_energy_in_interval: [0, 0]]
+
+ff_ebur128_relative_threshold:
+-22 -> []
+0 -> []
+
+ff_ebur128_sample_peak:
+-22 -> []
+0 -> []
+
+ff_fill_line_with_color:
+-12 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+0 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf]]
+
+ff_filter_init_hw_frames:
+0 -> []
+
+ff_framesync_uninit:
+$
+
+ff_get_dnn_module:
+$
+
+ff_gradfun_blur_line_c:
+$
+
+ff_gradfun_filter_line_c:
+$
+
+ff_gradfun_init_x86:
+$
+
+ff_idet_filter_line_c:
+$
+
+ff_idet_filter_line_c_16bit:
+$
+
+ff_idet_init_x86:
+$
+
+ff_insert_inpad:
+$
+
+ff_insert_inpad.1845:
+$
+
+ff_insert_inpad.2990:
+$
+
+ff_insert_inpad.3669:
+$
+
+ff_insert_inpad.4749:
+$
+
+ff_insert_inpad.5821:
+$
+
+ff_insert_inpad.7296:
+$
+
+ff_insert_inpad.7614:
+$
+
+ff_insert_inpad.8343:
+$
+
+ff_insert_inpad.855:
+$
+
+ff_insert_inpad.8554:
+$
+
+ff_insert_inpad.8861:
+$
+
+ff_insert_inpad.9019:
+$
+
+ff_insert_outpad:
+$
+
+ff_insert_outpad.2634:
+$
+
+ff_insert_outpad.2841:
+$
+
+ff_insert_outpad.3389:
+$
+
+ff_insert_outpad.3672:
+$
+
+ff_insert_outpad.4751:
+$
+
+ff_insert_outpad.4992:
+$
+
+ff_insert_outpad.5351:
+$
+
+ff_insert_outpad.5853:
+$
+
+ff_insert_outpad.6297:
+$
+
+ff_insert_outpad.8053:
+$
+
+ff_insert_outpad.8144:
+$
+
+ff_line_noise_avg_c:
+$
+
+ff_line_noise_c:
+$
+
+ff_make_formatu64_list:
+$
+
+ff_me_cmp_sad:
+$
+
+ff_nlmeans_init:
+$
+
+ff_noise_init_x86:
+$
+
+ff_norm_qscale:
+$
+
+ff_null_get_audio_buffer:
+$
+
+ff_null_get_video_buffer:
+$
+
+ff_parse_channel_layout:
+-22 -> [av_get_extended_channel_layout: [-inf, -1]]
+0 -> [av_get_extended_channel_layout: [0, +inf]]
+
+ff_parse_pixel_format:
+-22 -> [av_get_pix_fmt: [-1, -1], av_pix_fmt_desc_get: [0, 0]]
+0 -> [av_pix_fmt_desc_get: [-inf, -1],[1, +inf], av_get_pix_fmt: [-inf, -2],[0, +inf]]
+
+ff_parse_sample_format:
+-22 -> [av_get_sample_fmt: [-1, -1], av_get_bytes_per_sample: [-inf, 0]]
+0 -> [av_get_bytes_per_sample: [1, +inf], av_get_sample_fmt: [-inf, -2],[0, +inf]]
+
+ff_parse_sample_rate:
+-22 -> []
+0 -> []
+
+ff_parse_time_base:
+-22 -> [av_parse_ratio: [-inf, -1]]
+0 -> [av_parse_ratio: [0, +inf]]
+
+ff_poll_frame:
+$
+
+ff_query_formats_all_layouts:
+$
+
+ff_scene_sad16_c:
+$
+
+ff_scene_sad_c:
+$
+
+ff_update_hdr_metadata:
+$
+
+ff_vmafmotion_uninit:
+$
+
+return_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+fixstride:
+$
+
+ff_yadif_filter_frame:
+-1163346256 -> [checkstride: [0, 0]]
+-12 -> [checkstride: [0, 0]]
+-1 -> [checkstride: [-inf, -1],[1, +inf]]
+0 -> [checkstride: [0, 0]]
+
+ff_yadif_request_frame:
+-541478725 -> [ff_request_frame: [-541478725, -541478725]]
+-12 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [0, 0]]
+0 -> [ff_request_frame: [-541478725, -541478725],[0, +inf], av_frame_clone: [-inf, -1],[1, +inf]]
+
+fft_channel:
+0 -> []
+
+fft_horizontal:
+0 -> []
+
+fft_vertical:
+0 -> []
+
+fieldmatch_init:
+-22 -> [ff_insert_inpad: [0, +inf]]
+-12 -> [ff_insert_inpad: [-inf, -1]]
+0 -> [ff_insert_inpad: [-inf, -1]]
+
+fieldmatch_uninit:
+$
+
+fill_items:
+$
+
+fill_items.9471:
+$
+
+fill_picture:
+$
+
+fill_picture_monoblack:
+$
+
+fill_picture_rgb:
+$
+
+filter:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+type2str:
+$
+
+rep2str:
+$
+
+filter.2154:
+$
+
+filter.2879:
+$
+
+filter.2930:
+$
+
+filter.7370:
+$
+
+filter16_3x3:
+$
+
+filter16_5x5:
+$
+
+filter16_7x7:
+$
+
+filter16_brng:
+$
+
+filter16_column:
+$
+
+filter16_complex_high:
+$
+
+filter16_complex_low:
+$
+
+filter16_prewitt:
+$
+
+filter16_roberts:
+$
+
+filter16_row:
+$
+
+filter16_scale:
+$
+
+filter16_simple_high:
+$
+
+filter16_simple_low:
+$
+
+filter16_sobel:
+$
+
+filter_tout_outlier:
+$
+
+filter16_tout:
+$
+
+filter16_vrep:
+$
+
+filter8_brng:
+$
+
+filter8_tout:
+$
+
+filter8_vrep:
+$
+
+stereo_position:
+$
+
+filter_2_1:
+$
+
+filter_3x3:
+$
+
+filter_5_0_side:
+$
+
+filter_5_1_back:
+$
+
+filter_5_1_side:
+$
+
+filter_5x5:
+$
+
+filter_7x7:
+$
+
+isfinite_array:
+0 -> []
+1 -> []
+
+find_index:
+0 -> []
+1 -> []
+
+interpolation:
+-12 -> []
+-1 -> []
+0 -> []
+
+filter_channel:
+-12 -> [isfinite_array: [-inf, -1],[1, +inf], interpolation: [-inf, -1]]
+-1 -> [isfinite_array: [-inf, -1],[1, +inf], interpolation: [-inf, -1]]
+0 -> [interpolation: [0, +inf], isfinite_array: [0, 0]]
+
+filter_channel.6756:
+0 -> []
+
+filter_channel.7756:
+0 -> []
+
+postprocess:
+$
+
+limit_gain:
+$
+
+process_frame.7832:
+$
+
+filter_channel.7831:
+0 -> []
+
+filter_child_class_next:
+$
+
+filter_child_next:
+$
+
+filter_color:
+0 -> []
+
+filter_color2:
+0 -> []
+
+filter_column:
+$
+
+filter_complex_high:
+$
+
+filter_complex_low:
+$
+
+filter_dbl:
+$
+
+filter_dbl.6176:
+$
+
+filter_dblp:
+$
+
+filter_dblp.6178:
+$
+
+filter_edge:
+$
+
+filter_edge_16bit:
+$
+
+filter_edges:
+$
+
+filter_edges_16bit:
+$
+
+filter_flt:
+$
+
+filter_flt.6175:
+$
+
+filter_fltp:
+$
+
+filter_fltp.6177:
+$
+
+filter_frame:
+$
+
+filter_frame.103:
+$
+
+filter_frame.1112:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1121:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1144:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1148:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1161:
+$
+
+filter_frame.1186:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1266:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1308:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.1351:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+scalarproduct:
+$
+
+filter_frame.1376:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1453:
+-1163346256 -> [av_audio_fifo_peek: [0, +inf], filter_channel: [0, +inf]]
+-12 -> [av_audio_fifo_peek: [0, +inf], filter_channel: [0, +inf]]
+0 -> [av_audio_fifo_peek: [0, +inf], filter_channel: [0, +inf]]
+
+filter_frame.1492:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_plane2d:
+$
+
+filter_plane3d2:
+$
+
+import_plane:
+$
+
+filter_plane3d1:
+$
+
+filter_frame.154:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1568:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1587:
+-1163346256 -> [filter: [-inf, -1], av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [filter: [-inf, -1], av_frame_clone: [0, 0]]
+0 -> [filter: [0, +inf], av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.1642:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.1665:
+$
+
+filter_frame.1720:
+-1163346256 -> []
+-12 -> [av_frame_is_writable: [0, 0]]
+0 -> []
+1 -> [av_frame_is_writable: [-inf, -1],[1, +inf]]
+
+filter_frame.1762:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+interleave:
+$
+
+filter_frame.1824:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+get_volume:
+$
+
+update_volume:
+$
+
+mcompand_channel:
+0 -> []
+
+filter_frame.1883:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+update_histogram_diff:
+-12 -> [color_inc: [-inf, -1]]
+
+update_histogram_frame:
+-12 -> [color_inc: [-inf, -1]]
+
+get_avg_color:
+$
+
+write_palette:
+$
+
+get_next_box_id_to_split:
+$
+
+load_color_refs:
+$
+
+split_box:
+$
+
+set_colorquant_ratio_meta:
+$
+
+get_palette_frame:
+$
+
+filter_frame.1922:
+$
+
+filter_frame.1954:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.196:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+make_vitc_tc_string:
+$
+
+get_pit_avg3:
+$
+
+get_vitc_crc:
+$
+
+read_vitc_line:
+0 -> []
+1 -> []
+
+filter_frame.1980:
+$
+
+filter_frame.2003:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2019:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2033:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2044:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2052:
+-1163346256 -> [av_realloc_array: [-inf, -1],[1, +inf]]
+-12 -> [av_realloc_array: [0, 0]]
+0 -> [av_realloc_array: [-inf, -1],[1, +inf]]
+
+filter_frame.213:
+$
+
+filter_frame.2153:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+update_sample_stats:
+$
+
+filter_frame.2188:
+$
+
+filter_frame.2246:
+$
+
+filter_frame.2293:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.232:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.2387:
+$
+
+set_params:
+$
+
+gaussianiir2d:
+$
+
+filter_frame.2407:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2436:
+-1163346256 -> [ff_filter_frame: [-inf, -541478726],[-541478724, +inf]]
+-541478725 -> [ff_filter_frame: [-inf, -541478726],[-541478724, +inf]]
+-12 -> [ff_filter_frame: [-inf, -541478726],[-541478724, +inf]]
+0 -> [ff_filter_frame: [-inf, -541478726],[-541478724, +inf]]
+
+filter_frame.2474:
+$
+
+filter_frame.2511:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2523:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2538:
+$
+
+filter_frame.2553:
+$
+
+filter_frame.2559:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.257:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2643:
+$
+
+filter_frame.2672:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+gaussian_blur:
+$
+
+get_rounded_direction:
+0 -> []
+1 -> []
+2 -> []
+3 -> []
+
+sobel:
+$
+
+non_maximum_suppression:
+$
+
+filter_frame.2710:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2764:
+$
+
+get_x:
+$
+
+filter_frame.2844:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.2964:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.304:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+set_frame_data:
+$
+
+var_size_bmc:
+$
+
+interpolate:
+$
+
+inject_frame:
+0 -> [cluster_mvs: [0, 0]]
+
+filter_frame.3150:
+-1163346256 -> [inject_frame: [0, 0], av_compare_ts: [-inf, 0], ff_get_video_buffer: [-inf, -1],[1, +inf]]
+-12 -> [inject_frame: [0, 0], av_compare_ts: [-inf, 0], ff_get_video_buffer: [0, 0]]
+0 -> [inject_frame: [0, 0], av_compare_ts: [1, +inf], ff_get_video_buffer: [-inf, -1],[1, +inf]]
+
+int_sin:
+$
+
+filter_frame.3196:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+get_scene_score.3266:
+$
+
+get_concatdec_select:
+$
+
+select_frame.3265:
+$
+
+filter_frame.3262:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+parse_yuv_type:
+$
+
+scale_slice:
+$
+
+filter_frame.3362:
+$
+
+filter_frame.3391:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.340:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.3416:
+$
+
+frame_needs_copy:
+0 -> [av_frame_is_writable: [-inf, -1],[1, +inf], buffer_needs_copy: [0, 0]]
+1 -> [buffer_needs_copy: [-inf, -1],[1, +inf], av_frame_is_writable: [0, 0]]
+
+filter_frame.3462:
+-12 -> [config_input.3463: [0, +inf]]
+0 -> [config_output.3460: [-inf, -1]]
+
+filter_frame.3480:
+$
+
+filter_frame.3572:
+$
+
+filter_frame.3608:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.3637:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.3762:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+uninit.3770:
+$
+
+filter_frame.3853:
+-22 -> [create_filtergraph: [-inf, -1]]
+-12 -> [create_filtergraph: [-inf, -1]]
+
+filter_frame.3901:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4028:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+yae_curr_frag:
+$
+
+yae_prev_frag:
+$
+
+yae_advance_to_next_frag:
+$
+
+yae_xcorr_via_rdft:
+$
+
+yae_align:
+$
+
+yae_adjust_position:
+$
+
+yae_overlap_add:
+-11 -> []
+0 -> []
+
+yae_downmix:
+$
+
+yae_load_data:
+-11 -> []
+0 -> []
+
+yae_load_frag:
+-11 -> [yae_load_data: [-inf, -1],[1, +inf]]
+0 -> [yae_load_data: [0, 0]]
+
+yae_apply:
+$
+
+push_samples.4083:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+filter_frame.4092:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4144:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4177:
+$
+
+filter_frame.4225:
+$
+
+filter_frame.4247:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4270:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+rgb_from_cqt:
+$
+
+yuv_from_cqt:
+$
+
+process_cqt:
+$
+
+plot_cqt:
+-12 -> []
+0 -> []
+
+filter_frame.4393:
+-1163346256 -> [ff_filter_frame: [-inf, -1], plot_cqt: [0, +inf]]
+-541478725 -> [plot_cqt: [0, +inf]]
+-12 -> [ff_filter_frame: [-inf, -1], plot_cqt: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf], plot_cqt: [0, +inf]]
+
+rdft_vertical:
+$
+
+irdft_vertical:
+$
+
+filter_frame.44:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+get_sx:
+$
+
+get_bsize:
+$
+
+plot_freq:
+$
+
+plot_freqs:
+-1163346256 -> [av_strdup: [-inf, -1],[1, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf]]
+
+filter_frame.4513:
+-1163346256 -> [av_audio_fifo_peek: [0, +inf]]
+-12 -> [av_audio_fifo_peek: [0, +inf]]
+0 -> [av_audio_fifo_peek: [0, +inf]]
+
+weight_averages:
+$
+
+nlmeans_plane:
+0 -> []
+
+filter_frame.4541:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+yule_filter_stereo_samples:
+$
+
+filter_frame.4558:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4679:
+-12 -> [av_frame_clone: [0, 0], av_buffer_alloc: [0, 0]]
+
+filter_frame.4692:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4704:
+$
+
+gaussian_filter:
+$
+
+true_peak_limiter:
+$
+
+filter_frame.4800:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4814:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4825:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.4947:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.502:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5037:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5049:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5071:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5131:
+$
+
+is_inside:
+0 -> []
+1 -> []
+
+filter_frame.5162:
+$
+
+filter_frame.5192:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.52:
+-1163346256 -> [disp_palette: [0, +inf]]
+-12 -> [disp_palette: [0, +inf]]
+0 -> [disp_palette: [0, +inf]]
+
+filter_frame.5231:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+frame_sum_square_err:
+$
+
+get_best_frame:
+$
+
+filter_frame.5252:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+hable:
+$
+
+mobius:
+$
+
+tonemap:
+$
+
+filter_frame.5277:
+-558323010 -> [av_pix_fmt_desc_get: [0, 0]]
+
+gate_update:
+$
+
+filter_frame.5370:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+
+filter_frame.542:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5469:
+0 -> []
+
+filter_frame.5500:
+$
+
+filter_frame.554:
+-12 -> [av_frame_is_writable: [0, 0]]
+
+filter_frame.5577:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5651:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5787:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.580:
+-1163346256 -> [fgets: [-inf, -1],[1, +inf], __isoc99_sscanf: [2, 2]]
+-1094995529 -> [__isoc99_sscanf: [-inf, 1],[3, +inf], fgets: [0, 0]]
+-12 -> [fgets: [-inf, -1],[1, +inf], __isoc99_sscanf: [2, 2]]
+0 -> [fgets: [-inf, -1],[1, +inf], __isoc99_sscanf: [2, 2]]
+
+filter_frame.5855:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+samplereduction:
+$
+
+lfo_get:
+$
+
+lfo_advance:
+$
+
+filter_frame.5911:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.5941:
+$
+
+update_stat:
+$
+
+set_meta.6122:
+$
+
+set_metadata:
+$
+
+filter_frame.6119:
+$
+
+filter_frame.6173:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6209:
+$
+
+filter_frame.621:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6239:
+$
+
+lfo_get_value:
+$
+
+lfo_advance.6282:
+$
+
+filter_frame.6277:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6295:
+-1163346256 -> [ff_outlink_get_status: [0, 0], av_frame_clone: [-inf, -1],[1, +inf]]
+-541478725 -> [ff_outlink_get_status: [-inf, -1],[1, +inf]]
+-12 -> [ff_outlink_get_status: [0, 0], av_frame_clone: [0, 0]]
+0 -> [ff_outlink_get_status: [0, 0], av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.6310:
+$
+
+filter_frame.6339:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6348:
+$
+
+filter_frame.6361:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+get_derivative:
+-22 -> []
+0 -> []
+
+setup_derivative_buffers:
+-12 -> []
+0 -> []
+
+filter_grey_edge:
+-12 -> [setup_derivative_buffers: [-inf, -1],[1, +inf]]
+0 -> [setup_derivative_buffers: [0, 0]]
+
+normalize_light:
+$
+
+illumination_estimation:
+-12 -> []
+0 -> []
+
+filter_frame.64:
+-1163346256 -> [illumination_estimation: [0, 0]]
+-12 -> [illumination_estimation: [-inf, -1],[1, +inf]]
+0 -> [illumination_estimation: [0, 0]]
+
+hdcd_detect_end:
+$
+
+hdcd_control:
+$
+
+hdcd_analyze_prepare:
+$
+
+hdcd_analyze_gen:
+$
+
+hdcd_analyze:
+$
+
+hdcd_envelope:
+$
+
+hdcd_integrate:
+$
+
+hdcd_scan:
+$
+
+hdcd_process:
+$
+
+hdcd_detect_onech:
+$
+
+hdcd_detect_start:
+$
+
+hdcd_control_stereo:
+0 -> []
+1 -> []
+
+hdcd_process_stereo:
+$
+
+filter_frame.6418:
+$
+
+filter_frame.6457:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.6537:
+$
+
+filter_frame.6588:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6651:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6697:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6755:
+$
+
+filter_frame.6842:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+plot_gamuts:
+$
+
+plot_white_point:
+$
+
+filter_frame.6901:
+-1163346256 -> [draw_background: [0, +inf]]
+-12 -> [draw_background: [-inf, -1]]
+0 -> [draw_background: [0, +inf]]
+
+filter_frame.691:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.6949:
+$
+
+filter_frame.7053:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.7101:
+$
+
+filter_frame.7137:
+-1163346256 -> [cqueue_empty: [0, 0]]
+-12 -> [cqueue_empty: [0, 0]]
+0 -> [cqueue_empty: [-inf, -1],[1, +inf]]
+
+get_rdelta:
+$
+
+filter_frame.7179:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.7222:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.7253:
+$
+
+flush:
+$
+
+filter_frame.733:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+finish_block:
+$
+
+update_stat.7353:
+$
+
+filter_frame.7352:
+$
+
+filter_frame.7368:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.7394:
+$
+
+mid_pred.7500:
+$
+
+filter_frame.7498:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf], av_frame_new_side_data: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_new_side_data: [0, 0], av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf], av_frame_new_side_data: [-inf, -1],[1, +inf]]
+
+filter_frame.7647:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.7755:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.779:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.7798:
+-1163346256 -> [av_audio_fifo_write: [0, +inf], av_audio_fifo_peek: [0, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [av_audio_fifo_write: [0, +inf], av_audio_fifo_peek: [0, +inf], ff_filter_frame: [-inf, -1]]
+0 -> [av_audio_fifo_write: [0, +inf], av_audio_fifo_peek: [0, +inf], ff_filter_frame: [0, +inf]]
+
+filter_frame.7898:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.8016:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+section_process:
+$
+
+process_sample:
+$
+
+filter_frame.8055:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+filter_frame.8163:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+filter_frame.8196:
+$
+
+filter_frame.8234:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.8416:
+$
+
+find_block_motion:
+$
+
+find_motion:
+$
+
+filter_frame.8485:
+$
+
+filter_frame.8642:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.8672:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.8686:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.880:
+$
+
+filter_frame16:
+$
+
+filter_frame8:
+$
+
+filter_frame.8811:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.885:
+$
+
+push_frame.9011:
+-1163346256 -> []
+-541478725 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9016:
+-1163346256 -> []
+-1094995529 -> []
+-541478725 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9047:
+$
+
+filter_frame.9070:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9093:
+-1163346256 -> []
+-12 -> []
+-5 -> []
+0 -> []
+
+make_command_flags_str:
+$
+
+filter_frame.9122:
+-1163346256 -> []
+-38 -> []
+-12 -> []
+0 -> []
+
+filter_frame.918:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9269:
+-1163346256 -> [swr_convert: [1, +inf]]
+-12 -> [swr_convert: [1, +inf]]
+0 -> [swr_convert: [-inf, 0]]
+
+filter_frame.9354:
+-12 -> [av_fast_realloc: [0, 0]]
+0 -> [av_fast_realloc: [-inf, -1],[1, +inf]]
+
+filter_frame.9435:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+filter_frame.9447:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9480:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+get_dither_value:
+$
+
+filter_frame.9555:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame.9618:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+filter_frame.9684:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+normalize:
+$
+
+filter_frame.9733:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame_1d:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+vertical_frame_pack:
+$
+
+horizontal_frame_pack:
+$
+
+try_push_frame:
+-1163346256 -> [av_stereo3d_create_side_data: [-inf, -1],[1, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1], av_stereo3d_create_side_data: [0, 0]]
+0 -> [av_stereo3d_create_side_data: [-inf, -1],[1, +inf], ff_filter_frame: [0, +inf]]
+
+filter_frame_left:
+$
+
+read16_fft_bin:
+$
+
+read8_fft_bin:
+$
+
+read_fft_data:
+$
+
+synth_window:
+$
+
+try_push_frame.8299:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+try_push_frames:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+filter_frame_magnitude:
+$
+
+filter_frame_phase:
+$
+
+filter_frame_ref:
+$
+
+filter_frame_right:
+$
+
+filter_freq_expr_16:
+$
+
+filter_freq_expr_8:
+$
+
+filter_freq_sigma_16:
+$
+
+filter_freq_sigma_8:
+$
+
+filter_horizontally:
+0 -> []
+
+filter_horizontally_16:
+0 -> []
+
+filter_horizontally_8:
+0 -> []
+
+filter_intra:
+$
+
+filter_intra_16bit:
+$
+
+filter_line_c:
+$
+
+filter_line_c.2932:
+$
+
+filter_line_c_16bit:
+$
+
+filter_line_c_16bit.2931:
+$
+
+filter_mono:
+0 -> []
+
+filter_postscale:
+0 -> []
+
+filter_prewitt:
+$
+
+rgb_to_xy:
+$
+
+filter_rgb24:
+$
+
+filter_rgb48:
+$
+
+filter_rgba:
+$
+
+filter_rgba64:
+$
+
+filter_roberts:
+$
+
+filter_row:
+$
+
+filter_scale:
+$
+
+filter_simple_high:
+$
+
+filter_simple_low:
+$
+
+filter_slice:
+0 -> []
+
+filter_slice.1393:
+0 -> []
+
+noise:
+$
+
+filter_slice.1722:
+0 -> []
+
+filter_slice.2880:
+0 -> []
+
+filter_slice.2933:
+0 -> []
+
+filter_slice.3199:
+0 -> []
+
+filter_slice.4146:
+0 -> []
+
+filter_slice.4669:
+0 -> []
+
+filter_slice.4694:
+0 -> []
+
+filter_slice.5042:
+0 -> []
+
+filter_slice.543:
+0 -> []
+
+filter_slice.5653:
+0 -> []
+
+filter_slice.7581:
+0 -> []
+
+filter_slice.7900:
+0 -> []
+
+filter_slice.794:
+0 -> []
+
+filter_slice.8674:
+0 -> []
+
+filter_slice.8964:
+0 -> []
+
+filter_slice16:
+0 -> []
+
+filter_slice8:
+0 -> []
+
+filter_slice_alpha:
+0 -> []
+
+filter_slice_chroma:
+0 -> []
+
+filter_slice_gbrap:
+0 -> []
+
+filter_slice_gbrap10:
+0 -> []
+
+filter_slice_gbrap12:
+0 -> []
+
+filter_slice_gbrap16:
+0 -> []
+
+filter_slice_gbrp:
+0 -> []
+
+filter_slice_gbrp10:
+0 -> []
+
+filter_slice_gbrp12:
+0 -> []
+
+filter_slice_gbrp14:
+0 -> []
+
+filter_slice_gbrp16:
+0 -> []
+
+filter_slice_gbrp9:
+0 -> []
+
+filter_slice_grey_edge:
+0 -> []
+
+filter_slice_luma:
+0 -> []
+
+filter_slice_packed:
+0 -> []
+
+filter_slice_planar:
+0 -> []
+
+filter_slice_rgb:
+0 -> []
+
+filter_slice_rgb0:
+0 -> []
+
+filter_slice_rgb24:
+0 -> []
+
+filter_slice_rgb48:
+0 -> []
+
+filter_slice_rgba:
+0 -> []
+
+filter_slice_rgba64:
+0 -> []
+
+filter_sobel:
+$
+
+filter_stereo:
+$
+
+filter_surround:
+$
+
+filter_vertically:
+0 -> []
+
+filter_vertically_16:
+0 -> []
+
+filter_vertically_8:
+0 -> []
+
+filter_xyz:
+$
+
+final_block_filtering:
+$
+
+find_peak:
+$
+
+find_rms:
+$
+
+find_stream:
+$
+
+fir_quantum:
+0 -> []
+
+fir_channel:
+0 -> []
+
+fir_channels:
+0 -> []
+
+fixed_borders16:
+$
+
+fixed_borders8:
+$
+
+flat16_column:
+0 -> []
+
+flat16_column_mirror:
+0 -> []
+
+flat16_row:
+0 -> []
+
+flat16_row_mirror:
+0 -> []
+
+flat_column:
+0 -> []
+
+flat_column_mirror:
+0 -> []
+
+flat_row:
+0 -> []
+
+flat_row_mirror:
+0 -> []
+
+flush_buffer:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+flush_frame:
+0 -> [swr_convert: [1, +inf]]
+
+framepack_uninit:
+$
+
+framesync_name:
+$
+
+free_blocks:
+$
+
+free_filter_param:
+$
+
+g_func:
+$
+
+gain_entry_compare:
+-1 -> []
+0 -> []
+1 -> []
+
+gain_interpolate_func:
+$
+
+generate_half_size_image:
+$
+
+get_am_factor:
+$
+
+get_aspect_ratio:
+-22 -> [av_expr_parse_and_eval: [-inf, +inf], av_parse_ratio: [0, +inf]]
+0 -> [av_expr_parse_and_eval: [-inf, +inf], av_parse_ratio: [0, +inf]]
+
+get_audio_buffer:
+$
+
+get_blacks_scale16:
+$
+
+get_blacks_scale8:
+$
+
+get_block_row:
+$
+
+get_block_row16:
+$
+
+get_cbrt_h:
+$
+
+get_cbrt_h2:
+$
+
+get_cm_factor:
+$
+
+mid_pred:
+$
+
+get_cmy_scale:
+$
+
+get_gm_factor:
+$
+
+get_histogram:
+$
+
+get_hm_factor:
+$
+
+get_lfe:
+$
+
+get_lin_h:
+$
+
+get_lin_h2:
+$
+
+get_log_h:
+$
+
+get_log_h2:
+$
+
+get_median_factor:
+$
+
+get_neutrals_scale16:
+$
+
+get_neutrals_scale8:
+$
+
+get_pm_factor:
+$
+
+get_qm_factor:
+$
+
+get_rgb_scale:
+$
+
+get_rotated_h:
+$
+
+get_rotated_w:
+$
+
+get_sad_ob:
+$
+
+get_sample_rate:
+$
+
+get_sbad_ob:
+$
+
+get_sqrt_h:
+$
+
+get_sqrt_h2:
+$
+
+get_video_buffer:
+$
+
+get_video_buffer.3461:
+$
+
+get_video_buffer.3666:
+$
+
+get_video_buffer.6347:
+$
+
+get_video_buffer.884:
+$
+
+get_whites_scale16:
+$
+
+get_whites_scale8:
+$
+
+getimag:
+$
+
+getreal:
+$
+
+getsum16:
+0 -> []
+1 -> []
+
+getsum8:
+0 -> []
+1 -> []
+
+graticule16_column:
+$
+
+graticule16_row:
+$
+
+graticule_column:
+$
+
+graticule_none:
+$
+
+graticule_row:
+$
+
+greater:
+$
+
+green_graticule:
+$
+
+green_graticule16:
+$
+
+guess_channel_layout:
+-22 -> [av_get_default_channel_layout: [0, 0]]
+0 -> [av_get_default_channel_layout: [-inf, -1],[1, +inf]]
+
+guess_map_any:
+$
+
+guess_map_matching:
+$
+
+haldclut_child_class_next:
+$
+
+haldclut_child_next:
+$
+
+haldclut_framesync_preinit:
+0 -> []
+
+haldclut_init:
+0 -> []
+
+haldclut_uninit:
+$
+
+haldclutsrc_config_props:
+$
+
+haldclutsrc_fill_picture:
+$
+
+haldclutsrc_init:
+$
+
+haldclutsrc_query_formats:
+-12 -> []
+0 -> []
+
+headphone_convolute:
+0 -> []
+
+headphone_fast_convolute:
+0 -> []
+
+hflip_b24_c:
+$
+
+hflip_b48_c:
+$
+
+hflip_byte_c:
+$
+
+hflip_dword_c:
+$
+
+hflip_qword_c:
+$
+
+hflip_short_c:
+$
+
+highpass_init:
+$
+
+highshelf_init:
+$
+
+hq2x:
+0 -> []
+
+hq3x:
+0 -> []
+
+hq4x:
+0 -> []
+
+hwdownload_config_input:
+-22 -> []
+-12 -> []
+0 -> []
+
+hwdownload_config_output:
+-22 -> [av_hwframe_transfer_get_formats: [0, +inf]]
+0 -> [av_hwframe_transfer_get_formats: [0, +inf]]
+
+hwdownload_filter_frame:
+$
+
+hwdownload_query_formats:
+-12 -> [av_pix_fmt_desc_next: [-inf, -1],[1, +inf], ff_add_format: [-inf, -1],[1, +inf], ff_formats_ref: [-inf, -1]]
+0 -> [ff_add_format: [0, 0], av_pix_fmt_desc_next: [0, 0], ff_formats_ref: [0, +inf]]
+
+hwdownload_uninit:
+$
+
+hwmap_config_output:
+-22 -> [av_hwdevice_find_type_by_name: [0, 0], av_hwdevice_ctx_create_derived: [0, +inf], av_pix_fmt_desc_get: [0, 0]]
+-12 -> [av_hwframe_ctx_create_derived: [0, +inf], av_hwdevice_find_type_by_name: [-inf, -1],[1, +inf], av_hwdevice_ctx_create_derived: [0, +inf], av_pix_fmt_desc_get: [-inf, -1],[1, +inf], av_hwframe_ctx_init: [0, +inf]]
+0 -> [av_hwframe_ctx_create_derived: [0, +inf], av_hwdevice_find_type_by_name: [-inf, -1],[1, +inf], av_hwdevice_ctx_create_derived: [0, +inf], av_pix_fmt_desc_get: [-inf, -1],[1, +inf], av_hwframe_ctx_init: [0, +inf]]
+
+hwmap_filter_frame:
+-12 -> [av_frame_alloc: [0, 0]]
+
+hwmap_get_buffer:
+$
+
+hwmap_query_formats:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+hwmap_uninit:
+$
+
+hwupload_config_output:
+-12 -> [av_hwframe_ctx_init: [0, +inf]]
+0 -> [av_hwframe_ctx_init: [0, +inf]]
+
+hwupload_filter_frame:
+$
+
+hwupload_query_formats:
+-22 -> [av_hwdevice_get_hwframe_constraints: [0, 0]]
+-12 -> [av_hwdevice_get_hwframe_constraints: [-inf, -1],[1, +inf], ff_formats_ref: [-inf, -1]]
+0 -> [av_hwdevice_get_hwframe_constraints: [-inf, -1],[1, +inf], ff_formats_ref: [0, +inf]]
+
+hwupload_uninit:
+$
+
+pop:
+$
+
+passed:
+$
+
+push:
+$
+
+is_empty:
+$
+
+hysteresis16:
+$
+
+hysteresis8:
+$
+
+hysteresis_child_class_next:
+$
+
+hysteresis_child_next:
+$
+
+hysteresis_framesync_preinit:
+0 -> []
+
+ifft_channel:
+0 -> []
+
+ifft_horizontal:
+0 -> []
+
+ifft_vertical:
+0 -> []
+
+iir_ch_dblp:
+0 -> []
+
+iir_ch_fltp:
+0 -> []
+
+iir_ch_s16p:
+0 -> []
+
+iir_ch_s32p:
+0 -> []
+
+iir_ch_serial_dblp:
+0 -> []
+
+iir_ch_serial_fltp:
+0 -> []
+
+iir_ch_serial_s16p:
+0 -> []
+
+iir_ch_serial_s32p:
+0 -> []
+
+image_sad:
+$
+
+imagf:
+$
+
+import_row16:
+$
+
+import_row8:
+$
+
+inflate:
+$
+
+inflate16:
+$
+
+init:
+-22 -> [ff_add_format: [0, +inf], av_get_sample_fmt: [-1, -1], get_sample_rate: [0, 0], av_get_channel_layout: [0, 0], ff_add_channel_layout: [0, +inf]]
+-12 -> [ff_add_format: [-inf, -1], av_get_channel_layout: [-inf, -1],[1, +inf], ff_add_channel_layout: [-inf, -1]]
+0 -> [av_get_sample_fmt: [-inf, -2],[0, +inf], ff_add_format: [-inf, -1], get_sample_rate: [-inf, -1],[1, +inf], av_get_channel_layout: [-inf, -1],[1, +inf], ff_add_channel_layout: [-inf, -1]]
+
+init.1033:
+-22 -> [ff_parse_channel_layout: [-inf, -1]]
+0 -> [ff_parse_channel_layout: [0, +inf]]
+
+init.1060:
+0 -> []
+
+init.1095:
+-22 -> []
+0 -> []
+
+init.1126:
+-12 -> []
+0 -> []
+
+init.1189:
+0 -> []
+
+init.1218:
+0 -> []
+
+init.1282:
+-1094995529 -> [av_isdigit: [0, 0], strlen: [0, 0]]
+0 -> [strlen: [-inf, -1],[1, +inf], av_isdigit: [-inf, -1],[1, +inf]]
+
+init.1314:
+0 -> [av_expr_parse: [0, +inf], avio_open: [0, +inf]]
+
+init.135:
+-12 -> []
+0 -> []
+
+init.1379:
+0 -> []
+
+init.1425:
+0 -> []
+
+init.1597:
+-12 -> []
+0 -> []
+
+init.1613:
+-22 -> []
+0 -> []
+
+init_noise:
+-12 -> [av_malloc: [0, 0]]
+0 -> [av_malloc: [-inf, -1],[1, +inf]]
+
+init.1670:
+-12 -> []
+0 -> []
+
+init.1829:
+-12 -> []
+0 -> []
+
+init.1968:
+-22 -> []
+0 -> []
+
+init.2037:
+0 -> []
+
+make_sin_table:
+$
+
+init.2101:
+0 -> [av_expr_parse: [0, +inf]]
+
+init.2133:
+0 -> []
+
+init.2411:
+-12 -> [av_asprintf: [0, 0]]
+0 -> [av_asprintf: [-inf, -1],[1, +inf]]
+
+init.2527:
+0 -> [strcmp: [0, 0]]
+
+init.2563:
+-12 -> [ff_insert_outpad.2634: [-inf, -1]]
+0 -> [ff_insert_outpad.2634: [0, +inf]]
+
+init.2649:
+-22 -> [ff_parse_pixel_format: [-inf, -1]]
+-12 -> [ff_parse_pixel_format: [0, +inf], strcmp: [0, 0]]
+0 -> [ff_parse_pixel_format: [-inf, -1], strcmp: [-inf, -1],[1, +inf]]
+
+load_mask:
+$
+
+init.2661:
+-12 -> [load_mask: [0, +inf], av_mallocz: [0, 0]]
+0 -> [load_mask: [0, +inf], av_mallocz: [-inf, -1],[1, +inf]]
+
+init.2676:
+0 -> []
+
+init.2714:
+-22 -> [strcmp: [-inf, -1],[1, +inf], av_parse_color: [-inf, -1]]
+0 -> [av_parse_color: [0, +inf], strcmp: [0, 0]]
+
+init.2767:
+0 -> [strcmp: [0, 0]]
+
+init.2816:
+-12 -> [ff_insert_outpad.2841: [-inf, -1]]
+0 -> [ff_insert_outpad.2841: [0, +inf]]
+
+init.2883:
+0 -> []
+
+init.2936:
+-22 -> []
+-12 -> []
+0 -> []
+
+init.295:
+0 -> []
+
+init.2974:
+-12 -> [ff_insert_inpad.2990: [-inf, -1]]
+0 -> [ff_insert_inpad.2990: [0, +inf]]
+
+init.3016:
+-12 -> []
+0 -> []
+
+init.3158:
+-22 -> [strcmp: [-inf, -1],[1, +inf], av_parse_color: [-inf, -1]]
+0 -> [av_parse_color: [0, +inf], strcmp: [0, 0]]
+
+init.3379:
+-22 -> [av_get_channel_layout: [0, 0]]
+-12 -> [av_get_channel_layout: [-inf, -1],[1, +inf], av_get_channel_layout_channel_index: [0, +inf]]
+0 -> [av_get_channel_layout: [-inf, -1],[1, +inf], av_get_channel_layout_channel_index: [0, +inf]]
+
+init.3396:
+-22 -> []
+0 -> []
+
+init.3566:
+0 -> []
+
+init.3645:
+-12 -> []
+0 -> []
+
+init.3678:
+-22 -> []
+0 -> []
+
+init.3769:
+0 -> []
+
+init.3872:
+0 -> []
+
+init.3906:
+0 -> [strcmp: [0, 0]]
+
+init.4072:
+0 -> []
+
+init.4193:
+0 -> [av_expr_parse: [0, +inf]]
+
+init.4258:
+0 -> []
+
+init_colormatrix:
+$
+
+init_cscheme:
+-22 -> [__isoc99_sscanf: [-inf, 5],[7, +inf]]
+0 -> [__isoc99_sscanf: [6, 6]]
+
+init.4291:
+-22 -> []
+0 -> []
+
+init_pattern_from_string:
+-22 -> []
+-12 -> []
+0 -> []
+
+init_pattern_from_file:
+$
+
+init.432:
+-22 -> [init_pattern_from_string: [-inf, -1]]
+-12 -> [init_pattern_from_string: [-inf, -1]]
+0 -> [init_pattern_from_file: [0, +inf], init_pattern_from_string: [0, +inf]]
+
+init.4400:
+0 -> []
+
+init.4521:
+-12 -> []
+0 -> []
+
+init.4567:
+-558323010 -> [strcmp: [-inf, -1],[1, +inf]]
+0 -> [strcmp: [0, 0]]
+
+init.4596:
+0 -> []
+
+parse_mapping:
+-22 -> []
+-12 -> []
+0 -> []
+
+parse_definition:
+$
+
+init.4724:
+$
+
+init.475:
+-22 -> [strcmp: [0, 0], ff_parse_channel_layout: [-inf, -1]]
+0 -> [strcmp: [0, 0]]
+
+init.4758:
+0 -> []
+
+init.5016:
+-22 -> []
+0 -> []
+
+init.5092:
+0 -> []
+
+init.5202:
+0 -> []
+
+init.5240:
+-12 -> []
+0 -> []
+
+init.5258:
+0 -> []
+
+init.5290:
+-12 -> [ff_insert_outpad.5351: [-inf, -1]]
+0 -> [ff_insert_outpad.5351: [0, +inf]]
+
+init_pattern_from_file.5435:
+-22 -> [av_file_map: [0, +inf]]
+-12 -> [av_file_map: [0, +inf], av_calloc: [0, 0]]
+0 -> [av_file_map: [0, +inf], av_calloc: [-inf, -1],[1, +inf]]
+
+parse_rule:
+-22 -> []
+0 -> []
+
+init.5395:
+-22 -> [parse_rule: [-inf, -1]]
+-12 -> [av_calloc: [0, 0]]
+0 -> [parse_rule: [-inf, -1], init_pattern_from_file.5435: [0, +inf], av_calloc: [-inf, -1],[1, +inf]]
+
+init.5453:
+-12 -> []
+0 -> []
+
+init.5586:
+-22 -> [strcmp: [0, 0]]
+0 -> [strcmp: [-inf, -1],[1, +inf]]
+
+init.5658:
+0 -> []
+
+init.566:
+$
+
+init.5793:
+-12 -> []
+0 -> []
+
+init.5832:
+-22 -> [av_strtok: [-inf, -1],[1, +inf]]
+-12 -> [av_strtok: [0, 0], av_asprintf: [0, 0]]
+0 -> [av_strtok: [0, 0], av_asprintf: [-inf, -1],[1, +inf]]
+
+init.5917:
+0 -> []
+
+set_filter_param:
+$
+
+init.6183:
+-22 -> []
+0 -> []
+
+init.628:
+-12 -> [av_expr_parse: [0, +inf]]
+0 -> [av_expr_parse: [0, +inf]]
+
+init.6353:
+0 -> []
+
+init.6366:
+0 -> []
+
+init.6448:
+-22 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [0, 0], __isoc99_sscanf: [-inf, 0],[2, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, -1],[1, +inf], __isoc99_sscanf: [1, 1]]
+
+skip_spaces:
+$
+
+parse_channel_name.6636:
+-22 -> [__isoc99_sscanf: [0, 0]]
+0 -> [__isoc99_sscanf: [-inf, -1],[1, +inf]]
+
+init.6629:
+-22 -> [parse_channel_name.6636: [-inf, -1],[1, +inf], av_get_channel_layout_nb_channels: [-inf, -1], av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_strtok: [-inf, +inf], parse_channel_name.6636: [0, 0], av_get_channel_layout_nb_channels: [0, +inf]]
+
+set_expr:
+-12 -> [av_strdup: [0, 0]]
+0 -> [av_strdup: [-inf, -1],[1, +inf], av_expr_parse: [0, +inf]]
+
+init.6672:
+0 -> [set_expr: [0, +inf]]
+
+init.6917:
+0 -> []
+
+init.698:
+0 -> []
+
+init.7029:
+-1094995529 -> [av_isdigit.7045: [0, 0], strlen: [0, 0]]
+0 -> [strlen: [-inf, -1],[1, +inf], av_isdigit.7045: [-inf, -1],[1, +inf]]
+
+init.7107:
+-22 -> []
+0 -> []
+
+init.7157:
+0 -> []
+
+init.7266:
+-12 -> []
+0 -> []
+
+init.7358:
+0 -> []
+
+init.737:
+$
+
+init.7401:
+-22 -> []
+0 -> []
+
+init.7507:
+0 -> []
+
+init.7573:
+-558323010 -> []
+-12 -> [ff_insert_inpad.7614: [-inf, -1]]
+0 -> [ff_insert_inpad.7614: [0, +inf]]
+
+init.7764:
+-22 -> [av_get_channel_layout: [0, 0]]
+-12 -> [av_get_channel_layout: [-inf, -1],[1, +inf]]
+0 -> [av_get_channel_layout: [-inf, -1],[1, +inf]]
+
+init.8023:
+-12 -> [ff_insert_outpad.8053: [-inf, -1]]
+0 -> [ff_insert_outpad.8053: [0, +inf]]
+
+init.8079:
+-558323010 -> []
+-22 -> []
+-12 -> [ff_insert_outpad.8144: [-inf, -1]]
+0 -> [ff_insert_outpad.8144: [0, +inf]]
+
+init.8205:
+0 -> []
+
+parse_channel_name:
+-22 -> [__isoc99_sscanf: [0, 0]]
+0 -> [__isoc99_sscanf: [-inf, -1],[1, +inf]]
+
+parse_map:
+$
+
+init.826:
+-22 -> [ff_insert_inpad.855: [0, +inf]]
+-12 -> [ff_insert_inpad.855: [-inf, -1], av_asprintf: [0, 0]]
+0 -> [ff_insert_inpad.855: [-inf, -1], av_asprintf: [-inf, -1],[1, +inf]]
+
+init.8329:
+-12 -> [av_asprintf: [0, 0]]
+0 -> [av_asprintf: [-inf, -1],[1, +inf]]
+
+set_expr.8364:
+0 -> [av_expr_parse: [0, +inf]]
+
+init.8358:
+$
+
+init.8442:
+-1163346256 -> []
+0 -> []
+
+init.8662:
+-22 -> []
+0 -> []
+
+init.8679:
+0 -> []
+
+init.8784:
+0 -> []
+
+init.8847:
+-22 -> []
+-12 -> []
+0 -> []
+
+init.8874:
+0 -> []
+
+init.889:
+-22 -> []
+0 -> []
+
+init.8993:
+-12 -> []
+0 -> []
+
+init.9059:
+0 -> []
+
+init.9075:
+-12 -> []
+-5 -> []
+0 -> []
+
+parse_command:
+-22 -> [strncmp: [-inf, -1],[1, +inf], strspn: [0, 0]]
+1 -> [strspn: [-inf, -1],[1, +inf], strncmp: [0, 0]]
+
+parse_commands:
+-22 -> [parse_command: [-inf, -1]]
+-12 -> [parse_command: [0, +inf]]
+0 -> [parse_command: [0, +inf]]
+1 -> [parse_command: [-inf, -1]]
+
+parse_interval:
+-22 -> [av_strtok: [0, 0], av_get_token: [0, 0]]
+
+skip_comments:
+$
+
+parse_intervals:
+$
+
+init.9107:
+-22 -> [parse_intervals: [0, +inf]]
+-12 -> [av_malloc: [0, 0]]
+0 -> [parse_intervals: [0, +inf]]
+
+init.9274:
+0 -> []
+
+init.9346:
+-12 -> []
+0 -> []
+
+init.9453:
+-22 -> []
+-12 -> []
+0 -> []
+
+init.9515:
+0 -> [av_expr_parse: [0, +inf]]
+
+init.9563:
+0 -> [av_expr_parse: [0, +inf]]
+
+init_alphaextract:
+$
+
+init_audio:
+-22 -> []
+-12 -> [av_fifo_alloc: [0, 0]]
+0 -> [av_fifo_alloc: [-inf, -1],[1, +inf]]
+
+init_dict:
+0 -> [av_parse_video_size: [0, +inf], av_opt_eval_flags: [0, +inf]]
+
+init_dict.9249:
+$
+
+init_histogram:
+$
+
+init_setfield:
+0 -> []
+
+init_setrange:
+0 -> []
+
+init_video:
+-22 -> []
+-12 -> [av_fifo_alloc: [0, 0]]
+0 -> [av_fifo_alloc: [-inf, -1],[1, +inf]]
+
+initialize:
+$
+
+initialize_chromakey:
+0 -> []
+
+interp_nearest:
+$
+
+interp_16_nearest:
+0 -> []
+
+interp_16_nearest_p10:
+0 -> []
+
+interp_16_nearest_p12:
+0 -> []
+
+interp_16_nearest_p14:
+0 -> []
+
+interp_16_nearest_p16:
+0 -> []
+
+interp_16_nearest_p9:
+0 -> []
+
+interp_tetrahedral:
+$
+
+interp_16_tetrahedral:
+0 -> []
+
+interp_16_tetrahedral_p10:
+0 -> []
+
+interp_16_tetrahedral_p12:
+0 -> []
+
+interp_16_tetrahedral_p14:
+0 -> []
+
+interp_16_tetrahedral_p16:
+0 -> []
+
+interp_16_tetrahedral_p9:
+0 -> []
+
+lerpf:
+$
+
+lerp:
+$
+
+interp_trilinear:
+$
+
+interp_16_trilinear:
+0 -> []
+
+interp_16_trilinear_p10:
+0 -> []
+
+interp_16_trilinear_p12:
+0 -> []
+
+interp_16_trilinear_p14:
+0 -> []
+
+interp_16_trilinear_p16:
+0 -> []
+
+interp_16_trilinear_p9:
+0 -> []
+
+interp_1d_cosine:
+$
+
+interp_1d_16_cosine:
+0 -> []
+
+interp_1d_16_cosine_p10:
+0 -> []
+
+interp_1d_16_cosine_p12:
+0 -> []
+
+interp_1d_16_cosine_p14:
+0 -> []
+
+interp_1d_16_cosine_p16:
+0 -> []
+
+interp_1d_16_cosine_p9:
+0 -> []
+
+interp_1d_cubic:
+$
+
+interp_1d_16_cubic:
+0 -> []
+
+interp_1d_16_cubic_p10:
+0 -> []
+
+interp_1d_16_cubic_p12:
+0 -> []
+
+interp_1d_16_cubic_p14:
+0 -> []
+
+interp_1d_16_cubic_p16:
+0 -> []
+
+interp_1d_16_cubic_p9:
+0 -> []
+
+interp_1d_linear:
+$
+
+interp_1d_16_linear:
+0 -> []
+
+interp_1d_16_linear_p10:
+0 -> []
+
+interp_1d_16_linear_p12:
+0 -> []
+
+interp_1d_16_linear_p14:
+0 -> []
+
+interp_1d_16_linear_p16:
+0 -> []
+
+interp_1d_16_linear_p9:
+0 -> []
+
+interp_1d_nearest:
+$
+
+interp_1d_16_nearest:
+0 -> []
+
+interp_1d_16_nearest_p10:
+0 -> []
+
+interp_1d_16_nearest_p12:
+0 -> []
+
+interp_1d_16_nearest_p14:
+0 -> []
+
+interp_1d_16_nearest_p16:
+0 -> []
+
+interp_1d_16_nearest_p9:
+0 -> []
+
+interp_1d_spline:
+$
+
+interp_1d_16_spline:
+0 -> []
+
+interp_1d_16_spline_p10:
+0 -> []
+
+interp_1d_16_spline_p12:
+0 -> []
+
+interp_1d_16_spline_p14:
+0 -> []
+
+interp_1d_16_spline_p16:
+0 -> []
+
+interp_1d_16_spline_p9:
+0 -> []
+
+interp_1d_8_cosine:
+0 -> []
+
+interp_1d_8_cosine_p8:
+0 -> []
+
+interp_1d_8_cubic:
+0 -> []
+
+interp_1d_8_cubic_p8:
+0 -> []
+
+interp_1d_8_linear:
+0 -> []
+
+interp_1d_8_linear_p8:
+0 -> []
+
+interp_1d_8_nearest:
+0 -> []
+
+interp_1d_8_nearest_p8:
+0 -> []
+
+interp_1d_8_spline:
+0 -> []
+
+interp_1d_8_spline_p8:
+0 -> []
+
+interp_8_nearest:
+0 -> []
+
+interp_8_nearest_p8:
+0 -> []
+
+interp_8_tetrahedral:
+0 -> []
+
+interp_8_tetrahedral_p8:
+0 -> []
+
+interp_8_trilinear:
+0 -> []
+
+interp_8_trilinear_p8:
+0 -> []
+
+interpolate_bilinear:
+$
+
+interpolate_bilinear16:
+$
+
+interpolate_bilinear8:
+$
+
+interpolate_biquadratic:
+$
+
+interpolate_nearest:
+$
+
+irdft_horizontal16:
+$
+
+irdft_horizontal8:
+$
+
+is_planar_yuv:
+0 -> []
+1 -> []
+
+is_same1:
+0 -> []
+1 -> []
+
+is_same1_16:
+0 -> []
+1 -> []
+
+is_same3:
+0 -> []
+1 -> []
+
+is_same3_16:
+0 -> []
+1 -> []
+
+is_same4:
+0 -> []
+1 -> []
+
+is_same4_16:
+0 -> []
+1 -> []
+
+join_config_output:
+-22 -> []
+-12 -> []
+0 -> []
+
+parse_maps:
+-22 -> [av_get_channel_layout_nb_channels: [-inf, 0],[2, +inf], av_get_channel_layout: [0, 0], strchr: [0, 0]]
+0 -> [strchr: [-inf, -1],[1, +inf], av_get_channel_layout: [-inf, -1],[1, +inf], av_get_channel_layout_nb_channels: [1, 1]]
+
+join_init:
+-22 -> [parse_maps: [-inf, -1], av_get_channel_layout: [0, 0]]
+-12 -> [av_get_channel_layout: [-inf, -1],[1, +inf], parse_maps: [0, +inf]]
+0 -> [av_get_channel_layout: [-inf, -1],[1, +inf]]
+
+join_query_formats:
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+0 -> [ff_add_channel_layout: [0, +inf], ff_set_common_samplerates: [0, +inf]]
+
+join_uninit:
+$
+
+lerpf.6241:
+$
+
+less:
+$
+
+limiter16:
+$
+
+limiter8:
+$
+
+line_noise_avg_mmx:
+$
+
+line_noise_mmx:
+$
+
+line_noise_mmxext:
+$
+
+load_colormap:
+$
+
+load_palette:
+$
+
+load_apply_palette:
+-558323010 -> [ff_framesync_dualinput_get_writable: [0, +inf]]
+
+logdb:
+$
+
+lowpass16_column:
+0 -> []
+
+lowpass16_column_mirror:
+0 -> []
+
+lowpass16_row:
+0 -> []
+
+lowpass16_row_mirror:
+0 -> []
+
+lowpass_column:
+0 -> []
+
+lowpass_column_mirror:
+0 -> []
+
+lowpass_init:
+$
+
+lowpass_row:
+0 -> []
+
+lowpass_row_mirror:
+0 -> []
+
+lowshelf_init:
+$
+
+lum:
+$
+
+set_identity_matrix_1d:
+$
+
+skip_line:
+$
+
+parse_cube_1d:
+-1094995529 -> [fgets: [-inf, +inf], av_sscanf: [-inf, 2],[4, +inf]]
+-22 -> [fgets: [-inf, -1],[1, +inf]]
+0 -> [av_sscanf: [3, 3], fgets: [-inf, +inf]]
+
+lut1d_init:
+-1094995529 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [0, 0], av_strcasecmp: [-inf, -1],[1, +inf], parse_cube_1d: [0, 0]]
+-22 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [-inf, -1],[1, +inf], av_strcasecmp: [-inf, -1],[1, +inf], parse_cube_1d: [-inf, -1],[1, +inf]]
+0 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [-inf, -1],[1, +inf], av_strcasecmp: [0, 0], parse_cube_1d: [0, 0]]
+
+lut2_16_16_16:
+$
+
+lut2_16_16_8:
+$
+
+lut2_16_8_16:
+$
+
+lut2_16_8_8:
+$
+
+lut2_8_16_16:
+$
+
+lut2_8_16_8:
+$
+
+lut2_8_8_16:
+$
+
+lut2_8_8_8:
+$
+
+lut2_child_class_next:
+$
+
+lut2_child_next:
+$
+
+lut2_config_output:
+-12 -> [ff_framesync_init: [-inf, -1]]
+0 -> [ff_framesync_init: [-inf, -1]]
+
+lut2_framesync_preinit:
+0 -> []
+
+parse_m3d:
+-1094995529 -> [av_sscanf: [-inf, 2],[4, +inf], fgets: [0, 0]]
+0 -> [fgets: [-inf, -1],[1, +inf], av_sscanf: [3, 3]]
+
+parse_dat:
+-1094995529 -> [strncmp: [-inf, -1],[1, +inf], av_sscanf: [-inf, 2],[4, +inf], fgets: [0, 0]]
+-22 -> [fgets: [-inf, -1],[1, +inf], strncmp: [0, 0]]
+0 -> [fgets: [-inf, -1],[1, +inf], strncmp: [-inf, -1],[1, +inf], av_sscanf: [3, 3]]
+
+parse_cube:
+-1094995529 -> [fgets: [-inf, +inf], av_sscanf: [-inf, 2],[4, +inf]]
+-22 -> [fgets: [-inf, -1],[1, +inf]]
+0 -> [av_sscanf: [3, 3], fgets: [-inf, +inf]]
+
+set_identity_matrix:
+$
+
+parse_3dl:
+-1094995529 -> [av_sscanf: [-inf, 2],[4, +inf], fgets: [0, 0]]
+0 -> [av_sscanf: [3, 3], fgets: [-inf, -1],[1, +inf]]
+
+lut3d_init:
+-1094995529 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [0, 0], av_strcasecmp: [-inf, -1],[1, +inf], parse_3dl: [0, 0], parse_dat: [0, 0], parse_cube: [0, 0], parse_m3d: [0, 0]]
+-22 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [-inf, -1],[1, +inf], av_strcasecmp: [-inf, -1],[1, +inf], parse_3dl: [-inf, -1],[1, +inf], parse_dat: [-inf, -1],[1, +inf], parse_cube: [-inf, -1],[1, +inf], parse_m3d: [-inf, -1],[1, +inf]]
+0 -> [fopen64: [-inf, -1],[1, +inf], strrchr: [-inf, -1],[1, +inf], av_strcasecmp: [0, 0], parse_3dl: [0, 0], parse_dat: [0, 0], parse_cube: [0, 0], parse_m3d: [0, 0]]
+
+lut_init:
+0 -> []
+
+lutrgb_init:
+0 -> []
+
+lutyuv_init:
+0 -> []
+
+maskedclamp16:
+0 -> []
+
+maskedclamp8:
+0 -> []
+
+maskedmerge16:
+$
+
+maskedmerge8:
+$
+
+maskfun16:
+0 -> []
+
+maskfun8:
+0 -> []
+
+midequalizer16:
+$
+
+midequalizer8:
+$
+
+midi:
+$
+
+mirror_borders16:
+$
+
+mirror_borders8:
+$
+
+mix_frames:
+0 -> []
+
+mode01:
+$
+
+mode02:
+$
+
+mode03:
+$
+
+mode04:
+$
+
+mode05:
+$
+
+mode06:
+$
+
+mode07:
+$
+
+mode08:
+$
+
+mode09:
+$
+
+mode10:
+$
+
+mode1112:
+$
+
+mode1314:
+$
+
+mode1516:
+$
+
+mode17:
+$
+
+mode18:
+$
+
+mode19:
+$
+
+mode20:
+$
+
+mode21:
+$
+
+mode22:
+$
+
+mode23:
+$
+
+mode24:
+$
+
+open_stream:
+-22 -> [avcodec_find_decoder: [0, 0]]
+-12 -> [avcodec_find_decoder: [-inf, -1],[1, +inf]]
+0 -> [avcodec_find_decoder: [-inf, -1],[1, +inf], avcodec_parameters_to_context: [0, +inf], avcodec_open2: [0, +inf]]
+
+movie_common_init:
+-558323010 -> [avformat_open_input: [0, +inf], av_seek_frame: [0, +inf], av_strtok: [-inf, +inf]]
+-22 -> [avformat_open_input: [0, +inf], av_seek_frame: [0, +inf], av_strtok: [-inf, -1],[1, +inf], guess_channel_layout: [-inf, -1]]
+-12 -> [guess_channel_layout: [0, +inf], open_stream: [0, +inf], avformat_open_input: [0, +inf], av_seek_frame: [0, +inf], av_strtok: [-inf, +inf]]
+0 -> [guess_channel_layout: [0, +inf], open_stream: [0, +inf], avformat_open_input: [0, +inf], av_seek_frame: [0, +inf], av_strtok: [-inf, +inf]]
+
+movie_config_output_props:
+0 -> []
+
+rewind_file:
+0 -> [av_seek_frame: [0, +inf]]
+
+movie_push_frame:
+-12 -> [av_read_frame: [0, +inf], av_frame_alloc: [0, 0]]
+0 -> [rewind_file: [0, +inf], av_frame_alloc: [-inf, -1],[1, +inf], av_read_frame: [-541478725, -541478725],[0, +inf]]
+
+movie_query_formats:
+-12 -> []
+0 -> []
+
+movie_request_frame:
+$
+
+movie_uninit:
+$
+
+multiply3x3_c:
+$
+
+uninit.4896:
+$
+
+negate_init:
+$
+
+nlmeans_slice:
+0 -> []
+
+none_graticule:
+$
+
+null_filter_frame:
+0 -> []
+
+nullsrc_fill_picture:
+$
+
+nullsrc_init:
+$
+
+oscilloscope_config_input:
+-12 -> []
+0 -> []
+
+oscilloscope_filter_frame:
+$
+
+oscilloscope_uninit:
+$
+
+overlay_child_class_next:
+$
+
+overlay_child_next:
+$
+
+overlay_framesync_preinit:
+0 -> []
+
+pal100bars_fill_picture:
+$
+
+pal100bars_init:
+$
+
+pal75bars_fill_picture:
+$
+
+pal75bars_init:
+$
+
+parse_expr:
+$
+
+phaser_dbl:
+$
+
+phaser_dblp:
+$
+
+phaser_flt:
+$
+
+phaser_fltp:
+$
+
+phaser_s16:
+$
+
+phaser_s16p:
+$
+
+phaser_s32:
+$
+
+phaser_s32p:
+$
+
+pick_color16:
+$
+
+pick_color8:
+$
+
+pick_pixel1:
+$
+
+pick_pixel1_16:
+$
+
+pick_pixel3:
+$
+
+pick_pixel3_16:
+$
+
+pick_pixel4:
+$
+
+pick_pixel4_16:
+$
+
+pink_filter:
+$
+
+pixel_diff:
+$
+
+pixscope_config_input:
+-22 -> []
+0 -> []
+
+pixscope_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+plot_channel:
+0 -> []
+
+poll_frame:
+$
+
+premultiply16:
+$
+
+premultiply16offset:
+$
+
+premultiply16yuv:
+$
+
+premultiply8:
+$
+
+premultiply8offset:
+$
+
+premultiply8yuv:
+$
+
+premultiply_slice:
+0 -> []
+
+print_file:
+$
+
+print_log:
+$
+
+print_stats:
+$
+
+print_stats.6094:
+$
+
+print_stats.7347:
+$
+
+process_command:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+-12 -> [av_strdup: [0, 0]]
+0 -> [strcmp: [0, 0]]
+
+process_command.3161:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+
+process_command.3282:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+
+process_command.3648:
+-1163346256 -> [strcmp: [0, 0]]
+-558323010 -> [strcmp: [0, 0]]
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+-12 -> [strcmp: [0, 0]]
+0 -> [strcmp: [0, 0]]
+
+yae_set_tempo:
+-22 -> []
+0 -> []
+
+process_command.4075:
+$
+
+process_command.4727:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+-22 -> [parse_mapping: [-inf, -1]]
+-12 -> [parse_mapping: [-inf, -1]]
+
+process_command.4956:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+-22 -> [snprintf: [-inf, -1], strcmp: [0, 0], __isoc99_sscanf: [-inf, 2],[4, +inf]]
+0 -> [strcmp: [-inf, +inf], __isoc99_sscanf: [-inf, 0],[2, +inf], snprintf: [0, +inf]]
+
+process_command.6675:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+0 -> [set_expr: [0, +inf]]
+
+process_command.7061:
+-38 -> [strcmp: [-inf, -1],[1, +inf], config_input.7069: [0, +inf]]
+0 -> [config_input.7069: [0, +inf]]
+
+process_command.7656:
+-22 -> [__isoc99_sscanf: [-inf, 0],[2, +inf]]
+-12 -> [__isoc99_sscanf: [1, 1]]
+0 -> [__isoc99_sscanf: [1, 1]]
+
+process_command.7825:
+0 -> []
+
+process_command.8026:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+-22 -> [strcmp: [0, 0], __isoc99_sscanf: [-inf, 3],[5, +inf]]
+0 -> [strcmp: [0, 0], __isoc99_sscanf: [4, 4]]
+
+process_command.8361:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+
+process_command.9277:
+-38 -> [strcmp: [-inf, -1],[1, +inf]]
+
+process_frame:
+-12 -> [av_frame_clone: [0, 0]]
+
+process_frame.1090:
+-12 -> [ff_framesync_get_frame: [0, +inf], av_frame_clone: [0, 0]]
+
+process_frame.1856:
+$
+
+process_frame.2996:
+-12 -> [filter_frame.2979: [-inf, -1]]
+0 -> [filter_frame.2979: [-inf, -1]]
+
+process_frame.359:
+-12 -> [av_frame_clone: [0, 0]]
+
+process_frame.4111:
+-12 -> [ff_framesync_get_frame: [0, +inf], av_frame_clone: [0, 0]]
+
+process_frame.4668:
+-12 -> [av_frame_clone: [0, 0]]
+
+process_frame.4753:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf], ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1], av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf], ff_filter_frame: [0, +inf]]
+
+process_frame.5874:
+-12 -> [ff_framesync_get_frame: [0, +inf], av_frame_clone: [0, 0]]
+
+process_frame.7301:
+$
+
+process_frame.7620:
+-12 -> [filter_frame.7578: [-inf, -1]]
+0 -> [filter_frame.7578: [-inf, -1]]
+
+process_frame.793:
+-12 -> [av_frame_clone: [0, 0]]
+
+process_frame.8320:
+-12 -> [av_frame_clone: [0, 0], ff_framesync_get_frame: [0, +inf]]
+
+process_frame.8864:
+$
+
+pseudocolor_filter:
+$
+
+pseudocolor_filter_10:
+$
+
+pseudocolor_filter_10d:
+$
+
+pseudocolor_filter_11:
+$
+
+pseudocolor_filter_11d:
+$
+
+pseudocolor_filter_16:
+$
+
+pseudocolor_filter_16_10:
+$
+
+pseudocolor_filter_16_10d:
+$
+
+pseudocolor_filter_16_11:
+$
+
+pseudocolor_filter_16_11d:
+$
+
+psnr_child_class_next:
+$
+
+psnr_child_next:
+$
+
+psnr_framesync_preinit:
+0 -> []
+
+push_frame.5715:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+push_single_pic:
+-1163346256 -> []
+-22 -> []
+-12 -> []
+0 -> []
+
+query_formats:
+-12 -> []
+0 -> []
+
+query_formats.1034:
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_set_common_formats: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf], ff_set_common_samplerates: [0, +inf]]
+
+query_formats.1055:
+-22 -> [ff_formats_ref: [0, +inf]]
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.1097:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.110:
+$
+
+query_formats.1128:
+-12 -> []
+0 -> []
+
+query_formats.1164:
+-12 -> []
+0 -> []
+
+query_formats.1230:
+-12 -> []
+0 -> []
+
+query_formats.1284:
+-12 -> []
+0 -> []
+
+query_formats.137:
+-12 -> []
+0 -> []
+
+query_formats.1374:
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_format: [0, +inf], ff_set_common_formats: [0, +inf], ff_add_channel_layout: [0, +inf], ff_set_common_samplerates: [0, +inf]]
+
+query_formats.1381:
+-12 -> []
+0 -> []
+
+query_formats.1427:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.1457:
+-12 -> []
+0 -> []
+
+query_formats.1496:
+-12 -> []
+0 -> []
+
+query_formats.1572:
+-12 -> []
+0 -> []
+
+query_formats.1615:
+$
+
+query_formats.162:
+-12 -> []
+0 -> []
+
+query_formats.1672:
+-12 -> []
+0 -> []
+
+query_formats.1726:
+-12 -> []
+0 -> []
+
+query_formats.1765:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.1799:
+-12 -> []
+0 -> []
+
+query_formats.1831:
+-12 -> []
+0 -> []
+
+query_formats.184:
+-12 -> []
+0 -> []
+
+query_formats.1860:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.1887:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.1927:
+-12 -> [ff_formats_ref: [-inf, -1]]
+-11 -> [ff_formats_ref: [0, +inf]]
+0 -> [ff_formats_ref: [-inf, +inf]]
+
+query_formats.1969:
+-12 -> []
+0 -> []
+
+query_formats.199:
+$
+
+query_formats.1993:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.2009:
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_format: [0, +inf], ff_set_common_formats: [0, +inf], ff_add_channel_layout: [0, +inf], ff_set_common_samplerates: [0, +inf]]
+
+query_formats.2024:
+$
+
+query_formats.2103:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.2135:
+-12 -> []
+0 -> []
+
+query_formats.219:
+$
+
+query_formats.2236:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.2250:
+-12 -> [ff_formats_ref: [-inf, -1], ff_channel_layouts_ref: [-inf, -1], ff_all_channel_counts: [0, 0]]
+0 -> [ff_all_channel_counts: [-inf, -1],[1, +inf], ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.23:
+-12 -> []
+0 -> []
+
+query_formats.2302:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.237:
+-12 -> [ff_formats_ref: [-inf, -1], ff_make_format_list: [0, 0]]
+0 -> [ff_formats_ref: [0, +inf], ff_make_format_list: [-inf, -1],[1, +inf]]
+
+query_formats.2396:
+$
+
+query_formats.2413:
+-12 -> [ff_formats_ref: [-inf, -1]]
+-11 -> [ff_formats_ref: [0, +inf]]
+0 -> [ff_formats_ref: [-inf, -1]]
+
+query_formats.2480:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.251:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.2516:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.2529:
+-12 -> []
+0 -> []
+
+query_formats.2544:
+-12 -> []
+0 -> []
+
+query_formats.2565:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1], ff_formats_ref: [0, +inf], ff_add_channel_layout: [-inf, -1],[1, +inf], ff_channel_layouts_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+
+query_formats.2651:
+-12 -> []
+0 -> []
+
+query_formats.2663:
+-12 -> []
+0 -> []
+
+query_formats.2678:
+-12 -> []
+0 -> []
+
+query_formats.2715:
+-12 -> []
+0 -> []
+
+query_formats.2769:
+-12 -> []
+0 -> []
+
+query_formats.2818:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_add_channel_layout: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.2852:
+-12 -> []
+0 -> []
+
+query_formats.2925:
+-12 -> []
+0 -> []
+
+query_formats.2938:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.2976:
+$
+
+query_formats.3018:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.3088:
+-12 -> []
+0 -> []
+
+query_formats.312:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.3160:
+-12 -> []
+0 -> []
+
+query_formats.3211:
+-12 -> [ff_set_common_formats: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf]]
+
+query_formats.3281:
+-12 -> [av_pix_fmt_desc_next: [-inf, -1],[1, +inf], ff_formats_ref: [-inf, -1]]
+0 -> [av_pix_fmt_desc_next: [0, 0], ff_formats_ref: [0, +inf]]
+
+query_formats.3380:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_samplerates: [-inf, -1], ff_set_common_formats: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf], ff_set_common_samplerates: [0, +inf], ff_add_channel_layout: [0, +inf]]
+
+query_formats.3422:
+$
+
+query_formats.346:
+$
+
+query_formats.3478:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.3580:
+-12 -> []
+0 -> []
+
+query_formats.3621:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.3647:
+-12 -> []
+0 -> []
+
+query_formats.366:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.3679:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.3771:
+-12 -> [ff_formats_ref: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_format: [0, +inf]]
+
+query_formats.3874:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.3908:
+-12 -> []
+0 -> []
+
+query_formats.3940:
+-12 -> []
+0 -> []
+
+query_formats.3967:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.3987:
+-12 -> [ff_add_format: [0, +inf], ff_set_common_channel_layouts: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_add_format: [-inf, -1], ff_set_common_channel_layouts: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.4034:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.4074:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.4100:
+$
+
+query_formats.4119:
+$
+
+query_formats.4152:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.4242:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.4293:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.434:
+-12 -> []
+0 -> []
+
+query_formats.4402:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.4523:
+-12 -> []
+0 -> []
+
+query_formats.4554:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.4569:
+-12 -> []
+0 -> []
+
+query_formats.4598:
+-12 -> []
+0 -> []
+
+query_formats.4659:
+$
+
+query_formats.4690:
+-12 -> []
+0 -> []
+
+query_formats.4699:
+-12 -> []
+0 -> []
+
+query_formats.47:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.4726:
+-12 -> [ff_set_common_samplerates: [-inf, -1]]
+0 -> [ff_set_common_samplerates: [0, +inf]]
+
+query_formats.4760:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf], ff_set_common_formats: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.477:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.4807:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.4832:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.4897:
+-12 -> []
+0 -> []
+
+query_formats.5018:
+-12 -> []
+0 -> []
+
+query_formats.5047:
+-12 -> []
+0 -> []
+
+query_formats.5054:
+-12 -> []
+0 -> []
+
+query_formats.5094:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.5139:
+-12 -> []
+0 -> []
+
+query_formats.514:
+-12 -> []
+0 -> []
+
+query_formats.5185:
+-12 -> []
+0 -> []
+
+query_formats.5204:
+-12 -> []
+0 -> []
+
+query_formats.5242:
+-12 -> []
+0 -> []
+
+query_formats.5259:
+$
+
+query_formats.5292:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.5397:
+$
+
+query_formats.5455:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.546:
+-12 -> [av_pix_fmt_desc_next: [-inf, -1],[1, +inf], ff_formats_ref: [-inf, -1]]
+0 -> [av_pix_fmt_desc_next: [0, 0], ff_formats_ref: [0, +inf]]
+
+query_formats.5474:
+-12 -> []
+0 -> []
+
+query_formats.5509:
+$
+
+query_formats.5587:
+$
+
+query_formats.56:
+$
+
+query_formats.5660:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.568:
+-12 -> []
+0 -> []
+
+query_formats.5726:
+-22 -> []
+-12 -> [ff_set_common_channel_layouts: [-inf, -1], ff_set_common_samplerates: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf], ff_set_common_samplerates: [0, +inf], ff_add_format: [0, +inf], ff_set_common_formats: [0, +inf]]
+
+query_formats.5772:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.5795:
+-12 -> [ff_set_common_samplerates: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_set_common_samplerates: [0, +inf], ff_set_common_formats: [0, +inf], ff_add_format: [0, +inf]]
+
+query_formats.5834:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.5866:
+$
+
+query_formats.5882:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.5951:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.597:
+-12 -> []
+0 -> []
+
+query_formats.6086:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.6166:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.6185:
+-12 -> []
+0 -> []
+
+query_formats.6222:
+-12 -> []
+0 -> []
+
+query_formats.6248:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.630:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.6302:
+$
+
+query_formats.6316:
+$
+
+query_formats.6345:
+-12 -> []
+0 -> []
+
+query_formats.6354:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.6368:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_channel_layouts: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.6553:
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_set_common_formats: [-inf, -1], ff_add_format: [-inf, -1]]
+
+query_formats.6631:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_set_common_samplerates: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+0 -> [ff_set_common_formats: [-inf, -1], ff_set_common_samplerates: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+
+query_formats.6674:
+-12 -> []
+0 -> []
+
+query_formats.6743:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.6778:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_add_channel_layout: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf], ff_add_channel_layout: [0, +inf], ff_channel_layouts_ref: [0, +inf]]
+
+query_formats.6854:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.6918:
+-12 -> []
+0 -> []
+
+query_formats.700:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7031:
+-12 -> []
+0 -> []
+
+query_formats.7060:
+-12 -> []
+0 -> []
+
+query_formats.7109:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7159:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7188:
+-12 -> []
+0 -> []
+
+query_formats.7228:
+-12 -> []
+0 -> []
+
+query_formats.7268:
+-12 -> []
+0 -> []
+
+query_formats.7343:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7360:
+-12 -> []
+0 -> []
+
+query_formats.7375:
+-12 -> []
+0 -> []
+
+query_formats.739:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> []
+
+query_formats.7403:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.7471:
+-12 -> []
+0 -> []
+
+query_formats.7509:
+-12 -> []
+0 -> []
+
+query_formats.7575:
+-12 -> []
+0 -> []
+
+query_formats.7627:
+-12 -> []
+0 -> []
+
+query_formats.7655:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7766:
+-12 -> [ff_channel_layouts_ref: [-inf, -1],[1, +inf], ff_all_samplerates: [0, 0]]
+0 -> [ff_channel_layouts_ref: [0, 0], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.7824:
+-12 -> [ff_set_common_channel_layouts: [-inf, -1]]
+0 -> [ff_set_common_channel_layouts: [0, +inf]]
+
+query_formats.784:
+$
+
+query_formats.7887:
+-12 -> []
+0 -> []
+
+query_formats.79:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_set_common_samplerates: [-inf, -1]]
+0 -> [ff_set_common_samplerates: [0, +inf]]
+
+query_formats.7908:
+-558323010 -> []
+-12 -> [ff_formats_ref: [-inf, -1]]
+-11 -> [ff_formats_ref: [0, +inf]]
+0 -> [ff_formats_ref: [-inf, +inf]]
+
+query_formats.801:
+-12 -> []
+0 -> []
+
+query_formats.8025:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.8064:
+-12 -> [ff_formats_ref: [-inf, -1], ff_make_format_list: [0, 0]]
+0 -> [ff_formats_ref: [0, +inf], ff_make_format_list: [-inf, -1],[1, +inf]]
+
+query_formats.8081:
+-12 -> [ff_formats_ref: [0, +inf], ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_formats_ref: [-inf, -1], ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.8172:
+-12 -> []
+0 -> []
+
+query_formats.8207:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.8241:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.828:
+-12 -> [ff_channel_layouts_ref: [-inf, -1],[1, +inf], ff_all_samplerates: [0, 0]]
+0 -> [ff_channel_layouts_ref: [0, 0], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.8306:
+$
+
+query_formats.8331:
+-22 -> [ff_channel_layouts_ref: [0, +inf]]
+-12 -> [ff_add_channel_layout: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+-11 -> [ff_channel_layouts_ref: [0, +inf]]
+0 -> [ff_add_channel_layout: [-inf, -1], ff_channel_layouts_ref: [-inf, -1]]
+
+query_formats.8360:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.8444:
+-12 -> []
+0 -> []
+
+query_formats.8493:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+-11 -> [ff_set_common_formats: [0, +inf]]
+0 -> [ff_set_common_formats: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+
+query_formats.8579:
+-12 -> [ff_formats_ref: [-inf, -1]]
+-11 -> [ff_formats_ref: [0, +inf]]
+0 -> [ff_formats_ref: [-inf, +inf]]
+
+query_formats.8663:
+-12 -> []
+0 -> []
+
+query_formats.8680:
+-12 -> []
+0 -> []
+
+query_formats.869:
+-12 -> []
+0 -> []
+
+query_formats.8786:
+-12 -> []
+0 -> []
+
+query_formats.8849:
+-12 -> [ff_formats_ref: [-inf, -1]]
+0 -> [ff_formats_ref: [0, +inf]]
+
+query_formats.8876:
+-12 -> []
+0 -> []
+
+query_formats.9029:
+-12 -> []
+0 -> []
+
+query_formats.9060:
+-12 -> []
+0 -> []
+
+query_formats.9077:
+-12 -> []
+0 -> []
+
+query_formats.9251:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+
+query_formats.9276:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_formats_ref: [-inf, -1], ff_make_format_list: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_make_format_list: [-inf, -1],[1, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.9352:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.9441:
+$
+
+query_formats.9455:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_all_samplerates: [0, 0]]
+0 -> [ff_set_common_formats: [0, +inf], ff_all_samplerates: [-inf, -1],[1, +inf]]
+
+query_formats.9517:
+-12 -> []
+0 -> []
+
+query_formats.9565:
+-12 -> [ff_channel_layouts_ref: [-inf, -1], ff_formats_ref: [-inf, -1]]
+0 -> [ff_channel_layouts_ref: [0, +inf], ff_formats_ref: [0, +inf]]
+
+query_formats.9629:
+-12 -> []
+0 -> []
+
+query_formats.97:
+-12 -> []
+0 -> []
+
+query_formats.9718:
+-12 -> []
+0 -> []
+
+queue_pop:
+$
+
+r_func:
+$
+
+rdft_horizontal16:
+$
+
+rdft_horizontal8:
+$
+
+realf:
+$
+
+remap_packed16_nearest_slice:
+0 -> []
+
+remap_packed8_nearest_slice:
+0 -> []
+
+remap_planar16_nearest_slice:
+0 -> []
+
+remap_planar8_nearest_slice:
+0 -> []
+
+request_frame:
+-1163346256 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [-inf, -1],[1, +inf], filter_frame.154: [-inf, -1]]
+-541478725 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [-inf, -1],[1, +inf], filter_frame.154: [0, +inf]]
+-12 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [0, 0], filter_frame.154: [-inf, -1]]
+0 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [-inf, -1],[1, +inf]]
+
+request_frame.1047:
+-1163346256 -> [ff_filter_frame: [-inf, -1]]
+-12 -> [ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf]]
+
+return_audio_frame:
+-12 -> [av_frame_clone: [0, 0]]
+
+request_frame.1223:
+$
+
+request_frame.1452:
+-541478725 -> [av_audio_fifo_size: [-inf, 0]]
+
+request_frame.1585:
+-541478725 -> [ff_request_frame: [-541478725, -541478725]]
+-12 -> [ff_request_frame: [-541478725, -541478725], av_frame_clone: [0, 0]]
+0 -> [ff_request_frame: [-541478725, -541478725],[0, +inf], av_frame_clone: [-inf, -1],[1, +inf]]
+
+request_frame.1638:
+$
+
+request_frame.1792:
+-1163346256 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-541478725 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-12 -> [ff_get_audio_buffer: [0, 0]]
+0 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+
+request_frame.1866:
+$
+
+request_frame.1907:
+-1163346256 -> [ff_request_frame: [-541478725, -541478725]]
+-541478725 -> [ff_request_frame: [-541478725, -541478725]]
+-12 -> [ff_request_frame: [-541478725, -541478725]]
+0 -> [ff_request_frame: [-541478725, -541478725]]
+
+request_frame.2043:
+$
+
+request_frame.2127:
+-1163346256 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-541478725 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-12 -> [ff_get_audio_buffer: [0, 0]]
+0 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+
+request_frame.2152:
+-12 -> [av_frame_clone: [0, 0]]
+
+request_frame.2386:
+$
+
+request_frame.2960:
+$
+
+request_frame.3216:
+$
+
+request_frame.3372:
+$
+
+request_frame.3409:
+$
+
+request_frame.3607:
+-12 -> [av_frame_clone: [0, 0]]
+
+request_frame.4060:
+-1163346256 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-541478725 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-12 -> [ff_get_audio_buffer: [0, 0]]
+0 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+
+yae_flush:
+-11 -> [yae_overlap_add: [-inf, -1],[1, +inf]]
+0 -> [yae_overlap_add: [0, 0]]
+
+request_frame.4082:
+-1163346256 -> [ff_request_frame: [-541478725, -541478725], yae_flush: [-11, -11], push_samples.4083: [-inf, -1]]
+-541478725 -> [ff_request_frame: [-541478725, -541478725], yae_flush: [-inf, -12],[-10, +inf], push_samples.4083: [0, +inf]]
+-12 -> [ff_request_frame: [-541478725, -541478725], yae_flush: [-11, -11], push_samples.4083: [-inf, -1]]
+0 -> [ff_request_frame: [-541478725, -541478725], yae_flush: [-11, -11], push_samples.4083: [0, +inf]]
+
+request_frame.4366:
+$
+
+request_frame.4649:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+request_frame.471:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+request_frame.4799:
+$
+
+request_inlink:
+$
+
+request_frame.5084:
+0 -> [request_inlink: [0, +inf]]
+
+request_frame.509:
+-1163346256 -> []
+-541478725 -> []
+-12 -> []
+0 -> []
+
+request_frame.5114:
+$
+
+request_frame.5229:
+-12 -> [av_frame_clone: [0, 0]]
+
+request_frame.5249:
+-1163346256 -> [ff_request_frame: [-541478725, -541478725], ff_filter_frame: [-inf, -1]]
+-541478725 -> [ff_request_frame: [-541478725, -541478725], ff_filter_frame: [0, +inf]]
+-12 -> [ff_request_frame: [-541478725, -541478725], ff_filter_frame: [-inf, -1]]
+0 -> [ff_filter_frame: [0, +inf], ff_request_frame: [-541478725, -541478725],[0, +inf]]
+
+request_frame.5444:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+request_frame.5709:
+-541478725 -> [ff_request_frame: [-541478725, -541478725]]
+
+request_frame.5747:
+-1163346256 -> [av_fifo_size: [-inf, -1],[1, +inf]]
+-541478725 -> [av_fifo_size: [0, 0]]
+-12 -> [av_fifo_size: [-inf, -1],[1, +inf]]
+-11 -> [av_fifo_size: [0, 0]]
+0 -> [av_fifo_size: [-inf, -1],[1, +inf]]
+
+request_frame.579:
+-12 -> [av_frame_clone: [0, 0]]
+
+request_frame.6752:
+$
+
+request_frame.693:
+$
+
+request_frame.7136:
+$
+
+request_frame.732:
+$
+
+request_frame.7460:
+-1163346256 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-541478725 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+-12 -> [ff_get_audio_buffer: [0, 0]]
+0 -> [ff_get_audio_buffer: [-inf, -1],[1, +inf]]
+
+request_frame.7796:
+-541478725 -> [av_audio_fifo_size: [-inf, 0]]
+
+request_frame.815:
+$
+
+request_frame.8286:
+0 -> [ff_request_frame: [0, +inf]]
+
+request_frame.8770:
+-1163346256 -> []
+-541478725 -> []
+-12 -> []
+0 -> []
+
+request_frame.9008:
+$
+
+request_frame.9041:
+-541478725 -> [ff_request_frame: [-541478725, -541478725]]
+
+request_frame.9259:
+$
+
+request_frame.9355:
+$
+
+request_frame.9432:
+$
+
+request_frame.9477:
+$
+
+request_frame_ref:
+$
+
+resample_child_class_next:
+$
+
+resample_child_next:
+$
+
+reverse_color16:
+$
+
+reverse_color8:
+$
+
+rgb2yuv_420p10_c:
+$
+
+rgb2yuv_420p12_c:
+$
+
+rgb2yuv_420p8_c:
+$
+
+rgb2yuv_422p10_c:
+$
+
+rgb2yuv_422p12_c:
+$
+
+rgb2yuv_422p8_c:
+$
+
+rgb2yuv_444p10_c:
+$
+
+rgb2yuv_444p12_c:
+$
+
+rgb2yuv_444p8_c:
+$
+
+rgb2yuv_fsb_420p10_c:
+$
+
+rgb2yuv_fsb_420p12_c:
+$
+
+rgb2yuv_fsb_420p8_c:
+$
+
+rgb2yuv_fsb_422p10_c:
+$
+
+rgb2yuv_fsb_422p12_c:
+$
+
+rgb2yuv_fsb_422p8_c:
+$
+
+rgb2yuv_fsb_444p10_c:
+$
+
+rgb2yuv_fsb_444p12_c:
+$
+
+rgb2yuv_fsb_444p8_c:
+$
+
+rgbasmear_slice16:
+0 -> []
+
+rgbasmear_slice8:
+0 -> []
+
+rgbawrap_slice16:
+0 -> []
+
+rgbawrap_slice8:
+0 -> []
+
+rgbtest_config_props:
+$
+
+rgbtest_put_pixel:
+$
+
+rgbtest_fill_picture:
+$
+
+rgbtest_init:
+$
+
+rgbtest_query_formats:
+-12 -> []
+0 -> []
+
+run_channel_fft:
+0 -> []
+
+same_str:
+$
+
+scale_magnitudes:
+$
+
+scale_samples_s16:
+$
+
+scale_samples_s16_small:
+$
+
+scale_samples_s32:
+$
+
+scale_samples_u8:
+$
+
+scale_samples_u8_small:
+$
+
+scconfig_output:
+-22 -> []
+-12 -> []
+0 -> []
+
+scquery_formats:
+-12 -> [ff_set_common_formats: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+-11 -> [ff_set_common_formats: [0, +inf]]
+0 -> [ff_set_common_formats: [-inf, -1], ff_add_channel_layout: [-inf, -1]]
+
+select_init:
+0 -> [init.3212: [0, +inf]]
+
+selective_color_16:
+0 -> []
+
+selective_color_8:
+0 -> []
+
+selective_color_direct_absolute_16:
+$
+
+selective_color_direct_absolute_8:
+$
+
+selective_color_direct_relative_16:
+$
+
+selective_color_direct_relative_8:
+$
+
+selective_color_indirect_absolute_16:
+$
+
+selective_color_indirect_absolute_8:
+$
+
+selective_color_indirect_relative_16:
+$
+
+selective_color_indirect_relative_8:
+$
+
+set_color:
+$
+
+set_frame_bruteforce_bayer:
+$
+
+set_frame_bruteforce_floyd_steinberg:
+$
+
+set_frame_bruteforce_heckbert:
+$
+
+set_frame_bruteforce_none:
+$
+
+set_frame_bruteforce_sierra2:
+$
+
+set_frame_bruteforce_sierra2_4a:
+$
+
+set_frame_nns_iterative_bayer:
+$
+
+set_frame_nns_iterative_floyd_steinberg:
+$
+
+set_frame_nns_iterative_heckbert:
+$
+
+set_frame_nns_iterative_none:
+$
+
+set_frame_nns_iterative_sierra2:
+$
+
+set_frame_nns_iterative_sierra2_4a:
+$
+
+set_frame_nns_recursive_bayer:
+$
+
+set_frame_nns_recursive_floyd_steinberg:
+$
+
+set_frame_nns_recursive_heckbert:
+$
+
+set_frame_nns_recursive_none:
+$
+
+set_frame_nns_recursive_sierra2:
+$
+
+set_frame_nns_recursive_sierra2_4a:
+$
+
+set_input_output_native:
+0 -> []
+1 -> []
+
+set_meta.4165:
+$
+
+set_pixel1:
+$
+
+set_pixel1_16:
+$
+
+set_pixel3:
+$
+
+set_pixel3_16:
+$
+
+set_pixel4:
+$
+
+set_pixel4_16:
+$
+
+setdar_config_props:
+0 -> [get_aspect_ratio: [0, 0]]
+
+setsar_config_props:
+0 -> [get_aspect_ratio: [0, 0]]
+
+setup_3x3:
+$
+
+setup_5x5:
+$
+
+setup_7x7:
+$
+
+setup_column:
+$
+
+setup_row:
+$
+
+showspectrumpic_filter_frame:
+$
+
+showspectrumpic_request_frame:
+-541478725 -> [av_audio_fifo_size: [-inf, 0]]
+
+showwaves_filter_frame:
+-1163346256 -> [alloc_out_frame: [0, +inf]]
+-12 -> [alloc_out_frame: [-inf, -1]]
+0 -> [alloc_out_frame: [-inf, -1]]
+
+showwavespic_config_input:
+-12 -> []
+0 -> []
+
+showwavespic_filter_frame:
+-12 -> []
+0 -> []
+
+shuffleplanes_config_input:
+-22 -> []
+0 -> []
+
+shuffleplanes_filter_frame:
+$
+
+silencedetect_dbl:
+$
+
+silencedetect_flt:
+$
+
+silencedetect_s16:
+$
+
+silencedetect_s32:
+$
+
+slice_get_derivative:
+0 -> []
+
+slice_normalize:
+0 -> []
+
+smear_borders16:
+$
+
+smear_borders8:
+$
+
+smear_slice16:
+0 -> []
+
+smear_slice8:
+0 -> []
+
+smptebars_fill_picture:
+$
+
+smptebars_init:
+$
+
+smptebars_query_formats:
+-12 -> []
+0 -> []
+
+smptehdbars_fill_picture:
+$
+
+smptehdbars_init:
+$
+
+split_init:
+-12 -> []
+0 -> []
+
+split_uninit:
+$
+
+sse_line_16bit:
+$
+
+sse_line_8bit:
+$
+
+ssim_4x4xn_16bit:
+$
+
+ssim_4x4xn_8bit:
+$
+
+ssim_child_class_next:
+$
+
+ssim_child_next:
+$
+
+ssim_end1:
+$
+
+ssim_end1x:
+$
+
+ssim_endn_16bit:
+$
+
+ssim_endn_8bit:
+$
+
+ssim_framesync_preinit:
+0 -> []
+
+ssim_plane:
+$
+
+ssim_plane_16bit:
+$
+
+starts_with:
+$
+
+tblend_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+test2_config_props:
+-22 -> [ff_draw_init: [0, +inf], av_image_check_size: [-inf, -1]]
+0 -> [ff_draw_init: [0, +inf], av_image_check_size: [0, +inf]]
+
+test2_fill_picture:
+$
+
+test2_init:
+$
+
+test2_query_formats:
+$
+
+test_fill_picture:
+$
+
+test_init:
+$
+
+test_query_formats:
+-12 -> []
+0 -> []
+
+thread_execute:
+0 -> []
+
+threshold16:
+$
+
+threshold8:
+$
+
+tlut2_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+tmix_filter_frame:
+-1163346256 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+-12 -> [av_frame_clone: [0, 0]]
+0 -> [av_frame_clone: [-inf, -1],[1, +inf]]
+
+transpose_block_16_c:
+$
+
+transpose_8x8_16_c:
+$
+
+transpose_block_24_c:
+$
+
+transpose_8x8_24_c:
+$
+
+transpose_block_32_c:
+$
+
+transpose_8x8_32_c:
+$
+
+transpose_block_48_c:
+$
+
+transpose_8x8_48_c:
+$
+
+transpose_block_64_c:
+$
+
+transpose_8x8_64_c:
+$
+
+transpose_block_8_c:
+$
+
+transpose_8x8_8_c:
+$
+
+treble_init:
+$
+
+trim_filter_frame:
+-1163346256 -> []
+-12 -> []
+0 -> []
+
+uninit:
+$
+
+uninit.1054:
+$
+
+uninit.109:
+$
+
+uninit.1096:
+$
+
+uninit.1127:
+$
+
+uninit.1219:
+$
+
+uninit.1283:
+$
+
+uninit.1315:
+$
+
+uninit.136:
+$
+
+uninit.1380:
+$
+
+uninit.1426:
+$
+
+uninit.1571:
+$
+
+uninit.1598:
+$
+
+uninit.161:
+$
+
+uninit.1614:
+$
+
+uninit.1671:
+$
+
+uninit.1725:
+$
+
+uninit.183:
+$
+
+uninit.1830:
+$
+
+uninit.1886:
+$
+
+uninit.1992:
+$
+
+uninit.2023:
+$
+
+uninit.2050:
+$
+
+uninit.2102:
+$
+
+uninit.2134:
+$
+
+uninit.2235:
+$
+
+uninit.2249:
+$
+
+uninit.2301:
+$
+
+uninit.236:
+$
+
+uninit.2395:
+$
+
+uninit.2412:
+$
+
+uninit.2479:
+$
+
+uninit.2515:
+$
+
+uninit.2528:
+$
+
+uninit.2557:
+$
+
+uninit_segment:
+$
+
+uninit.2564:
+$
+
+uninit.2650:
+$
+
+uninit.2662:
+$
+
+uninit.2677:
+$
+
+uninit.2768:
+$
+
+uninit.2817:
+$
+
+uninit.2851:
+$
+
+uninit.2884:
+$
+
+uninit.2924:
+$
+
+uninit.2937:
+$
+
+uninit.2975:
+$
+
+uninit.3017:
+$
+
+uninit.3087:
+$
+
+uninit.311:
+$
+
+uninit.3159:
+$
+
+uninit.3204:
+$
+
+uninit.3280:
+$
+
+uninit.345:
+$
+
+uninit.3477:
+$
+
+uninit.3567:
+$
+
+uninit.3579:
+$
+
+uninit.3646:
+$
+
+uninit.3873:
+$
+
+uninit.3907:
+$
+
+uninit.3939:
+$
+
+uninit.3966:
+$
+
+uninit.3993:
+$
+
+uninit.4033:
+$
+
+uninit.4073:
+$
+
+uninit.4099:
+$
+
+uninit.4151:
+$
+
+uninit.4194:
+$
+
+uninit.4253:
+$
+
+uninit.4292:
+$
+
+uninit.433:
+$
+
+uninit.4401:
+$
+
+uninit.4522:
+$
+
+uninit.4553:
+$
+
+uninit.4568:
+$
+
+uninit.4597:
+$
+
+uninit.4658:
+$
+
+uninit.4725:
+$
+
+uninit.4759:
+$
+
+uninit.476:
+$
+
+uninit.4806:
+$
+
+uninit.5017:
+$
+
+uninit.5138:
+$
+
+uninit.5203:
+$
+
+uninit.5241:
+$
+
+uninit.5291:
+$
+
+uninit.5396:
+$
+
+uninit.5454:
+$
+
+uninit.55:
+$
+
+uninit.5659:
+$
+
+uninit.567:
+$
+
+uninit.5725:
+$
+
+uninit.5771:
+$
+
+uninit.5794:
+$
+
+uninit.5833:
+$
+
+uninit.5865:
+$
+
+uninit.5881:
+$
+
+uninit.5950:
+$
+
+uninit.596:
+$
+
+uninit.6085:
+$
+
+uninit.6165:
+$
+
+uninit.6184:
+$
+
+uninit.629:
+$
+
+uninit.6315:
+$
+
+uninit.6367:
+$
+
+uninit.6449:
+$
+
+uninit.6552:
+$
+
+uninit.6630:
+$
+
+uninit.6673:
+$
+
+uninit.6742:
+$
+
+uninit.6777:
+$
+
+uninit.6853:
+$
+
+uninit.699:
+$
+
+uninit.7030:
+$
+
+uninit.7059:
+$
+
+uninit.7158:
+$
+
+uninit.7267:
+$
+
+uninit.7342:
+$
+
+uninit.7359:
+$
+
+uninit.738:
+$
+
+uninit.7402:
+$
+
+uninit.7470:
+$
+
+uninit.7508:
+$
+
+uninit.7574:
+$
+
+uninit.7654:
+$
+
+uninit.7765:
+$
+
+uninit.7823:
+$
+
+uninit.783:
+$
+
+uninit.7907:
+$
+
+uninit.8024:
+$
+
+uninit.8080:
+$
+
+uninit.8171:
+$
+
+uninit.8206:
+$
+
+uninit.8240:
+$
+
+uninit.827:
+$
+
+uninit.8305:
+$
+
+uninit.8330:
+$
+
+uninit.8359:
+$
+
+uninit.8443:
+$
+
+uninit.8492:
+$
+
+uninit.8578:
+$
+
+uninit.8691:
+$
+
+uninit.8785:
+$
+
+uninit.8848:
+$
+
+uninit.8875:
+$
+
+uninit.8994:
+$
+
+uninit.9076:
+$
+
+uninit.9108:
+$
+
+uninit.9250:
+$
+
+uninit.9275:
+$
+
+uninit.9347:
+$
+
+uninit.9430:
+$
+
+uninit.9440:
+$
+
+uninit.9454:
+$
+
+uninit.9516:
+$
+
+uninit.9564:
+$
+
+uninit.96:
+$
+
+uninit.9717:
+$
+
+unpremultiply16:
+$
+
+unpremultiply16offset:
+$
+
+unpremultiply16yuv:
+$
+
+unpremultiply8:
+$
+
+unpremultiply8offset:
+$
+
+unpremultiply8yuv:
+$
+
+update16_cr:
+$
+
+update_clut_planar:
+$
+
+update_clut_packed:
+$
+
+update_apply_clut:
+$
+
+update_cr:
+$
+
+update_peak:
+$
+
+update_rms:
+$
+
+update_sono_rgb:
+$
+
+update_sono_yuv:
+$
+
+upmix_1_0:
+$
+
+upmix_2_1:
+$
+
+upmix_3_0:
+$
+
+upmix_3_1:
+$
+
+upmix_3_1_surround:
+$
+
+upmix_4_0:
+$
+
+upmix_4_1:
+$
+
+upmix_5_0_back:
+$
+
+upmix_5_1_back:
+$
+
+upmix_5_1_back_2_1:
+$
+
+upmix_5_1_back_surround:
+$
+
+upmix_7_0:
+$
+
+upmix_7_1:
+$
+
+upmix_7_1_5_0_side:
+$
+
+upmix_7_1_5_1:
+$
+
+upmix_stereo:
+$
+
+val:
+$
+
+vectorscope16:
+$
+
+vectorscope8:
+$
+
+vibrance_slice16:
+0 -> []
+
+vibrance_slice8:
+0 -> []
+
+violet_filter:
+$
+
+vsink_init:
+$
+
+vsink_query_formats:
+-22 -> []
+-12 -> [ff_set_common_formats: [-inf, -1], ff_default_query_formats: [-inf, -1]]
+0 -> [ff_set_common_formats: [0, +inf], ff_default_query_formats: [0, +inf]]
+
+weight_U:
+$
+
+weight_V:
+$
+
+weight_Y:
+$
+
+white_filter:
+$
+
+worker_func:
+$
+
+wrap_slice16:
+0 -> []
+
+wrap_slice8:
+0 -> []
+
+xbr2x:
+0 -> []
+
+xbr3x:
+0 -> []
+
+xbr4x:
+0 -> []
+
+xflat16_column:
+0 -> []
+
+xflat16_column_mirror:
+0 -> []
+
+xflat16_row:
+0 -> []
+
+xflat16_row_mirror:
+0 -> []
+
+xflat_column:
+0 -> []
+
+xflat_column_mirror:
+0 -> []
+
+xflat_row:
+0 -> []
+
+xflat_row_mirror:
+0 -> []
+
+yuv2rgb_420p10_c:
+$
+
+yuv2rgb_420p12_c:
+$
+
+yuv2rgb_420p8_c:
+$
+
+yuv2rgb_422p10_c:
+$
+
+yuv2rgb_422p12_c:
+$
+
+yuv2rgb_422p8_c:
+$
+
+yuv2rgb_444p10_c:
+$
+
+yuv2rgb_444p12_c:
+$
+
+yuv2rgb_444p8_c:
+$
+
+yuv2yuv_420p10to10_c:
+$
+
+yuv2yuv_420p10to12_c:
+$
+
+yuv2yuv_420p10to8_c:
+$
+
+yuv2yuv_420p12to10_c:
+$
+
+yuv2yuv_420p12to12_c:
+$
+
+yuv2yuv_420p12to8_c:
+$
+
+yuv2yuv_420p8to10_c:
+$
+
+yuv2yuv_420p8to12_c:
+$
+
+yuv2yuv_420p8to8_c:
+$
+
+yuv2yuv_422p10to10_c:
+$
+
+yuv2yuv_422p10to12_c:
+$
+
+yuv2yuv_422p10to8_c:
+$
+
+yuv2yuv_422p12to10_c:
+$
+
+yuv2yuv_422p12to12_c:
+$
+
+yuv2yuv_422p12to8_c:
+$
+
+yuv2yuv_422p8to10_c:
+$
+
+yuv2yuv_422p8to12_c:
+$
+
+yuv2yuv_422p8to8_c:
+$
+
+yuv2yuv_444p10to10_c:
+$
+
+yuv2yuv_444p10to12_c:
+$
+
+yuv2yuv_444p10to8_c:
+$
+
+yuv2yuv_444p12to10_c:
+$
+
+yuv2yuv_444p12to12_c:
+$
+
+yuv2yuv_444p12to8_c:
+$
+
+yuv2yuv_444p8to10_c:
+$
+
+yuv2yuv_444p8to12_c:
+$
+
+yuv2yuv_444p8to8_c:
+$
+
+yuvtest_config_props:
+$
+
+yuvtest_fill_picture16:
+$
+
+yuvtest_fill_picture8:
+$
+
+yuvtest_init:
+$
+
+yuvtest_query_formats:
+-12 -> []
+0 -> []
+

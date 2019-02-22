@@ -1,0 +1,680 @@
+FMT_istext:
+$
+
+sk_X509_CRL_value:
+$
+
+sk_X509_CRL_num.343:
+$
+
+add_crls_store:
+1 -> []
+
+sk_CONF_VALUE_num:
+$
+
+sk_CONF_VALUE_value:
+$
+
+add_oid_section:
+0 -> [NCONF_get_string: [-inf, -1],[1, +inf], NCONF_get_section: [0, 0], OBJ_create: [0, 0]]
+1 -> [NCONF_get_string: [0, 0], NCONF_get_section: [-inf, -1],[1, +inf], OBJ_create: [-inf, -1],[1, +inf]]
+
+app_RAND_load_conf:
+$
+
+app_RAND_write:
+$
+
+app_access:
+$
+
+dup_bio_in:
+$
+
+app_get_pass:
+$
+
+app_init:
+1 -> []
+
+opt_isdir:
+-1 -> [stat: [-inf, -1],[1, +inf]]
+
+app_isdir:
+$
+
+apps_bf_prefix:
+$
+
+dup_bio_out:
+$
+
+modeverb:
+$
+
+modestr:
+$
+
+bio_open_default_:
+$
+
+bio_open_default:
+$
+
+opt_getprog:
+$
+
+app_load_config_bio:
+$
+
+app_load_config:
+$
+
+bio_open_default_quiet:
+$
+
+app_load_config_quiet:
+$
+
+app_load_modules:
+0 -> [CONF_modules_load: [-inf, 0]]
+1 -> [CONF_modules_load: [1, +inf]]
+
+app_malloc:
+$
+
+app_passwd:
+0 -> []
+1 -> []
+
+app_tminterval:
+$
+
+apps_ssl_info_callback:
+$
+
+opt_arg:
+$
+
+opt_printf_stderr:
+$
+
+opt_format_error:
+0 -> []
+
+opt_format:
+0 -> [strcmp: [-inf, -1],[1, +inf]]
+1 -> [strcmp: [0, 0]]
+
+ssl_excert_prepend:
+1 -> []
+
+sk_X509_pop_free.317:
+$
+
+ssl_excert_free:
+$
+
+args_excert:
+0 -> [ssl_excert_prepend: [0, 0], opt_format: [0, 0]]
+1 -> [ssl_excert_prepend: [-inf, -1],[1, +inf], opt_format: [-inf, -1],[1, +inf]]
+
+bio_dump_callback:
+$
+
+bio_open_owner:
+$
+
+bio_to_mem:
+-1 -> [BIO_new: [0, 0], BIO_read: [-inf, -1]]
+
+chopup_args:
+0 -> []
+1 -> []
+
+sk_OPENSSL_STRING_num:
+$
+
+sk_OPENSSL_STRING_value:
+$
+
+config_ctx:
+0 -> [SSL_CONF_cmd: [-inf, 0], SSL_CONF_CTX_finish: [0, 0]]
+1 -> [SSL_CONF_cmd: [1, +inf], SSL_CONF_CTX_finish: [-inf, -1],[1, +inf]]
+
+sk_X509_EXTENSION_num:
+$
+
+sk_X509_EXTENSION_pop_free:
+$
+
+sk_X509_EXTENSION_value:
+$
+
+copy_extensions:
+0 -> [X509_add_ext: [0, 0]]
+1 -> [X509_add_ext: [-inf, -1],[1, +inf]]
+
+corrupt_signature:
+$
+
+sk_DIST_POINT_pop_free:
+$
+
+sk_X509_CRL_new_null:
+$
+
+load_cert_crl_http:
+0 -> [OCSP_REQ_CTX_add1_header: [0, 0]]
+1 -> [X509_CRL_http_nbio: [1, 1], X509_http_nbio: [1, 1]]
+
+load_crl:
+$
+
+sk_DIST_POINT_value:
+$
+
+sk_GENERAL_NAME_value:
+$
+
+sk_GENERAL_NAME_num:
+$
+
+get_dp_url:
+$
+
+sk_DIST_POINT_num:
+$
+
+load_crl_crldp:
+$
+
+sk_X509_CRL_free:
+$
+
+sk_X509_CRL_push:
+$
+
+crls_http_cb:
+$
+
+ctx_set_ctlog_list_file:
+$
+
+ctx_set_verify_locations:
+0 -> [SSL_CTX_set_default_verify_file: [-inf, 0], SSL_CTX_set_default_verify_dir: [-inf, 0]]
+1 -> [SSL_CTX_set_default_verify_file: [1, +inf], SSL_CTX_set_default_verify_dir: [1, +inf]]
+
+destroy_prefix_method:
+$
+
+destroy_ui_method:
+$
+
+get_sigtype:
+$
+
+do_print_sigalgs:
+1 -> []
+
+do_server:
+0 -> [BIO_ADDR_service_string: [0, 0]]
+
+get_nameopt:
+$
+
+print_name:
+$
+
+dump_cert_text:
+0 -> []
+
+dup_bio_err:
+$
+
+fileno_stdin:
+$
+
+fileno_stdout:
+$
+
+free_index:
+$
+
+generate_cookie_callback:
+0 -> [BIO_ADDR_rawaddress: [0, 0]]
+
+generate_stateless_cookie_callback:
+0 -> []
+
+get_ui_method:
+$
+
+hexencode:
+$
+
+index_index:
+0 -> [TXT_DB_create_index: [0, 0]]
+1 -> [TXT_DB_create_index: [-inf, -1],[1, +inf]]
+
+index_name_cmp:
+$
+
+index_name_LHASH_COMP:
+$
+
+index_name_hash:
+$
+
+index_name_LHASH_HASH:
+$
+
+index_name_qual:
+$
+
+index_serial_cmp:
+$
+
+index_serial_LHASH_COMP:
+$
+
+index_serial_hash:
+$
+
+index_serial_LHASH_HASH:
+$
+
+init_client:
+0 -> [BIO_sock_init: [-inf, 0],[2, +inf], BIO_lookup_ex: [0, 0]]
+1 -> [BIO_sock_init: [1, 1], BIO_lookup_ex: [-inf, -1],[1, +inf]]
+
+keylog_callback:
+$
+
+unbuffer:
+$
+
+load_pkcs12:
+0 -> [PKCS12_verify_mac: [0, 0]]
+
+load_cert:
+$
+
+sk_X509_pop_free:
+$
+
+sk_X509_INFO_value:
+$
+
+sk_X509_CRL_pop_free:
+$
+
+sk_X509_push:
+$
+
+sk_X509_INFO_num:
+$
+
+sk_X509_INFO_pop_free:
+$
+
+sk_X509_num:
+$
+
+sk_X509_new_null:
+$
+
+sk_X509_CRL_num:
+$
+
+load_certs_crls:
+0 -> [sk_X509_num: [-inf, 0], sk_X509_push: [0, 0], sk_X509_CRL_push: [0, 0], sk_X509_CRL_num: [-inf, 0]]
+1 -> [sk_X509_CRL_push: [-inf, -1],[1, +inf], sk_X509_push: [-inf, -1],[1, +inf], sk_X509_num: [1, +inf], sk_X509_CRL_num: [1, +inf]]
+
+load_certs:
+$
+
+load_crls:
+$
+
+load_key:
+$
+
+load_excert:
+0 -> [load_certs: [0, 0]]
+1 -> [load_certs: [-inf, -1],[1, +inf]]
+
+parse_yesno:
+$
+
+load_index:
+$
+
+load_pubkey:
+$
+
+rand_serial:
+0 -> [BN_to_ASN1_INTEGER: [0, 0], BN_rand: [0, 0]]
+1 -> [BN_rand: [-inf, -1],[1, +inf], BN_to_ASN1_INTEGER: [-inf, -1],[1, +inf]]
+
+load_serial:
+$
+
+loadfiles:
+0 -> [RAND_load_file: [-inf, -1]]
+1 -> [RAND_load_file: [0, +inf]]
+
+lookup:
+$
+
+make_uppercase:
+$
+
+msg_cb:
+$
+
+next_protos_parse:
+$
+
+sk_X509_POLICY_NODE_value:
+$
+
+sk_X509_POLICY_NODE_num:
+$
+
+nodes_print:
+$
+
+opt_begin:
+$
+
+opt_cipher:
+0 -> []
+1 -> []
+
+opt_flag:
+$
+
+valtype2param:
+$
+
+opt_help:
+$
+
+opt_number_error:
+$
+
+opt_imax:
+0 -> [strtoimax: [0, 0]]
+1 -> [strtoimax: [-inf, -1],[1, +inf]]
+
+opt_progname:
+$
+
+opt_init:
+$
+
+opt_long:
+0 -> [strtol: [0, 0]]
+1 -> [strtol: [-inf, -1],[1, +inf]]
+
+opt_int:
+0 -> [opt_long: [0, 0]]
+1 -> [opt_long: [-inf, -1],[1, +inf]]
+
+opt_md:
+0 -> []
+1 -> []
+
+opt_ulong:
+0 -> [strtoul: [0, 0]]
+1 -> [strtoul: [-inf, -1],[1, +inf]]
+
+opt_umax:
+0 -> [strtoumax: [0, 0]]
+1 -> [strtoumax: [-inf, -1],[1, +inf]]
+
+opt_next:
+-1 -> [opt_isdir: [-inf, 0], opt_imax: [0, 0], opt_umax: [0, 0], opt_long: [0, 0], opt_ulong: [0, 0], opt_format: [0, 0], opt_int: [0, 0]]
+0 -> [strcmp: [0, 0]]
+
+opt_rest:
+$
+
+opt_num_rest:
+$
+
+opt_pair:
+0 -> [strcmp: [-inf, -1],[1, +inf]]
+1 -> [strcmp: [0, 0]]
+
+opt_rand:
+0 -> []
+1 -> []
+
+opt_unknown:
+$
+
+opt_verify:
+0 -> [OBJ_txt2obj: [0, 0], X509_PURPOSE_get_by_sname: [-inf, -1], X509_VERIFY_PARAM_set_purpose: [0, 0], X509_VERIFY_PARAM_lookup: [0, 0], opt_imax: [0, 0], X509_VERIFY_PARAM_set1_host: [0, 0], X509_VERIFY_PARAM_set1_email: [0, 0], X509_VERIFY_PARAM_set1_ip_asc: [0, 0]]
+1 -> [OBJ_txt2obj: [-inf, -1],[1, +inf], X509_PURPOSE_get_by_sname: [0, +inf], X509_VERIFY_PARAM_set_purpose: [-inf, -1],[1, +inf], X509_VERIFY_PARAM_lookup: [-inf, -1],[1, +inf], opt_imax: [-inf, -1],[1, +inf], X509_VERIFY_PARAM_set1_host: [-inf, -1],[1, +inf], X509_VERIFY_PARAM_set1_email: [-inf, -1],[1, +inf], X509_VERIFY_PARAM_set1_ip_asc: [-inf, -1],[1, +inf]]
+
+parse_name:
+$
+
+ui_malloc:
+$
+
+password_callback:
+0 -> [UI_new_method: [0, 0], UI_construct_prompt: [0, 0], UI_process: [-inf, -1], UI_add_verify_string: [-inf, -1], UI_add_input_string: [-inf, -1]]
+
+pkey_ctrl_string:
+-1 -> [CRYPTO_strdup: [0, 0]]
+
+policies_print:
+$
+
+prefix_callback_ctrl:
+$
+
+prefix_create:
+0 -> []
+1 -> []
+
+prefix_ctrl:
+0 -> [BIO_next: [0, 0]]
+
+prefix_destroy:
+1 -> []
+
+prefix_gets:
+$
+
+prefix_puts:
+$
+
+prefix_read:
+$
+
+prefix_write:
+0 -> [BIO_write_ex: [0, 0]]
+1 -> [BIO_write_ex: [-inf, -1],[1, +inf]]
+
+print_array:
+$
+
+print_bignum_var:
+$
+
+sk_X509_NAME_num:
+$
+
+sk_X509_NAME_value:
+$
+
+print_ca_names:
+$
+
+print_cert_checks:
+$
+
+print_chain_flags:
+$
+
+print_raw_cipherlist:
+$
+
+ssl_print_point_formats:
+1 -> []
+
+print_verify_detail:
+$
+
+ssl_print_tmp_key:
+1 -> []
+
+ssl_print_groups:
+1 -> []
+
+print_ssl_summary:
+$
+
+raw_read_stdin:
+$
+
+raw_write_stdout:
+$
+
+release_engine:
+$
+
+rotate_index:
+0 -> [rename: [-inf, -1]]
+1 -> [rename: [0, +inf]]
+
+rotate_serial:
+0 -> [rename: [-inf, -1]]
+1 -> [rename: [0, +inf]]
+
+save_index:
+0 -> [BIO_new_file: [0, 0]]
+
+save_serial:
+0 -> [BIO_new_file: [0, 0], BN_to_ASN1_INTEGER: [0, 0]]
+1 -> [BIO_new_file: [-inf, -1],[1, +inf], BN_to_ASN1_INTEGER: [-inf, -1],[1, +inf]]
+
+security_callback_debug:
+1 -> []
+
+set_cert_cb:
+0 -> [SSL_ctrl: [0, 0], SSL_use_PrivateKey: [0, 0], SSL_use_certificate: [0, 0]]
+1 -> [SSL_use_certificate: [-inf, -1],[1, +inf], SSL_use_PrivateKey: [-inf, -1],[1, +inf], SSL_ctrl: [-inf, -1],[1, +inf]]
+
+set_table_opts:
+0 -> [strcasecmp: [-inf, -1],[1, +inf]]
+1 -> [strcasecmp: [0, 0]]
+
+sk_CONF_VALUE_pop_free:
+$
+
+set_multi_opts:
+0 -> [set_table_opts: [0, 0]]
+1 -> [set_table_opts: [-inf, -1],[1, +inf]]
+
+set_cert_ex:
+$
+
+set_cert_key_stuff:
+0 -> [SSL_CTX_use_certificate: [-inf, 0], SSL_CTX_use_PrivateKey: [-inf, 0], SSL_CTX_ctrl: [0, 0], SSL_CTX_check_private_key: [0, 0]]
+1 -> [SSL_CTX_use_certificate: [1, +inf], SSL_CTX_use_PrivateKey: [1, +inf], SSL_CTX_check_private_key: [-inf, -1],[1, +inf], SSL_CTX_ctrl: [-inf, -1],[1, +inf]]
+
+set_cert_stuff:
+0 -> [SSL_CTX_use_certificate_file: [-inf, 0], SSL_CTX_use_PrivateKey_file: [-inf, 0], SSL_CTX_check_private_key: [0, 0]]
+1 -> [SSL_CTX_use_certificate_file: [1, +inf], SSL_CTX_use_PrivateKey_file: [1, +inf], SSL_CTX_check_private_key: [-inf, -1],[1, +inf]]
+
+set_cert_times:
+0 -> [X509_time_adj_ex: [0, 0], ASN1_TIME_set_string_X509: [0, 0], X509_gmtime_adj: [0, 0]]
+1 -> [ASN1_TIME_set_string_X509: [-inf, -1],[1, +inf], X509_gmtime_adj: [-inf, -1],[1, +inf], X509_time_adj_ex: [-inf, -1],[1, +inf]]
+
+set_ext_copy:
+0 -> [strcasecmp: [-inf, -1],[1, +inf]]
+1 -> [strcasecmp: [0, 0]]
+
+set_keylog_file:
+0 -> []
+1 -> []
+
+set_name_ex:
+0 -> [set_multi_opts: [0, 0]]
+1 -> [set_multi_opts: [-inf, -1],[1, +inf]]
+
+set_nameopt:
+0 -> []
+1 -> []
+
+try_load_engine:
+$
+
+setup_engine:
+$
+
+setup_ui_method:
+0 -> []
+
+setup_verify:
+$
+
+store_setup_crl_download:
+$
+
+ssl_ctx_add_crls:
+1 -> []
+
+ssl_ctx_security_debug:
+$
+
+ssl_ctx_set_excert:
+$
+
+ssl_load_stores:
+0 -> [X509_STORE_load_locations: [0, 0], X509_STORE_new: [0, 0]]
+1 -> [X509_STORE_new: [-inf, -1],[1, +inf], X509_STORE_load_locations: [-inf, -1],[1, +inf]]
+
+ssl_print_client_cert_types:
+$
+
+ssl_print_sigalgs:
+1 -> []
+
+tlsext_cb:
+$
+
+ui_close:
+1 -> [UI_method_get_closer: [0, 0]]
+
+ui_open:
+1 -> [UI_method_get_opener: [0, 0]]
+
+ui_read:
+1 -> [UI_method_get_reader: [0, 0]]
+
+ui_write:
+1 -> [UI_method_get_writer: [0, 0]]
+
+verify_callback:
+$
+
+verify_cookie_callback:
+0 -> [memcmp: [-inf, -1],[1, +inf], generate_cookie_callback: [0, 0]]
+1 -> [generate_cookie_callback: [-inf, -1],[1, +inf], memcmp: [0, 0]]
+
+verify_stateless_cookie_callback:
+$
+
+wait_for_async:
+$
+
+wrap_password_callback:
+$
+

@@ -1,0 +1,41 @@
+
+/home/ubuntu_1604/lichi/openssl/crypto/asn1/a_strex.c
+X509_NAME_print_ex_fp:
+-1 -> [BIO_new_fp: [0, 0]]
+
+CONF_dump_fp:
+0 -> [BIO_new_fp: [0, 0]]
+
+NCONF_dump_fp:
+0 -> [BIO_new_fp: [0, 0]]
+
+NCONF_load_fp:
+0 -> [BIO_new_fp: [0, 0]]
+
+do_pk8pkey_fp:
+0 -> [BIO_new_fp: [0, 0]]
+
+X509V3_EXT_print_fp:
+0 -> [BIO_new_fp: [0, 0]]
+
+
+根据上诉结果，0 -> [BIO_new_fp: [0, 0]]， 其中在函数X509_NAME_print_ex_fp中-1 -> [BIO_new_fp: [0, 0]]有可能为error propagation问题，但是函数X509_NAME_print_ex_fp官方文档描述 如果变量XN_FLAG_COMPAT被设置时，此函数返回1为成功，返回0为失败，否则返回-1失败，其余值为成功。
+
+
+#ifndef OPENSSL_NO_STDIO
+int X509_NAME_print_ex_fp(FILE *fp, const X509_NAME *nm, int indent,
+                          unsigned long flags)
+{
+    if (flags == XN_FLAG_COMPAT) {
+        BIO *btmp;
+        int ret;
+        btmp = BIO_new_fp(fp, BIO_NOCLOSE);
+        if (!btmp)
+            return -1;
+        ret = X509_NAME_print(btmp, nm, indent);
+        BIO_free(btmp);
+        return ret;
+    }
+    return do_name_ex(send_fp_chars, fp, nm, indent, flags);
+}
+#endif

@@ -1,0 +1,34 @@
+audio_read_header:
+-12 -> [avformat_new_stream: [0, 0]]
+-5 -> [avformat_new_stream: [-inf, -1],[1, +inf], ff_oss_audio_open: [-inf, -1]]
+0 -> [avformat_new_stream: [-inf, -1],[1, +inf], ff_oss_audio_open: [0, +inf]]
+
+create_stream:
+-1163346256 -> [avformat_new_stream: [-inf, -1],[1, +inf], av_parse_video_size: [0, +inf], av_parse_video_rate: [0, +inf]]
+-22 -> [avformat_new_stream: [-inf, -1],[1, +inf], av_parse_video_size: [0, +inf], av_parse_video_rate: [0, +inf]]
+-12 -> [avformat_new_stream: [0, 0]]
+0 -> [avformat_new_stream: [-inf, -1],[1, +inf], av_parse_video_size: [0, +inf], av_parse_video_rate: [0, +inf]]
+
+create_subcc_streams:
+-12 -> [avformat_new_stream: [0, 0]]
+0 -> [avformat_new_stream: [-inf, -1],[1, +inf]]
+
+fbdev_read_header:
+-22 -> [ff_get_pixfmt_from_fb_varinfo: [-1, -1]]
+-12 -> [avformat_new_stream: [0, 0]]
+
+lavfi_read_header:
+-1279870712 -> [avfilter_get_by_name: [0, 0]]
+-22 -> [avfilter_pad_get_type: [-inf, 0],[2, +inf]]
+-12 -> [avformat_new_stream: [0, 0], avfilter_graph_config: [0, +inf], avfilter_graph_alloc: [0, 0], av_frame_alloc: [0, 0]]
+0 -> [avfilter_graph_config: [0, +inf], av_frame_alloc: [-inf, -1],[1, +inf]]
+
+此时出现false positive情况 
+avformat_new_stream返回值为null时，出错。
+此时即使avformat_new_stream返回值不为null，caller返回值也出现了错误的结果。
+例如如下，在avformat_new_stream返回值不为null时，caller仍返回-5,说明在函数avformat_new_stream返回值不为null时仍进入错误的分支，此时为错误的结果。
+audio_read_header:
+-12 -> avformat_new_stream: [0, 0]]
+-5 -> avformat_new_stream: [-inf, -1],[1, +inf]
+0 -> avformat_new_stream: [-inf, -1],[1, +inf]
+
